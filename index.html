@@ -972,10 +972,10 @@
             <span>📋 一鍵複製配置回傳給小林</span>
           </button>
           <button class="btn btn-preset" onclick="applyPreset('core')">
-            <span>🎯 常用基礎配置 (~1.8 TB)</span>
+            <span>🎯 常用基礎配置 (~1.0 TB)</span>
           </button>
           <button class="btn btn-preset" onclick="applyPreset('sd3_combo')">
-            <span>🥁 常用配置 + SD3 爵士鼓 (~2.3 TB)</span>
+            <span>🥁 常用配置 + SD3 錄音棚鼓組擴充 (~1.5 TB)</span>
           </button>
           <button class="btn btn-secondary" onclick="openImportModal()">
             <span>🔑 匯入代碼還原配置</span>
@@ -1163,6 +1163,23 @@
               </div>
             </div>
 
+            <!-- 日誌 6 -->
+            <div class="worklog-item success">
+              <div class="worklog-item-title">
+                <span>6. 配器與分類架構全面升級（獨立「獨奏樂器」、長長詳細列出 Ample Bass 每一款）</span>
+                <span class="worklog-tag worklog-tag-green">架構重構</span>
+              </div>
+              <div style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-top: 6px;">
+                落實阿三老師專業配器分類標準，全庫劃分為 11 大專業聲部分類：
+              </div>
+              <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin: 6px 0 0 18px; padding: 0;">
+                <li><strong>獨立「獨奏樂器」專區</strong>：小提琴獨奏 (Stradivari, Guarneri, Spitfire Solo, LASS First Chair)、大提琴獨奏 (Stradivari Cello, Spitfire Solo Cello)、室內樂四重奏、愛爾蘭風笛 (已修復 .nicnt)、峇里島竹笛、獨奏雙豎琴、手風琴等。</li>
+                <li><strong>Ample Bass 長長詳細逐套列出</strong>：嚴格獨立列出每一套實體琴款模型、具體容量與演奏法（ABA 木貝斯 4.7G、ABJ 爵士貝斯 3.7G、ABP P-Bass 3.6G、ABJF 無品貝斯 2.1G、ABY 5弦主動式 5.1G、ABU 原聲立式 4.2G、AEBJ Elrick 3.9G、AEU 輕量立式 2.1G），加上 Trilian、Scarbee 與 Session Bassist。</li>
+                <li><strong>原聲鋼琴與鍵盤樂器全面補齊</strong>：完整收錄 19 套鋼琴與鍵盤庫（涵蓋 Yamaha CFX/C3/C7, Steinway D, Kawai, Bösendorfer 290, Bechstein, Klavins 370 等 30+ 款實體鋼琴），並標註 Hans Zimmer Piano 現況。</li>
+                <li><strong>用詞質樸規範</strong>：全面清洗所有誇飾宣傳與捧場詞彙（清除「極致細滑」、「頂級」、「神級」、「最強」、「聖杯」、「軍火庫」及「演唱會」等），以客觀聲學與取樣規格陳述。</li>
+              </ul>
+            </div>
+
             <!-- 日誌 5 -->
             <div class="worklog-item purple">
               <div class="worklog-item-title">
@@ -1255,52 +1272,52 @@
     "items": [
       {
         "id": "ni_noire",
-        "name": "Native Instruments Noire (Nils Frahm 現代傳奇平台鋼琴)",
-        "desc": "Yamaha CFX 9 呎頂級演奏三角鋼琴，收錄純淨 (Pure) 與毛氈 (Felt) 雙音色，內建粒子引擎",
+        "name": "Native Instruments Noire (Nils Frahm 客製 Yamaha CFX 平台鋼琴)",
+        "desc": "Yamaha CFX 9 呎演奏三角鋼琴，收錄純淨 (Pure) 與毛氈 (Felt) 雙音色，內建粒子引擎",
         "size": 15,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "德國當代作曲家 Nils Frahm 於包豪斯 Saal 3 錄音棚錄製的傳奇客製化 Yamaha CFX 平台鋼琴。具有極佳的動態解析度與獨特粒子演算法（Particles Engine）。",
-          "suitable": "現代流行、抒情伴奏、新古典、電影與遊戲配樂。",
+          "overview": "德國當代作曲家 Nils Frahm 於包豪斯 Saal 3 錄音棚錄製的客製化 Yamaha CFX 平台鋼琴。具有高解析動態層次與粒子演算法（Particles Engine）。",
+          "suitable": "流行音樂、抒情伴奏、新古典、電影與遊戲配樂。",
           "list": [
             "Noire Pure (純淨原聲平台鋼琴：清晰明亮、動態層次分明)",
-            "Noire Felt (毛氈弱音鋼琴：溫暖柔和、空氣感豐富，新古典與抒情首選)",
+            "Noire Felt (毛氈弱音鋼琴：溫暖柔和、空氣感豐富，抒情首選)",
             "Particles Engine (粒子引擎：隨彈奏力度自動生成泛音脈衝與聲響織體)"
           ]
         }
       },
       {
         "id": "ni_the_grandeur",
-        "name": "Native Instruments The Grandeur (漢堡史坦威 D 平台鋼琴)",
-        "desc": "Steinway Model D-274 平台鋼琴，古典與現代流行標準音色，中高頻通透平衡",
+        "name": "Native Instruments The Grandeur (漢堡史坦威 D-274 平台鋼琴)",
+        "desc": "Steinway Model D-274 平台鋼琴，古典與流行標準音色，中高頻通透平衡",
         "size": 6,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "採樣自一台狀況極佳的漢堡 Steinway D 平台鋼琴，在頂級聲學空間實錄。低音渾厚扎實，高頻晶瑩剔透，音色動態均勻好混音。",
+          "overview": "採樣自一台狀況極佳的漢堡 Steinway D 平台鋼琴，在專用聲學空間實錄。低音結實，高頻通透，音色動態均勻便於混音。",
           "suitable": "古典獨奏、流行歌曲鋼琴伴奏、爵士與管弦配樂。",
           "list": [
             "Steinway Model D Concert Grand (完整力度層與踏板共鳴採樣)",
-            "內建多樣化音色輪廓調整 (Tone, Color, Dynamic Resonance)",
+            "內建音色輪廓調整 (Tone, Color, Dynamic Resonance)",
             "半音與弱音踏板物理建模噪音"
           ]
         }
       },
       {
         "id": "ni_alicias_keys",
-        "name": "Native Instruments Alicia's Keys (Yamaha C3 流行平台鋼琴)",
-        "desc": "葛萊美歌后 Alicia Keys 專用 Yamaha C3 Neo-Soul 平台鋼琴，流行、靈魂與 R&B 標誌音色",
+        "name": "Native Instruments Alicia's Keys (Yamaha C3 流行/靈魂樂平台鋼琴)",
+        "desc": "葛萊美音樂人 Alicia Keys 專用 Yamaha C3 平台鋼琴，流行、靈魂與 R&B 標誌音色",
         "size": 7,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "由 Alicia Keys 本人與著名採樣專家 Thomas Skarbye 合作，在她個人的「Oven Studios」錄音室使用其專屬的 1984 年 Yamaha C3 實錄。音色圓潤溫暖、極具靈魂樂特質。",
-          "suitable": "華語流行情歌、R&B、靈魂樂、Urban Pop、現場伴奏。",
+          "overview": "由 Alicia Keys 與採樣工程師 Thomas Skarbye 合作，在其專屬錄音室使用其個人 1984 年 Yamaha C3 實錄。音色圓潤溫暖、極具靈魂樂特質。",
+          "suitable": "流行情歌、R&B、靈魂樂、Urban Pop、現場伴奏。",
           "list": [
             "Alicia Keys 專屬調音 Yamaha C3 平台鋼琴",
             "真實踏板與琴鍵釋放噪音採樣",
-            "在流行樂混音中不突兀、自然融入人聲的溫暖頻響"
+            "在流行樂混音中自然融入人聲的溫暖頻響"
           ]
         }
       },
@@ -1312,7 +1329,7 @@
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "Cinematic Studio Series 家族專屬鋼琴，與著名 CSS 弦樂在相同配樂舞台錄製。使用經典 Yamaha C7 錄音室平台鋼琴，具備多組麥克風位置，立體空間感極佳。",
+          "overview": "Cinematic Studio Series 家族專屬鋼琴，與 CSS 弦樂在相同配樂舞台錄製。使用經典 Yamaha C7 錄音室平台鋼琴，具備多組麥克風位置。",
           "suitable": "電影配樂、情感氛圍音樂、電視戲劇配樂、現代流行伴奏。",
           "list": [
             "Yamaha C7 Concert Grand (電影錄音棚實錄)",
@@ -1329,10 +1346,10 @@
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "專為抒情、傷感與電影伴奏設計的鋼琴音源。採用深沉柔和的敲擊力度採樣，音色極具木質溫暖度與空間包覆感。",
+          "overview": "專為抒情與電影伴奏設計的鋼琴音源。採用深沉柔和的敲擊力度採樣，音色具備木質溫暖度與空間包覆感。",
           "suitable": "抒情慢歌、配樂背景鋼琴、安靜氛圍音樂。",
           "list": [
-            "Kawai 經典演奏三角鋼琴深度取樣",
+            "Kawai 演奏三角鋼琴深度取樣",
             "精細的低力度層動態分佈",
             "木質共鳴箱體與踏板柔和機械聲"
           ]
@@ -1340,13 +1357,13 @@
       },
       {
         "id": "synthogy_ivory_ii",
-        "name": "Synthogy Ivory II (經典象牙鋼琴四巨頭 · Kontakt 轉換版)",
+        "name": "Synthogy Ivory II (經典象牙鋼琴四名琴合集 · Kontakt 封裝版)",
         "desc": "收錄 German Concert D, Bösendorfer 290, Italian Grand, Studio Grand 四款名琴",
         "size": 15,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "全球專業錄音室與現場演出的標竿鋼琴音色庫，本版本為 Kontakt 封裝轉換版。收錄世界四大頂級三角平台鋼琴。",
+          "overview": "錄音室與現場演出廣泛使用的經典鋼琴音色庫，本版本為 Kontakt 封裝轉換版。收錄世界四大三角平台鋼琴。",
           "suitable": "古典演奏、現場演出、流行伴奏、大編制配樂。",
           "list": [
             "Ivory German Concert D (德國漢堡史坦威 D 平台鋼琴)",
@@ -1358,14 +1375,14 @@
       },
       {
         "id": "session_keys_grand_s",
-        "name": "e-instruments Session Keys Grand S (現代現場 Steinway D 鋼琴)",
-        "desc": "Steinway Model D 現場流行平台鋼琴，具備 Concert 與 Pop 雙聲學物理建模模式",
+        "name": "e-instruments Session Keys Grand S (現場流行 Steinway D 鋼琴)",
+        "desc": "Steinway Model D 流行平台鋼琴，具備 Concert 與 Pop 雙聲學物理建模模式",
         "size": 10,
         "default": false,
         "badge": "選配擴充",
         "details": {
           "overview": "德國 e-instruments 出品，專為流行編曲與舞台演奏設計。提供一鍵切換 Concert（古典宏大）與 Pop（明亮緊湊）雙重性格引擎。",
-          "suitable": "現場演出、現代流行舞曲伴奏、搖滾樂隊鋼琴。",
+          "suitable": "現場演出、流行舞曲伴奏、樂隊鋼琴。",
           "list": [
             "Steinway D 平台鋼琴精細採樣",
             "Pop / Concert 雙引擎切換",
@@ -1375,14 +1392,14 @@
       },
       {
         "id": "hammersmith_pro",
-        "name": "Soniccouture The Hammersmith Pro (Steinway D 21力度層極致解析)",
+        "name": "Soniccouture The Hammersmith Pro (Steinway D 21力度層高解析取樣)",
         "desc": "倫敦 Mark Knopfler British Grove 錄音室實錄 Steinway D，高達 21 力度層超精細取樣",
         "size": 18,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "目前取樣層次最豐富的 Steinway D 平台鋼琴之一。在倫敦頂尖 British Grove Studios 錄製，每一鍵均採樣多達 21 個真實力度層，動態過渡無階梯感。",
-          "suitable": "精細古典鋼琴獨奏、專業鋼琴家編曲、高動態要求錄音。",
+          "overview": "取樣層次豐富的 Steinway D 平台鋼琴之一。在倫敦 British Grove Studios 錄製，每一鍵均採樣多達 21 個真實力度層，動態過渡無階梯感。",
+          "suitable": "古典鋼琴獨奏、專業鋼琴家編曲、高動態要求錄音。",
           "list": [
             "Steinway Model D 平台鋼琴 (21 Velocity Layers)",
             "6 組立體聲錄音室麥克風配置 (Neumann, Schoeps, AKG, B&K)",
@@ -1398,7 +1415,7 @@
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "Native Instruments 與 Galaxy Instruments 早期聯手打造的古典三大名琴標竿庫，音色質樸純粹，佔用記憶體小。",
+          "overview": "Native Instruments 與 Galaxy Instruments 聯手打造的古典三大名琴庫，音色質樸純粹，佔用記憶體小。",
           "suitable": "古典練習、合唱伴奏、傳統室內樂編曲。",
           "list": [
             "Berlin Concert Grand (德國柏林古典平台鋼琴)",
@@ -1421,20 +1438,20 @@
             "The Gentleman (1908 年古董立式鋼琴 Upright Piano，溫暖復古)",
             "The Maverick (1905 年 C. Bechstein 古董平台鋼琴，古典歷史韻味)",
             "The Giant (Klavins Piano 370 巨型直立鋼琴，超深沉次低音頻響)",
-            "Piano Colors (前衛現代粒子演算與預置演奏法鋼琴)"
+            "Piano Colors (現代粒子演算與預置演奏法鋼琴)"
           ]
         }
       },
       {
         "id": "spectrasonics_keyscape",
-        "name": "Spectrasonics Keyscape (當代鍵盤樂器全集 · 36款名琴)",
+        "name": "Spectrasonics Keyscape (鍵盤樂器全集 · 36款鍵盤名機)",
         "desc": "收錄 LA Custom C7 平台鋼琴、立式鋼琴、Rhodes、Wurlitzer、Clavinet 等 36 款鍵盤名機",
         "size": 77,
         "default": true,
         "badge": "常用推薦",
         "details": {
           "overview": "Spectrasonics 歷時 10 年修復並深入取樣的鍵盤音源。收錄 36 款珍稀鍵盤名琴，多重力度感應與踏板噪音取樣。",
-          "suitable": "所有音樂風格、流行演唱會、爵士、R&B、放克、福音音樂。",
+          "suitable": "所有音樂風格、流行音樂、爵士、R&B、放克、福音音樂。",
           "list": [
             "LA Custom C7 Grand Piano (錄音室客製化 9 呎演奏三角鋼琴)",
             "Wing Upright Piano (經典立式鋼琴)",
@@ -1446,18 +1463,18 @@
       },
       {
         "id": "scarbee_vintage_keys",
-        "name": "Native Instruments Scarbee 經典電鋼琴全套 (A-200 / Clavinet / EP-88s)",
+        "name": "Native Instruments Scarbee 經典電鋼琴系列 (A-200 / Clavinet / EP-88s)",
         "desc": "70 年代經典電鋼琴取樣，放克、靈魂樂、流行與爵士常用鍵盤",
         "size": 18,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "採樣大師 Thomas Skarbye 打造的經典電鋼琴系列。精確還原模擬前級放大器、箱體與真實鍵盤動態響應。",
+          "overview": "採樣工程師 Thomas Skarbye 打造的經典電鋼琴系列。精確還原模擬前級放大器、箱體與真實鍵盤動態響應。",
           "suitable": "70/80 年代流行、放克 Funk、靈魂樂 Soul、Neo-Soul、Fusion 爵士。",
           "list": [
             "Scarbee Vintage Keys (Rhodes Mark I, Wurlitzer A-200)",
             "Scarbee Clavinet / Pianet (放克必備敲弦鍵盤)",
-            "Scarbee Classic EP-88s (88 鍵手作電鋼琴，動態極致細膩)",
+            "Scarbee Classic EP-88s (88 鍵手作電鋼琴，動態細緻)",
             "Soniccouture Broken Wurli & EP73 Deconstructed"
           ]
         }
@@ -1470,7 +1487,7 @@
         "default": false,
         "badge": "殘缺標註",
         "details": {
-          "overview": "Spitfire 與漢斯季默聯名開發之巨型鋼琴。經底層二進制體檢，目前目錄僅有 37 個 .nkx 取樣切片，遺失 33 個區塊（1~7 號及中後段麥克風切片），存在百度網盤下載中斷檔。",
+          "overview": "Spitfire 與漢斯季默聯名開發之鋼琴音色。經底層二進制體檢，目前目錄僅有 37 個 .nkx 取樣切片，遺失 33 個區塊（1~7 號及中後段麥克風切片），存在下載中斷檔。",
           "suitable": "僅供備查；正式製作建議優先使用 Noire、The Grandeur、CSP 或 Ivory II。",
           "list": [
             "官方規格：約 211.2 GB (AIR Hall 16 組多視角麥克風信號)",
@@ -1483,42 +1500,41 @@
     ]
   },
   {
-    "category": "B. 弦樂聲部 (Strings)",
+    "category": "B. 弦樂合奏 (Ensemble Strings)",
     "icon": "🎻",
-    "badge": "弦樂聲部",
+    "badge": "弦樂合奏",
     "items": [
       {
         "id": "lass3",
-        "name": "Audiobro LASS 3 (LA Scoring Strings 3 完整版)",
-        "desc": "乾音編制、分部 (Divisi) 控制、具備真實 Legato 連奏與穿透力，流行編曲與管弦弦樂常備",
+        "name": "Audiobro LASS 3 / LASS Full 2 (LA Scoring Strings 完整管弦弦樂)",
+        "desc": "乾音編制、分部 (Divisi) 控制、真實 Legato 連奏與穿透力，流行編曲與管弦常備",
         "size": 60,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "好萊塢與華語流行音樂廣泛使用的弦樂音源。具備真實乾音錄音、獨特的 Divisi 分部控制與真實 Legato，在流行樂混音中穿透力極強。",
-          "suitable": "華語流行情歌副歌鋪墊、大編制交響、快節奏弦樂切分、電視電影配樂。",
+          "overview": "好萊塢與華語流行音樂廣泛使用的弦樂音源。具備真實乾音錄音、獨特的 Divisi 分部控制與真實 Legato，在流行樂混音中穿透力良好。",
+          "suitable": "流行情歌副歌鋪墊、大編制交響、快節奏弦樂切分、電視電影配樂。",
           "list": [
-            "第一小提琴 (First Violins, 16人分部)",
-            "第二小提琴 (Second Violins, 12人分部)",
-            "中提琴 (Violas, 10人分部)",
-            "大提琴 (Cellos, 8人分部)",
-            "低音提琴 (Basses, 4人分部)",
-            "First Chair 首席獨奏聲部 (小提琴、中提琴、大提琴、低音提琴獨奏)"
+            "第一小提琴合奏 (First Violins, 16人分部)",
+            "第二小提琴合奏 (Second Violins, 12人分部)",
+            "中提琴合奏 (Violas, 10人分部)",
+            "大提琴合奏 (Cellos, 8人分部)",
+            "低音提琴合奏 (Basses, 4人分部)"
           ]
         }
       },
       {
         "id": "cinematic_strings_suite",
-        "name": "Cinematic Studio Strings (CSS) & CS2 經典管弦弦樂套組",
+        "name": "Cinematic Studio Strings (CSS) & CS2 管弦弦樂套組",
         "desc": "澳洲 Trackdown Studios 實錄，抒情連奏流暢自然；搭配 CS2 大編制管弦，音色溫潤醇厚",
         "size": 55,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "電影配樂界極受推崇的連奏弦樂庫。CSS 的動態層次平滑，低力度溫婉細膩，高力度飽滿深情；CS2 則具備經典好萊塢管弦的醇厚混音感。",
+          "overview": "電影配樂界廣受好評的連奏弦樂庫。CSS 的動態層次平滑，低力度溫婉細膩，高力度飽滿深情；CS2 則具備經典好萊塢管弦的醇厚混音感。",
           "suitable": "影視抒情主題曲、管弦慢板、主旋律長音連奏、流行抒情弦樂。",
           "list": [
-            "Cinematic Studio Strings (CSS, 抒情連奏標竿庫，流暢動態響應)",
+            "Cinematic Studio Strings (CSS, 抒情連奏標準庫，流暢動態響應)",
             "Cinematic Strings 2 (CS2, 好萊塢經典大編制交響弦樂，好混音好上手)"
           ]
         }
@@ -1531,12 +1547,12 @@
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "Spitfire Audio 的旗艦交響弦樂庫。在傳奇的 AIR Studios 錄音棚由英國頂尖樂手合奏錄製，具有著名的空氣感與自然堂音。",
+          "overview": "Spitfire Audio 的旗艦交響弦樂庫。在 AIR Studios 錄音棚由英國樂手合奏錄製，具有通透空氣感與自然堂音。",
           "suitable": "大編制電影配樂、交響史詩、古典管弦編曲。",
           "list": [
             "60 位管弦演奏家大編制合奏 (16 小提琴 I, 14 小提琴 II, 12 中提琴, 10 大提琴, 8 低音提琴)",
             "包含完整傳統運音法、Flautando (笛音奏法)、Sul Ponticello (琴橋奏法)",
-            "多組世界級麥克風位置 (Close, Tree, Ambient, Outrigger)"
+            "多組錄音室麥克風位置 (Close, Tree, Ambient, Outrigger)"
           ]
         }
       },
@@ -1548,7 +1564,7 @@
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "Spitfire 最受好評的弦樂庫之一。相較於大編制的宏大殘響，16 人小編制室內樂線條更細膩，每把琴的摩擦質感與空氣感分毫畢現。",
+          "overview": "Spitfire 經典弦樂庫之一。相較於大編制的宏大殘響，16 人小編制室內樂線條更細膩，每把琴的摩擦質感與空氣感清晰分明。",
           "suitable": "流行編曲、抒情慢歌、新古典、獨立電影配樂。",
           "list": [
             "4 小提琴 I、3 小提琴 II、3 中提琴、3 大提琴、3 低音提琴",
@@ -1558,31 +1574,14 @@
         }
       },
       {
-        "id": "solo_chamber_quartets",
-        "name": "獨奏弦樂與名琴四重奏合集 (Spitfire Solo / Sacconi / Cremona Quartet)",
-        "desc": "小提琴/中提琴/大提琴獨奏庫，以及 Stradivari / Guarneri / Amati 傳奇名琴四重奏",
-        "size": 45,
-        "default": false,
-        "badge": "選配擴充",
-        "details": {
-          "overview": "收錄世界頂級獨奏家與傳奇古董名琴的單獨聲部庫，適合旋律主奏與精緻室內樂編制。",
-          "suitable": "主旋律小提琴獨奏、大提琴主奏、弦樂四重奏室內樂、古裝或歷史劇配樂。",
-          "list": [
-            "Spitfire Solo Strings (倫敦頂尖首席演奏家獨奏小提琴、中提琴、大提琴、低音提琴)",
-            "Spitfire Sacconi Strings Quartet (英國頂尖室內樂四重奏實錄)",
-            "Cremona Quartet (克雷莫納名琴：Stradivari 小提琴、Guarneri 小提琴、Amati 中提琴)"
-          ]
-        }
-      },
-      {
         "id": "modern_scoring_strings",
-        "name": "Audiobro Modern Scoring Strings (MSS 現代高解像弦樂)",
-        "desc": "新一代高解像度弦樂庫，含 Expanded Legato 延伸連奏與動態分部",
+        "name": "Audiobro Modern Scoring Strings (MSS 現代高解像弦樂合奏)",
+        "desc": "新一代高解像度弦樂庫，含 Expanded Legato 延伸連奏與 Auto Divisi 自動分部",
         "size": 45,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "LASS 開發團隊的新一代旗艦。採用高解像錄音技術，具備全新的 Auto Divisi 自動分部與先進連奏引擎。",
+          "overview": "LASS 開發團隊的新一代管弦弦樂。採用現代高解像錄音技術，具備全新的 Auto Divisi 自動分部與先進連奏引擎。",
           "suitable": "現代管弦配樂、高動態需求編曲、複雜聲部織體。",
           "list": [
             "現代錄音棚清晰度，分部聲道獨立控制",
@@ -1590,54 +1589,735 @@
             "精準的速度同步與短音運音法切換"
           ]
         }
+      },
+      {
+        "id": "spitfire_studio_strings",
+        "name": "Spitfire Studio Strings & LCO Strings (現代錄音室乾音與前衛弦樂)",
+        "desc": "AIR Studio One 乾音錄音室弦樂，以及倫敦當代管弦樂隊前衛實驗材質弦樂",
+        "size": 45,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "提供更為乾淨、緊湊的乾音弦樂選擇，便於使用者自由套用第三方殘響效果器；LCO 則收錄微音程與特色弓法。",
+          "suitable": "流行流行樂、現代室內樂、實驗配樂、獨立音樂。",
+          "list": [
+            "Spitfire Studio Strings (乾音錄音棚弦樂，聲音直接緊湊)",
+            "Spitfire London Contemporary Orchestra Strings (現代前衛聲響與特殊運音法)"
+          ]
+        }
       }
     ]
   },
   {
-    "category": "C. 吉他與貝斯 (Guitars & Basses)",
-    "icon": "🎸",
-    "badge": "彈撥聲部",
+    "category": "C. 獨奏樂器 (Solo Instruments - 獨奏弦樂 / 獨奏吹管 / 獨奏特色)",
+    "icon": "🎻",
+    "badge": "獨奏聲部",
     "items": [
       {
-        "id": "ample_guitar",
-        "name": "Ample Sound 寫實吉他系列全套 (木吉他、電吉他、古典吉他)",
-        "desc": "華語音樂常用吉他音源，包含泰勒 814ce、馬丁 D-41、芬達、吉普森等全套模型 (S 碟 111GB 完整裝載)",
-        "size": 111,
+        "id": "solo_stradivari_violin",
+        "name": "Native Instruments Stradivari Violin (1727 Vesuvius 克雷莫納斯氏小提琴獨奏)",
+        "desc": "義大利克雷莫納 Museo del Violino 實錄 1727 年傳世名琴，多重運音法與連奏滑音",
+        "size": 4,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "國內外專業音樂人公認擬真度最高的吉他系列。內建強大的真實掃弦引擎 (Strummer)、打板、泛音、推弦與拍弦系統。",
-          "suitable": "華語流行木吉他伴奏、民謠、搖滾電吉他、古典吉他演奏、現場演出。",
+          "overview": "克雷莫納名琴四重奏之首。使用 Antonio Stradivari 於 1727 年製作的 'Vesuvius' 原裝名琴實錄，動態細膩、高音清亮甜美。",
+          "suitable": "旋律主奏小提琴、古典小提琴獨奏、流行歌曲小提琴 Solo、戲劇主題旋律。",
           "list": [
-            "木吉他：AGT (Taylor 814ce), AGM (Martin D-41), AGSJ (Gibson SJ-200), AG12 (12弦木吉他)",
-            "電吉他：AGLP (Gibson Les Paul), AGSC (Fender Stratocaster), AGTC (Fender Telecaster), AGSH (Gibson ES-335)",
-            "古典吉他：AGL (Luthier 尼龍弦古典吉他)",
-            "內建真實吉他效果器排組與多款經典箱體模擬"
+            "Antonio Stradivari 1727 'Vesuvius' 單把獨奏小提琴",
+            "包含多力度層 Legato、Portamento (滑音)、Vibrato 控制",
+            "義大利克雷莫納禮堂自然混響麥克風配置"
           ]
         }
       },
       {
-        "id": "session_guitarist",
-        "name": "Native Instruments Session Guitarist 系列 (民謠、電吉他律動庫)",
-        "desc": "真實吉他手錄音室演奏循環與和弦指彈系統，包含 Picked Acoustic、Electric Sunburst 等",
-        "size": 35,
+        "id": "solo_guarneri_violin",
+        "name": "Native Instruments Guarneri Violin (1743 Il Cannone 瓜奈里小提琴獨奏)",
+        "desc": "義大利 1743 年 Guarneri del Gesù 名琴實錄，音色濃郁深沉、中低頻張力強大",
+        "size": 4,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "採樣自傳奇小提琴大師帕格尼尼鍾愛的 1743 年瓜奈里名琴 'Il Cannone'（大砲）。音色相較史坦威更加粗獷濃郁，張力十足。",
+          "suitable": "激情高昂的小提琴獨奏、戲劇張力配樂、抒情慢歌撕裂感獨奏。",
+          "list": [
+            "Guarneri del Gesù 1743 實琴採樣",
+            "獨特指板共鳴與強烈弓弦摩擦質感",
+            "多組真實揉弦與非揉弦切換"
+          ]
+        }
+      },
+      {
+        "id": "solo_stradivari_cello",
+        "name": "Native Instruments Stradivari Cello (1700 Stauffer 斯氏大提琴獨奏)",
+        "desc": "1700 年 Antonio Stradivari 大提琴實錄，木質共鳴深沉厚實，情感表達細緻",
+        "size": 4,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "由一流錄音室樂手實錄的和弦與節奏律動庫。只需按鍵盤和弦，即可自動演奏出自然流暢的吉他伴奏聲部。",
-          "suitable": "流行流行歌曲節奏吉他、民謠指彈伴奏、商業快節奏編曲。",
+          "overview": "採樣自克雷莫納小提琴博物館珍藏的 1700 年 Stradivari 'Stauffer' 傳奇大提琴。低音渾厚如歌，高把位歌唱性極佳。",
+          "suitable": "電影主題曲大提琴獨奏、抒情情歌前奏與間奏大提琴、室內樂獨奏。",
           "list": [
-            "Picked Acoustic (馬丁 000-28 指彈與精緻分解和弦)",
+            "Antonio Stradivari 1700 'Stauffer' 獨奏大提琴",
+            "真實連奏滑音、弓向交替與多重揉弦深度控制",
+            "極具穿透力與溫暖包覆感的低音弦共振"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_solo_strings",
+        "name": "Spitfire Audio - Spitfire Solo Strings (倫敦首席演奏家獨奏全套)",
+        "desc": "倫敦頂尖首席獨奏家小提琴、中提琴、大提琴、低音提琴全套獨奏聲部",
+        "size": 30,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "在 AIR Studios 錄音棚錄製的完整獨奏弦樂庫。由倫敦交響樂團一線首席演奏家單獨演奏，具備精湛的連奏與傳統運音法。",
+          "suitable": "電影配樂主奏、管弦室內樂、精緻流行歌曲弦樂獨奏。",
+          "list": [
+            "Solo Violin (第一小提琴首席獨奏)",
+            "Solo Viola (中提琴首席獨奏)",
+            "Solo Cello (大提琴首席獨奏)",
+            "Solo Double Bass (低音提琴獨奏)"
+          ]
+        }
+      },
+      {
+        "id": "cinestrings_solo",
+        "name": "Cinesamples CineStrings Solo (好萊塢電影獨奏弦樂四重奏)",
+        "desc": "洛杉磯 MGM 配樂舞台實錄，小提琴、中提琴、大提琴與低音提琴電影配樂獨奏",
+        "size": 12,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "在傳奇的索尼 MGM 配樂舞台由好萊塢一流獨奏家錄製。具備標準好萊塢配樂的醇厚立體聲場與豐富表情控制。",
+          "suitable": "電影配樂、電視劇配樂、浪漫流行情歌弦樂主奏。",
+          "list": [
+            "CineStrings Solo Violin (小提琴獨奏)",
+            "CineStrings Solo Viola (中提琴獨奏)",
+            "CineStrings Solo Cello (大提琴獨奏)",
+            "CineStrings Solo Bass (低音提琴獨奏)"
+          ]
+        }
+      },
+      {
+        "id": "lass_first_chair",
+        "name": "Audiobro LASS First Chair 2.0 (乾音首席弦樂獨奏合集)",
+        "desc": "LASS 專屬首席獨奏庫，小提琴、中提琴、大提琴首席獨奏，乾音好混音",
+        "size": 10,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "專為疊加在合奏音色上增加第一排樂手清晰度，或單獨作為乾音室內樂獨奏使用。在流行樂混音中線條極度明確。",
+          "suitable": "流行編曲弦樂獨奏、室內樂四重奏、弦樂合奏頂部線條加強。",
+          "list": [
+            "First Chair 1st Violin, 2nd Violin, Viola, Cello, Bass 全套獨奏",
+            "超低延遲反應與乾音連奏"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_sacconi_quartet",
+        "name": "Spitfire Sacconi Strings Quartet (英國 Sacconi 弦樂四重奏室內樂組)",
+        "desc": "英國知名室內樂四重奏組實錄，四件套獨奏樂器完美平衡融合",
+        "size": 10,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "由英國知名室內樂團體 Sacconi Quartet 於 Wigmore Hall 規格空間實錄。四把獨奏樂器彼此聲學相位完美對齊。",
+          "suitable": "古典室內樂編曲、精緻文藝影視配樂、流行歌曲優雅四重奏伴奏。",
+          "list": [
+            "Sacconi Violin 1 (第一小提琴獨奏)",
+            "Sacconi Violin 2 (第二小提琴獨奏)",
+            "Sacconi Viola (中提琴獨奏)",
+            "Sacconi Cello (大提琴獨奏)"
+          ]
+        }
+      },
+      {
+        "id": "uilleann_pipes",
+        "name": "Ilya Efimov Uilleann Pipes (愛爾蘭風笛獨奏)",
+        "desc": "真實細膩的愛爾蘭風笛獨奏，具備無縫連奏與豐富裝飾音 (已完成 .nicnt 修復驗證)",
+        "size": 1.5,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "愛爾蘭風笛權威取樣音源。完美捕捉風笛特有的連奏滑音、顫音與裝飾跳音，具備極佳的民族旋律感。",
+          "suitable": "愛爾蘭風格音樂、居爾特民謠、電影英雄主題曲、大河之舞風情。",
+          "list": [
+            "無縫真實 Legato 連奏與多種裝飾音鍵位切換",
+            "風箱氣鳴伴奏管聲 (Drones & Regulators) 獨立控制",
+            "已修復標準 .nicnt 與專屬封面，Kontakt 完美識別"
+          ]
+        }
+      },
+      {
+        "id": "balinese_flutes",
+        "name": "Soniccouture Balinese Flutes (印尼峇里島竹笛獨奏)",
+        "desc": "印尼峇里島傳統 Suling 竹笛，豐富的氣聲、滑音與微音程裝飾音",
+        "size": 1.5,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "收錄峇里島傳統竹笛 Suling 的各類尺寸笛款。音色空靈通透，帶有熱帶海島與東南亞獨特風情。",
+          "suitable": "熱帶島嶼風情、世界音樂、冥想放鬆音樂、異域探險配樂。",
+          "list": [
+            "Suling Gambuh 與 Suling Arja 各調式竹笛獨奏、滑音與氣鳴特徵"
+          ]
+        }
+      },
+      {
+        "id": "harp_collection",
+        "name": "電影級雙豎琴獨奏合集 (CineHarp & Skaila Kanga Harp)",
+        "desc": "索尼配樂棚實錄好萊塢電影豎琴，以及傳奇豎琴大師 Skaila Kanga 獨奏重製版",
+        "size": 17,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "涵蓋好萊塢電影中常用的華麗豎琴刮奏 (Glissando) 與古典單音指彈。",
+          "suitable": "電影配樂、流行浪漫抒情歌曲、童話氛圍音樂、管弦伴奏。",
+          "list": [
+            "CineHarp (Sony 哥倫比亞影業配樂舞台實錄，多麥克風通道)",
+            "Skaila Kanga Harp Redux (英國傳奇大師 Skaila Kanga 演奏取樣)"
+          ]
+        }
+      },
+      {
+        "id": "accordions_2",
+        "name": "Best Service - Accordions 2 (Eduardo Tarilonte 手風琴與班多鈕全套)",
+        "desc": "收錄全球 13 款特色手風琴與簧片風鳴樂器，從阿根廷探戈班多鈕到法式香頌手風琴",
+        "size": 8,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "採樣名家 Eduardo Tarilonte 傾力打造的手風琴音源。完美還原風箱的動態控制與簧片震動。",
+          "suitable": "阿根廷探戈、法式香頌、義大利民謠、流行歌曲特色配器。",
+          "list": [
+            "Bandoneon (阿根廷班多鈕琴 - 皮亞佐拉探戈靈魂)",
+            "French Musette (法式香頌手風琴)",
+            "Concertina (愛爾蘭六角手風琴)",
+            "Accordion (標準鍵盤手風琴與巴揚手風琴)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "D. 銅管與木管合奏 (Brass & Woodwinds Ensembles)",
+    "icon": "🎺",
+    "badge": "管樂合奏",
+    "items": [
+      {
+        "id": "cinematic_studio_brass_winds",
+        "name": "Cinematic Studio Brass & Woodwinds (CSB & CSW 管樂合集)",
+        "desc": "澳洲 Trackdown Studios 實錄，與 CSS 弦樂完全對齊之交響銅管與木管",
+        "size": 41,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "Cinematic Studio Series 家族的管樂聲部。CSB 銅管具備溫暖的連奏與強奏時的自然爆發力；CSW 木管則音色清澈、空氣感十足。",
+          "suitable": "電影配樂、管弦大編制、流行歌曲長笛/薩克斯聲部、流行銅管鋪陳。",
+          "list": [
+            "Cinematic Studio Brass (小號、圓號 Horns、長號、大號合奏與獨奏)",
+            "Cinematic Studio Woodwinds (長笛 Flute、雙簧管 Oboe、單簧管 Clarinet、巴松管 Bassoon、短笛)"
+          ]
+        }
+      },
+      {
+        "id": "session_horns_pro",
+        "name": "Native Instruments Session Horns Pro (流行 Funk/R&B 銅管合奏組)",
+        "desc": "10 件套流行管樂團，包含小號、中音/次中音薩克斯、長號，支援 Voicing Assistant 和聲助手",
+        "size": 28,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "流行音樂中最常使用的銅管組音源。專為現代流行、放克與 R&B 編配設計，獨家 Voicing Assistant 可自動將單音琴鍵分解為真實銅管和聲配器。",
+          "suitable": "流行音樂、放克 Funk、靈魂樂 Soul、R&B、Big Band 大樂隊。",
+          "list": [
+            "4 支小號、3 支薩克斯 (Alto, Tenor, Baritone)、2 支長號、1 支大號",
+            "獨奏模式與 10 人合奏模式",
+            "Smart Voice Split 智慧聲部拆分技術"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_symphonic_brass_winds",
+        "name": "Spitfire Symphonic Brass & Woodwinds (交響大編制管樂合集)",
+        "desc": "倫敦 AIR Studios 實錄交響大編制銅管與木管樂隊，具備傳奇大廳自然殘響",
+        "size": 65,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Spitfire 交響旗艦管樂。AIR Studios Lyndhurst Hall 的開闊聲場賦予銅管極佳的莊嚴感與電影厚度。",
+          "suitable": "史詩電影配樂、交響管弦大編制、好萊塢大片伴奏。",
+          "list": [
+            "Symphonic Brass (小號獨奏/合奏、圓號群奏、長號、低音長號、大號)",
+            "Symphonic Woodwinds (交響木管全套聲部，含英國管、低音單簧管)"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_studio_brass_winds",
+        "name": "Spitfire Studio Brass & Studio Woodwinds (錄音室乾音管樂合集)",
+        "desc": "AIR Studio One 乾音錄音棚實錄，聲音緊湊、細節清晰、易於混音",
+        "size": 40,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "針對需要乾淨混音與緊湊空間的管樂錄製。提供更小的編制與直接的麥克風擺位。",
+          "suitable": "現代流行、爵士流行、電視配樂、小編制室內管樂。",
+          "list": [
+            "Studio Brass 核心與專業版、Studio Woodwinds 核心與專業版"
+          ]
+        }
+      },
+      {
+        "id": "vintage_horns",
+        "name": "Vintage Horns 1 & 2 (復古摩城與爵士管樂套件)",
+        "desc": "60~70 年代摩城 (Motown) 與放克復古管樂音色，粗獷有力、個性鮮明",
+        "size": 5,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "專為復古老唱片音色設計的管樂庫。採樣音色帶有濃厚的類比粗粒感與老式磁帶染色。",
+          "suitable": "復古放克、70 年代摩城流行、復古 R&B、獨立復古風格編曲。",
+          "list": [
+            "復古小號、長號、薩克斯管與長笛短句採樣"
+          ]
+        }
+      },
+      {
+        "id": "projectsam_swing",
+        "name": "ProjectSAM Swing! & Swing More! (爵士大樂隊與搖擺樂管樂組)",
+        "desc": "大樂隊 (Big Band) 管樂、吉普賽爵士吉他、爵士打擊與特色合奏",
+        "size": 15,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "荷蘭 ProjectSAM 打造的爵士大樂隊音色庫。包含薩克斯合奏、帶弱音器的小號與長號、爵士節奏組。",
+          "suitable": "爵士樂、搖擺樂 Swing、百老匯音樂劇、復古流行大樂隊伴奏。",
+          "list": [
+            "Big Band 管樂合奏組、爵士吉他與低音提琴、爵士鼓打擊循環"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "E. 民族樂器與國樂 (Chinese & Asian Instruments)",
+    "icon": "🪕",
+    "badge": "國樂民樂",
+    "items": [
+      {
+        "id": "threebody_chinese",
+        "name": "三體聲音科技國樂全套 (Three-Body Technology 旗艦六件套)",
+        "desc": "物理建模與高解析真實取樣，包含揉弦、滑音與地道中式演奏法 (S 碟已裝載)",
+        "size": 30,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "演奏法地道的國樂採樣音源。利用物理建模與先進演奏法捕捉，還原中國傳統樂器細微的滑音、揉弦、打音、擻音等特色。",
+          "suitable": "古風流行、國風電音、仙俠影視配樂、民族管弦、現場演奏。",
+          "list": [
+            "鳳凰笛 (Dizi - 竹笛：曲笛與梆笛，具備真實氣聲與滑音)",
+            "尋音簫 (Xiao - 洞簫：幽深空靈，氣聲與弱奏自然)",
+            "傾城二胡 (Erhu - 二胡：具備快弓、慢弓、揉弦與墊指滑音)",
+            "臥龍古箏 (Guzheng - 古箏：真實搖指、刮奏與滑音技巧)",
+            "國色琵琶 (Pipa - 琵琶：輪指、煞音與絞弦特色演奏法)",
+            "裂空嗩吶 (Suona - 嗩吶：嘹亮穿透，氣鳴滑音逼真)"
+          ]
+        }
+      },
+      {
+        "id": "kong_audio",
+        "name": "空音 Kong Audio 完整合集 (23 款中國民族樂器全套)",
+        "desc": "華語音樂經典民族音源，涵蓋吹管、彈撥、拉弦、打擊四大聲部所有樂器",
+        "size": 120,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "華語流行與配樂製作齊全的中國民族樂器庫。音色純粹樸實，在流行編曲中極易調配混音。",
+          "suitable": "國風流行音樂、大型民族管弦樂編曲、武俠戲劇配樂、民族打擊樂鋪陳。",
+          "list": [
+            "吹管：曲笛、梆笛、簫、嗩吶、管子、笙、葫蘆絲、巴烏",
+            "彈撥：古箏、琵琶、中阮、大阮、柳琴、揚琴、三弦",
+            "拉弦：二胡、中胡、高胡、板胡、京胡",
+            "打擊：堂鼓、排鼓、大鑼、小鑼、碰鈴、木魚等全套中式打擊"
+          ]
+        }
+      },
+      {
+        "id": "jade_ethnic_orchestra",
+        "name": "Strezov Sampling JADE Ethnic Orchestra & Evolutions (亞洲管弦旗艦)",
+        "desc": "華人演奏家實錄之亞洲管弦樂合集，多種傳統樂器與亞洲民族合唱",
+        "size": 135,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "由保加利亞 Strezov 與華人音樂家合作錄製的大型亞洲管弦樂庫。聲場宏大立體，包含罕見的亞洲弓弦樂隊合奏。",
+          "suitable": "史詩級東方管弦配樂、大型紀錄片、仙俠遊戲、影視配樂。",
+          "list": [
+            "蒙古馬頭琴獨奏與合奏、呼麥喉音 (Khoomei)",
+            "日本尺八 (Shakuhachi)、日本箏 (Koto)",
+            "完整中國民族弓弦樂隊合奏 (Chinese String Ensemble)",
+            "特色亞洲合唱團人聲 (Asian Choirs)"
+          ]
+        }
+      },
+      {
+        "id": "evolution_world_colors",
+        "name": "Evolution Series World Colors 國樂系列合集",
+        "desc": "澳洲 Evolution 系列出品之乾音細膩取樣：二胡、琵琶、笛子、簫、塤、古琴、揚琴、古箏、巴烏",
+        "size": 25,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Evolution Series 出品的亞洲傳統樂器精細乾音庫。麥克風擺位極近，細節清晰，極好添加自訂空間殘響效果。",
+          "suitable": "現代流行國風編曲、清爽好混音的國樂點綴。",
+          "list": [
+            "World Colors Erhu, Pipa, Dizi, Xiao, Xun, Guqin, Yangqin, Guzheng, Bawu 全套 9 款"
+          ]
+        }
+      },
+      {
+        "id": "ni_east_asia",
+        "name": "Native Instruments East Asia (東亞傳統樂器精選)",
+        "desc": "中國、日本、韓國傳統旋律與打擊樂器，介面簡潔且內建地道演奏短句",
+        "size": 5,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "NI 出品的精緻東亞音色庫，涵蓋中日韓三國標誌性樂器，帶有內建琶音與和聲律動器。",
+          "suitable": "現代流行點綴、影視背景、休閒遊戲配樂。",
+          "list": [
+            "笛子、二胡、琵琶、古箏、日本箏、太鼓、韓國長鼓等"
+          ]
+        }
+      },
+      {
+        "id": "world_strings_guzheng_beiguan",
+        "name": "World Strings Guzheng & Temple Bei Guan (傳統古箏與北管合集)",
+        "desc": "傳統高解析古箏單音取樣，以及稀有的台灣傳統廟宇北管吹管與打擊樂庫",
+        "size": 6,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "傳統民間音樂採樣庫。包含細緻的古箏撥弦與罕見的北管鑼鼓、嗩吶實地採樣。",
+          "suitable": "鄉土民俗題材、地方戲曲、特定氛圍配樂。",
+          "list": [
+            "World Strings Guzheng, Temple Bei Guan Library"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "F. 世界音樂與特色民族樂器 (World & Ethnic Instruments)",
+    "icon": "🌍",
+    "badge": "世界民樂",
+    "items": [
+      {
+        "id": "ethno_world_6",
+        "name": "Best Service - Ethno World 6 Complete (全球樂器庫 + 人聲庫)",
+        "desc": "涵蓋全球五大洲 320 多款民族樂器與原生態特色人聲，世界音樂權威庫",
+        "size": 33,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由 Marcel Barsotti 歷時數十年錄製的世界音樂巨作。涵蓋中東、非洲、歐洲、美洲與大洋洲的所有重要民間樂器與原住民人聲短句。",
+          "suitable": "世界音樂、旅遊紀錄片、異域風情流行歌曲、大片背景音樂。",
+          "list": [
+            "弦樂器：西塔琴 (Sitar)、烏德琴 (Oud)、薩茲琴 (Saz)、曼陀鈴、布祖基琴 (Bouzouki)",
+            "管樂器：杜讀管 (Duduk)、印加排笛 (Pan Flute)、愛爾蘭低音哨笛、印第安笛",
+            "打擊樂：達布卡鼓 (Darbuka)、非洲金貝鼓 (Djembe)、鋼鼓 (Steel Pan)、框鼓 (Frame Drum)",
+            "人聲庫：全球原生態人聲採樣、宗教吟唱、呼麥、民族短句"
+          ]
+        }
+      },
+      {
+        "id": "balinese_gamelan",
+        "name": "Soniccouture Balinese Gamelan 2 & Tingklik (印尼峇里島甘美朗打擊)",
+        "desc": "峇里島青銅敲擊樂團與竹筒打擊樂器，極具穿透力的金屬共鳴與異域音階",
+        "size": 5,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "倫敦 Soniccouture 在印尼實地取樣的完整甘美朗樂隊。具有獨特的微分音音階與清脆金屬敲擊聲。",
+          "suitable": "世界音樂、電影緊張氛圍、冥想與實驗音樂。",
+          "list": [
+            "Ugal, Pemade, Kantil 青銅琴、Reyong 鑼組、Tingklik 竹筒琴"
+          ]
+        }
+      },
+      {
+        "id": "world_percussion_taiko",
+        "name": "World Percussion Taiko (日本和太鼓打擊樂庫)",
+        "desc": "日本傳統大型和太鼓群奏與單打，低頻震懾力與節奏張力強烈",
+        "size": 4,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "收錄大太鼓 (O-Daiko)、締太鼓 (Shime-Daiko) 與桶太鼓。低頻下潛極深，動態強勁。",
+          "suitable": "東方動作電影、武術遊戲、震撼節奏鋪陳。",
+          "list": [
+            "大型大太鼓、中型和太鼓、太鼓邊擊 (Rim) 與鼓棒敲擊聲"
+          ]
+        }
+      },
+      {
+        "id": "soniccouture_ethnic_percussion",
+        "name": "Soniccouture 特色民族打擊合集 (Balafon, Mbira, Kora, Pan Drums)",
+        "desc": "非洲木琴、辛巴威姆比拉拇指琴、西非科拉琴、手碟與鋼舌鼓特色打擊",
+        "size": 10,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "收錄各類民間獨特的原聲敲擊與彈撥樂器，音色清澈具備原生態木質與金屬共振質感。",
+          "suitable": "世界音樂、原聲流行點綴、文藝電影配樂。",
+          "list": [
+            "Wassolou Balafon (西非傳統葫蘆木琴)",
+            "Array Mbira (高音質非洲拇指琴)",
+            "Pan Drums & Hang Drum (手碟與鋼舌鼓)",
+            "Kora (西非傳統 21 弦豎琴式彈撥樂器)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "G. 吉他 (Guitars)",
+    "icon": "🎸",
+    "badge": "吉他聲部",
+    "items": [
+      {
+        "id": "ample_guitar_acoustics",
+        "name": "Ample Sound 原聲木吉他與古典系列全套 (AGT / AGM / AGSJ / AG12 / AGL / AGPF)",
+        "desc": "包含泰勒 814ce、馬丁 D-41、吉普森 SJ-200、12弦木吉他、古典與弗朗明哥尼龍弦 (38 GB)",
+        "size": 38,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "擬真度極高的原聲吉他系列。內建真實掃弦引擎 (Strummer)、打板、泛音、推弦與拍弦系統，指彈與掃弦極為生動。",
+          "suitable": "流行木吉他伴奏、民謠指彈、古典吉他演奏、弗朗明哥節奏、現場伴奏。",
+          "list": [
+            "AGT (Taylor 814ce 民謠木吉他, 5.2 GB - 流行常用指彈與掃弦)",
+            "AGM (Martin D-41 經典民謠木吉他, 5.8 GB - 溫暖厚實木質低頻)",
+            "AGSJ (Gibson SJ-200 Super Jumbo 珍寶木吉他, 8.5 GB - 寬廣掃弦動態)",
+            "AG12 (Taylor 12 弦民謠木吉他, 8.2 GB - 豐富雙弦合唱泛音)",
+            "AGL (Alhambra 5P Luthier 尼龍弦古典吉他, 4.0 GB - 典雅古典指彈)",
+            "AGPF (Camps Primera Negra 弗朗明哥尼龍弦吉他, 6.5 GB - 熱情掃弦與打板)"
+          ]
+        }
+      },
+      {
+        "id": "ample_guitar_electrics",
+        "name": "Ample Sound 經典與金屬電吉他全套 (AGLP / AGSC / AGTC / AGSH / AME / AMH / AMR)",
+        "desc": "包含吉普森 Les Paul、芬達 Strat/Tele、335 爵士琴、ESP/Schecter/Suhr 金屬琴 (43 GB)",
+        "size": 43,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "涵蓋電吉他史上所有標誌性名琴。內建吉他效果器板組、高精度音箱箱體模擬與雙/單線圈拾音器切換。",
+          "suitable": "流行搖滾、藍調、放克、爵士、流行電吉他 Solo、重金屬音樂。",
+          "list": [
+            "AGLP (Gibson Les Paul 1958, 7.4 GB - 經典厚實雙線圈音色)",
+            "AGSC (Fender Custom 54 Stratocaster, 7.9 GB - 清脆單線圈經典)",
+            "AGTC (Fender 1952 Telecaster, 7.3 GB - 穿透力清亮 Twang 音色)",
+            "AGSH (Gibson ES-335, 5.1 GB - 溫暖半空心爵士與藍調音色)",
+            "AME (ESP Eclipse, 4.5 GB - 降弦重型節奏金屬電吉他)",
+            "AMH (Schecter Hellraiser, 5.8 GB - 現代金屬降弦主奏電吉他)",
+            "AMR (Suhr Modern, 5.0 GB - 現代高技術搖滾與流行電吉他)"
+          ]
+        }
+      },
+      {
+        "id": "session_guitarist_series",
+        "name": "Native Instruments Session Guitarist 律動系列全集 (民謠、電吉他)",
+        "desc": "真實錄音室樂手實錄和弦循環與指彈系統：Picked Acoustic, Picked Nylon, Strummed, Sunburst 等",
+        "size": 55,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由一線錄音室樂手實錄的和弦與節奏律動庫。只需按下琴鍵和弦，即可自動演奏出自然流暢的吉他伴奏聲部。",
+          "suitable": "流行歌曲節奏吉他、民謠指彈伴奏、快節奏商業編曲。",
+          "list": [
+            "Picked Acoustic (Martin 000-28 指彈與精緻分解和弦)",
+            "Picked Nylon (手工尼龍弦古典吉他抒情指彈)",
             "Strummed Acoustic 1 & 2 (經典民謠木吉他開放與封閉和弦掃弦)",
-            "Electric Sunburst Deluxe (吉普森電吉他經典律動與主奏雙模式)",
-            "Electric Vintage & Electric Mint (芬達 Telecaster 與 Stratocaster 電吉他)"
+            "Electric Sunburst Deluxe (Gibson Les Paul 律動與主奏雙模式)",
+            "Electric Vintage & Electric Mint (Fender Telecaster 與 Stratocaster 電吉他)"
+          ]
+        }
+      },
+      {
+        "id": "scarbee_funk_guitarist",
+        "name": "Native Instruments Scarbee Funk Guitarist (放克節奏電吉他)",
+        "desc": "專注於 70/80 年代放克與流行切分節奏的 16 分音符掃弦電吉他",
+        "size": 8,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "專為放克、迪斯可與流行舞曲設計的切分節奏吉他。精確控制悶音 (Mute)、抓弦與滑音。",
+          "suitable": "Funk 放克、Disco 舞曲、流行快歌節奏鋪墊。",
+          "list": [
+            "經典 Fender Stratocaster 琴橋拾音器採樣、上千種 Funk 節奏律動"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "H. 貝斯 (Basses - 完整詳細列出每一套 Ample Bass 與經典貝斯)",
+    "icon": "🎸",
+    "badge": "低音聲部",
+    "items": [
+      {
+        "id": "ab_aba",
+        "name": "Ample Bass Acoustic (ABA) - 原聲木貝斯",
+        "desc": "採樣自 Guild B-54 CE 原聲木貝斯，指彈與拍弦 (Slap)，自然木質低頻 (4.7 GB)",
+        "size": 4.7,
+        "default": true,
+        "badge": "木貝斯",
+        "details": {
+          "overview": "Ample Sound 出品之高解析木貝斯。使用 Guild B-54 CE 實錄，具有溫暖飽滿的木質共鳴箱體低頻，特別適合不插電 (Unplugged) 與民謠流行編曲。",
+          "suitable": "流行民謠、不插電歌曲、原聲木吉他伴奏、輕爵士音樂。",
+          "list": [
+            "實體琴款：Guild B-54 CE 原聲木貝斯",
+            "取樣容量：4.7 GB (S 碟 /Volumes/S/Ample Sound/ABA_Library)",
+            "演奏法：指彈 (Sustain, Accent, Palm Mute)、拍弦 (Slap, Pull)、泛音、打板、滑音",
+            "自帶麥克風與拾音器雙通道混合推桿"
+          ]
+        }
+      },
+      {
+        "id": "ab_abj",
+        "name": "Ample Bass Jazz (ABJ) - 芬達爵士電貝斯",
+        "desc": "採樣自 Fender Custom Shop 1960s Jazz Bass 4弦電貝斯，指彈與 Slap 擊勾 (3.7 GB)",
+        "size": 3.7,
+        "default": true,
+        "badge": "流行必備",
+        "details": {
+          "overview": "流行音樂最標準的低音音色之一。採樣自 Fender Custom Shop 復古 1960 年代 J-Bass，中頻顆粒感分明，混音中定位清晰。",
+          "suitable": "流行音樂、搖滾、爵士、Fusion、放克 Funk、流行情歌伴奏。",
+          "list": [
+            "實體琴款：Fender Custom Shop 1960s Jazz Bass (4弦)",
+            "取樣容量：3.7 GB (S 碟 /Volumes/S/Ample Sound/ABJ_Library)",
+            "演奏法：Finger (指彈)、Slap & Pull (擊勾拍弦)、Pop、Mute (悶音)、Hammer-On / Pull-Off",
+            "支援前後拾音器比例獨立調節與箱體模擬"
+          ]
+        }
+      },
+      {
+        "id": "ab_abp",
+        "name": "Ample Bass Precision (ABP) - 芬達 P-Bass 電貝斯",
+        "desc": "採樣自 Fender Precision Bass (P-Bass) 4弦經典電貝斯，低頻扎實沉穩 (3.6 GB)",
+        "size": 3.6,
+        "default": true,
+        "badge": "流行必備",
+        "details": {
+          "overview": "電貝斯歷史奠基之作。P-Bass 以其深沉渾厚的低頻與扎實的底盤著稱，在搖滾、摩城與流行歌曲中提供堅固的節奏骨架。",
+          "suitable": "經典搖滾、流行情歌、摩城音樂、龐克、英倫搖滾。",
+          "list": [
+            "實體琴款：Fender Precision Bass (4弦)",
+            "取樣容量：3.6 GB (S 碟 /Volumes/S/Ample Sound/ABP_Library)",
+            "演奏法：Finger (指彈)、Pick (撥片)、Palm Mute (手掌悶音)、Slap",
+            "具備經典分體式單線圈拾音器深厚頻響"
+          ]
+        }
+      },
+      {
+        "id": "ab_abjf",
+        "name": "Ample Bass Jazz Fretless (ABJF) - 芬達無品爵士電貝斯",
+        "desc": "採樣自 Fender Custom Shop Jazz Bass 無品電貝斯，極具歌唱性的滑音與揉弦 (2.1 GB)",
+        "size": 2.1,
+        "default": false,
+        "badge": "無品貝斯",
+        "details": {
+          "overview": "無品電貝斯（Fretless Bass）代表作。沒有琴品金屬阻隔，音色如人聲般悠長滑順，具備標誌性的 'Mwah' 滑音音色與平滑揉弦。",
+          "suitable": "抒情慢歌主旋律貝斯、Fusion 融合爵士、氛圍音樂、新世紀音樂。",
+          "list": [
+            "實體琴款：Fender Custom Shop Jazz Bass Fretless",
+            "取樣容量：2.1 GB (S 碟 /Volumes/S/Ample Sound/ABJF_Library)",
+            "演奏法：無級滑音 (Smooth Slide)、指彈歌唱性長音、真實指板揉弦",
+            "獨特指板木質摩擦共鳴"
+          ]
+        }
+      },
+      {
+        "id": "ab_aby",
+        "name": "Ample Bass StingRay (ABY) - 現代 5 弦主動式電貝斯",
+        "desc": "採樣自 Music Man StingRay 5弦電貝斯，強勁主動式 EQ，穿透力極強 (5.1 GB)",
+        "size": 5.1,
+        "default": true,
+        "badge": "五弦低音",
+        "details": {
+          "overview": "現代流行與重型音樂利器。Music Man StingRay 配備大型雙線圈拾音器與主動式前級，低頻衝擊力強，附帶超低音 B 弦 (Low-B)。",
+          "suitable": "現代流行、放克 Slap、硬搖滾、重金屬、現代舞曲低音。",
+          "list": [
+            "實體琴款：Music Man StingRay 5-String",
+            "取樣容量：5.1 GB (S 碟 /Volumes/S/Ample Sound/ABY_Library)",
+            "演奏法：5 弦超低音域指彈、大力度 Slap & Pop、撥片高速交替",
+            "具備主動式拾音器標誌性金屬咬字與厚重低頻"
+          ]
+        }
+      },
+      {
+        "id": "ab_abu",
+        "name": "Ample Bass Upright (ABU) - 原聲立式低音提琴",
+        "desc": "古典原聲立式低音提琴 (Double Bass / Upright)，指彈 (Pizzicato) 與拉弦 (Arco) (4.2 GB)",
+        "size": 4.2,
+        "default": true,
+        "badge": "原聲低音",
+        "details": {
+          "overview": "爵士樂與古典管弦聲部核心。採樣自專業原聲立式 Double Bass，琴箱共鳴龐大深邃，無論指彈慢搖還是琴弓拉奏均十分逼真。",
+          "suitable": "爵士三重奏、搖擺樂 Walking Bass、古典室內樂、流行不插電慢歌。",
+          "list": [
+            "實體琴款：專業原聲立式低音提琴 (Double Bass)",
+            "取樣容量：4.2 GB (S 碟 /Volumes/S/Ample Sound/ABU_Library)",
+            "演奏法：Pizzicato (指彈撥奏)、Arco (琴弓拉弦連奏)、Open String 共振",
+            "多麥克風立體聲環境通道"
+          ]
+        }
+      },
+      {
+        "id": "ab_aebj",
+        "name": "Ample Bass Elrick (AEBJ) - 5 弦手工精品電貝斯",
+        "desc": "採樣自美國頂級手工 Elrick e-volution 5弦精品電貝斯，現代高頻清晰細膩 (3.9 GB)",
+        "size": 3.9,
+        "default": false,
+        "badge": "精品低音",
+        "details": {
+          "overview": "高階精品手工琴代表。Elrick 手工琴以精確的人體工學與極為均衡的頻響著稱，高頻細緻溫潤，音符顆粒清晰乾淨。",
+          "suitable": "當代 Fusion 爵士、技巧型 Solo 演奏、精緻現代流行編曲。",
+          "list": [
+            "實體琴款：Elrick e-volution 5-String Handmade Bass",
+            "取樣容量：3.9 GB (S 碟 /Volumes/S/Ample Sound/AEBJ_Library)",
+            "演奏法：精細指彈、Slap、雙音伴奏、高把位歌唱性旋律",
+            "現代錄音棚極致乾淨前級直錄信號"
+          ]
+        }
+      },
+      {
+        "id": "ab_aeu",
+        "name": "Ample Bass Acoustic Upright Lite (AEU) - 立式低音提琴精簡版",
+        "desc": "立式原聲低音提琴輕量載入版，快速開啟省資源 (2.1 GB)",
+        "size": 2.1,
+        "default": false,
+        "badge": "輕量低音",
+        "details": {
+          "overview": "針對筆電或輕量工程設計的 Upright Bass 精簡音色庫。保留核心指彈力度層，載入速度快且節省記憶體。",
+          "suitable": "快速草稿編配、筆電行動編曲、輕量爵士伴奏。",
+          "list": [
+            "實體琴款：原聲立式 Double Bass 精選採樣",
+            "取樣容量：2.1 GB (S 碟 /Volumes/S/Ample Sound/AEU_Library)",
+            "核心 Pizzicato 指彈演奏法與基本滑音"
           ]
         }
       },
       {
         "id": "spectrasonics_trilian",
-        "name": "Spectrasonics Trilian (全能低音貝斯音源)",
-        "desc": "原聲低音提琴、電貝斯與經典合成 Bass，音色與動態覆蓋完整",
+        "name": "Spectrasonics Trilian (全能低音貝斯音源旗艦)",
+        "desc": "原聲低音提琴、電貝斯與經典類比合成 Bass，音色與動態覆蓋完整 (40 GB)",
         "size": 40,
         "default": true,
         "badge": "常用推薦",
@@ -1653,27 +2333,59 @@
         }
       },
       {
-        "id": "scarbee_ample_basses",
-        "name": "經典電貝斯系列 (Scarbee Bass / Session Bassist / Ample Bass)",
-        "desc": "包含 Rickenbacker 4003、Pre-Bass、Jay-Bass、MM-Bass 等經典電貝斯取樣",
-        "size": 30,
+        "id": "scarbee_rickenbacker_bass",
+        "name": "Native Instruments Scarbee Rickenbacker Bass (官方授權搖滾電貝斯)",
+        "desc": "官方認證 Rickenbacker 4003 電貝斯，經典英倫搖滾與前衛搖滾金屬咬字 (12 GB)",
+        "size": 12,
+        "default": false,
+        "badge": "搖滾必備",
+        "details": {
+          "overview": "由 Rickenbacker 官方正式授權的 4003 經典電貝斯採樣。獨特的琴身設計與拾音器帶來無可替代的清脆中頻碰撞聲（Clank），是英倫搖滾與復古前衛必備。",
+          "suitable": "英倫搖滾 (Britpop)、經典搖滾、前衛搖滾、獨立流行。",
+          "list": [
+            "實體琴款：Rickenbacker 4003 經典 4 弦電貝斯",
+            "取樣容量：約 12 GB",
+            "撥片 (Palm Muted & Open Pick) 雙重模式與立體聲雙拾音器輸出"
+          ]
+        }
+      },
+      {
+        "id": "scarbee_pre_jay_mm_basses",
+        "name": "Native Instruments Scarbee 經典電貝斯三傑 (Pre-Bass / Jay-Bass / MM-Bass)",
+        "desc": "1957 P-Bass、1970s J-Bass 與 70 年代 Music Man StingRay 經典音箱箱體直錄 (24 GB)",
+        "size": 24,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "收錄各類標誌性硬體電貝斯的取樣庫，具備真實拾音器動態與放大器箱體模擬。",
-          "suitable": "復古搖滾、摩城音樂、硬搖滾、金屬音樂、Fusion 爵士。",
+          "overview": "採樣名家 Thomas Skarbye 的經典電貝斯作品。收錄原聲直錄 (DI) 與經由經典低音箱體 (Amped) 處理的完整力度層採樣。",
+          "suitable": "放克 Funk、復古搖滾、流行情歌、摩城音樂、70/80 年代流行金曲。",
           "list": [
-            "Scarbee Rickenbacker Bass (官方認證經典搖滾電貝斯)",
-            "Scarbee Pre-Bass & Jay-Bass (經典芬達 P-Bass 與 J-Bass)",
-            "Session Bassist Icon Bass & Prime Bass (現代指彈與撥片電貝斯)",
-            "Ample Bass 系列 (P-Bass, J-Bass, Fretless)"
+            "Scarbee Pre-Bass & Amped (1957 Fender Precision Bass, 平卷弦與圓卷弦)",
+            "Scarbee Jay-Bass & Jay-70 (1970s Fender Jazz Bass, 指彈與 Slap 擊勾)",
+            "Scarbee MM-Bass & Amped (1970s Music Man StingRay, 經典主動式雙線圈)"
+          ]
+        }
+      },
+      {
+        "id": "session_bassist_duo",
+        "name": "Native Instruments Session Bassist 律動系列 (Prime Bass & Icon Bass)",
+        "desc": "1981 年經典 Fender Jazz Bass 與 1970 年代 Fender Precision 撥片律動庫 (18 GB)",
+        "size": 18,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "具備自動律動和弦切換與單音演奏雙模式的現代貝斯庫。音色現代乾淨，節奏律動即按即得。",
+          "suitable": "商業流行快節奏、現代流行搖滾、舞曲底層律動。",
+          "list": [
+            "Prime Bass (1981 Fender Jazz Bass 單音指彈與流行節奏循環)",
+            "Icon Bass (1970s Fender Precision 撥片音色與搖滾重節奏循環)"
           ]
         }
       }
     ]
   },
   {
-    "category": "D. 爵士鼓與打擊樂 (Drums & Acoustic Percussion)",
+    "category": "I. 真實鼓組與打擊樂 (Drums & Acoustic Percussion)",
     "icon": "🥁",
     "badge": "打擊節奏",
     "items": [
@@ -1685,24 +2397,24 @@
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "全球專業混音師與製作人公認的聲學鼓標準。由傳奇工程師 George Massenburg 錄製，具備純生鼓音色與完整的室內環境麥克風通道。",
+          "overview": "混音師與製作人公認的聲學鼓標準。由工程師 George Massenburg 錄製，具備純生鼓音色與完整的室內環境麥克風通道。",
           "suitable": "所有需要真實聲學鼓的流行音樂、搖滾、爵士、金屬與配樂製作。",
           "list": [
-            "核心鼓組：Ayotte, Gretsch, Pearl, Premier, Ludwig, Yamaha 頂級鼓組",
+            "核心鼓組：Ayotte, Gretsch, Pearl, Premier, Ludwig, Yamaha 鼓組",
             "麥克風軌道：直接麥克風 (Direct)、軍鼓上下麥、底鼓內外麥、環境麥 (Overheads, Ambience Close, Mid, Far)",
-            "內建強大混音台、EQ、壓縮、殘響效果器與 MIDI 律動庫"
+            "內建混音台、EQ、壓縮、殘響效果器與 MIDI 律動庫"
           ]
         }
       },
       {
         "id": "sdx_hitmaker",
         "name": "Toontrack SDX Hitmaker (經典流行金曲鼓組擴充)",
-        "desc": "傳奇工程師 Hugh Padgham 錄製，70/80 年代流行、搖滾與經典流行曲風鼓組",
+        "desc": "工程師 Hugh Padgham 錄製，70/80 年代流行、搖滾與經典流行曲風鼓組",
         "size": 78,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "在倫敦名棚錄製，涵蓋經典流行音樂中最常聽到的通鼓與軍鼓動態，音色緊湊自然。",
+          "overview": "在倫敦錄音棚錄製，涵蓋經典流行音樂中最常聽到的通鼓與軍鼓動態，音色緊湊自然。",
           "suitable": "流行音樂、經典搖滾、流行抒情歌曲。",
           "list": [
             "經典錄音棚鼓組、閘門殘響軍鼓、多通道混音預設"
@@ -1711,13 +2423,13 @@
       },
       {
         "id": "sdx_fields_of_rock",
-        "name": "Toontrack SDX Fields of Rock (搖滾聖堂擴充)",
+        "name": "Toontrack SDX Fields of Rock (搖滾聖堂錄音棚鼓組擴充)",
         "desc": "英國傳奇 Rockfield 錄音棚錄製，英國經典搖滾與現代流行鼓組",
         "size": 150,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "在 Queen、Oasis 錄製傳奇專輯的 Rockfield 錄音棚實錄，具有極具特色的房間共鳴與動態。",
+          "overview": "在 Queen、Oasis 錄製傳奇專輯的 Rockfield 錄音棚實錄，具有特色的房間共鳴與動態。",
           "suitable": "流行搖滾、現代英式流行、原聲鼓組編曲。",
           "list": [
             "多套經典鼓組、大房間與乾音雙棚取樣"
@@ -1727,12 +2439,12 @@
       {
         "id": "sdx_jazz_sessions",
         "name": "Toontrack SDX The Jazz Sessions (爵士與輕音樂鼓組擴充)",
-        "desc": "頂級爵士鼓組全套，包含鼓刷 (Brushes)、木槌 (Mallets) 與鼓棒演奏法",
+        "desc": "爵士鼓組全套，包含鼓刷 (Brushes)、木槌 (Mallets) 與鼓棒演奏法",
         "size": 150,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "專為爵士樂、原聲不插電與流行慢歌設計。鼓刷掃動的動態極為細膩，銅鈸泛音悠長。",
+          "overview": "專為爵士樂、原聲不插電與流行慢歌設計。鼓刷掃動的動態細膩，銅鈸泛音悠長。",
           "suitable": "爵士樂、Bossanova、原聲不插電流行、輕音樂伴奏。",
           "list": [
             "鼓刷 (Brushes) 演奏法、鼓棒 (Sticks) 演奏法、復古小直徑爵士鼓組"
@@ -1741,13 +2453,13 @@
       },
       {
         "id": "sdx_death",
-        "name": "Toontrack SDX Death (重型搖滾與打擊鼓組)",
-        "desc": "由 Mark Lewis 於佛羅里達實錄，衝擊力極強的現代重型鼓組",
+        "name": "Toontrack SDX Death (重型搖滾與金屬鼓組)",
+        "desc": "由 Mark Lewis 於佛羅里達實錄，衝擊力強勁的現代重型鼓組",
         "size": 106,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "極具穿透力與低頻衝擊力的現代鼓組，適合需要強烈打擊感的音樂。",
+          "overview": "具備穿透力與低頻衝擊力的現代鼓組，適合需要強烈打擊感的音樂。",
           "suitable": "重搖滾、金屬、現代力量流行、遊戲戰鬥配樂。",
           "list": [
             "緊湊厚重的底鼓與軍鼓、高穿透力金屬銅鈸"
@@ -1771,14 +2483,14 @@
       },
       {
         "id": "sdx_state_of_the_art",
-        "name": "Toontrack SDX State of the Art (當代錄音棚鼓組)",
-        "desc": "現代頂級流行錄音棚鼓組，清晰乾淨，通用性極高",
+        "name": "Toontrack SDX State of the Art (當代錄音棚標準鼓組)",
+        "desc": "現代流行錄音棚鼓組，清晰乾淨，通用性極高",
         "size": 78,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "追求極致乾淨與現代感的錄音棚鼓組，適應各類現代流行與舞曲混音。",
-          "suitable": "現代流行、商業舞曲、廣播級流行音樂混音。",
+          "overview": "乾淨與現代感的錄音棚鼓組，適應各類現代流行與舞曲混音。",
+          "suitable": "現代流行、商業舞曲、流行音樂混音。",
           "list": [
             "現代精準調音鼓組、獨立可調動態通道"
           ]
@@ -1817,12 +2529,12 @@
       {
         "id": "sdx_metal_foundry",
         "name": "Toontrack SDX The Metal Foundry (經典硬搖滾與金屬鼓)",
-        "desc": "Toontrack 經典之作，歷史最悠久且最穩定的重型鼓組庫",
+        "desc": "Toontrack 經典之作，穩定耐用的重型鼓組庫",
         "size": 34,
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "經過無數商業唱片驗證的經典鼓組庫。",
+          "overview": "經過商業唱片廣泛驗證的經典鼓組庫。",
           "suitable": "硬搖滾、金屬、力量流行。",
           "list": [
             "多款經典金屬軍鼓與雙踩底鼓設置"
@@ -1837,10 +2549,10 @@
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "收錄紐約傳奇 Avatar Studios、溫哥華 Rock Warehouse 以及納許維爾鄉村名棚的全套擴充。",
+          "overview": "收錄紐約 Avatar Studios、溫哥華 Rock Warehouse 以及納許維爾名棚的全套擴充。",
           "suitable": "各類特色風格、美式鄉村、復古流行、大空間搖滾。",
           "list": [
-            "Avatar (紐約傳奇 Avatar Studios 原聲經典)",
+            "Avatar (紐約 Avatar Studios 原聲經典)",
             "Rock Warehouse (溫哥華名棚大空間大房間反響)",
             "Music City USA (納許維爾鄉村與原聲搖滾)",
             "The Indiependent (西雅圖獨立搖滾乾音特色)",
@@ -1851,12 +2563,12 @@
       {
         "id": "ni_abbey_road_drums",
         "name": "Native Instruments Abbey Road Drummer 全系列 & Studio Drummer",
-        "desc": "英國傳奇艾比路錄音室實錄 50s, 60s, 70s, 80s, Modern, Vintage 爵士鼓組全集",
+        "desc": "英國艾比路錄音室實錄 50s, 60s, 70s, 80s, Modern, Vintage 爵士鼓組全集",
         "size": 35,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "由 Native Instruments 與倫敦 Abbey Road Studios 深度合作。在傳奇的 2 號與 3 號棚使用該年代真實硬體設備錄製。",
+          "overview": "由 Native Instruments 與倫敦 Abbey Road Studios 合作。在傳奇的 2 號與 3 號棚使用該年代真實硬體設備錄製。",
           "suitable": "各年代復古流行、披頭四風格、80 年代流行、現代流行編曲。",
           "list": [
             "Abbey Road 50s, 60s, 70s, 80s Drummer (各時代復古麥克風調音)",
@@ -1873,7 +2585,7 @@
         "default": false,
         "badge": "選配擴充",
         "details": {
-          "overview": "聲學鼓取樣先鋒，具備純生鼓音色與極高的混音自由度。",
+          "overview": "聲學鼓取樣代表之一，具備純生鼓音色與極高的混音自由度。",
           "suitable": "需要精細混音的聲學原聲鼓編曲。",
           "list": [
             "原聲鼓組深度取樣、獨立出血 (Bleed) 與阻抗微調"
@@ -1883,275 +2595,20 @@
     ]
   },
   {
-    "category": "E. 銅管與木管 (Brass & Woodwinds)",
-    "icon": "🎺",
-    "badge": "管樂聲部",
-    "items": [
-      {
-        "id": "cinematic_studio_brass_winds",
-        "name": "Cinematic Studio Brass & Woodwinds (CSB & CSW 管樂合集)",
-        "desc": "澳洲 Trackdown Studios 實錄，與 CSS 弦樂完全對齊之交響銅管與木管",
-        "size": 41,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "Cinematic Studio Series 家族的管樂聲部。CSB 銅管具備溫暖的連奏與強奏時的自然爆發力；CSW 木管則音色清澈、空氣感十足。",
-          "suitable": "電影配樂、管弦大編制、流行歌曲長笛/薩克斯聲部、流行銅管鋪陳。",
-          "list": [
-            "Cinematic Studio Brass (小號、圓號 Horns、長號、大號合奏與獨奏)",
-            "Cinematic Studio Woodwinds (長笛 Flute、雙簧管 Oboe、單簧管 Clarinet、巴松管 Bassoon、短笛)"
-          ]
-        }
-      },
-      {
-        "id": "session_horns_pro",
-        "name": "Native Instruments Session Horns Pro (流行 Funk/R&B 銅管合奏組)",
-        "desc": "10 件套流行管樂團，包含小號、中音/次中音薩克斯、長號，支援 Voicing Assistant 和聲助手",
-        "size": 28,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "華語流行與歐美流行音樂中最常使用的銅管組音源。專為現代流行、放克與 R&B 編配設計，獨家 Voicing Assistant 可自動將單音琴鍵分解為真實銅管和聲配器。",
-          "suitable": "流行音樂、放克 Funk、靈魂樂 Soul、R&B、Big Band 大樂隊。",
-          "list": [
-            "4 支小號、3 支薩克斯 (Alto, Tenor, Baritone)、2 支長號、1 支大號",
-            "獨奏模式與 10 人合奏模式",
-            "Smart Voice Split 智慧聲部拆分技術"
-          ]
-        }
-      },
-      {
-        "id": "spitfire_symphonic_brass_winds",
-        "name": "Spitfire Symphonic Brass & Woodwinds (交響大編制管樂合集)",
-        "desc": "倫敦 AIR Studios 實錄交響大編制銅管與木管樂隊，具備傳奇大廳自然殘響",
-        "size": 65,
-        "default": false,
-        "badge": "選配擴充",
-        "details": {
-          "overview": "Spitfire 交響旗艦管樂。AIR Studios Lyndhurst Hall 的開闊聲場賦予銅管極佳的莊嚴感與電影厚度。",
-          "suitable": "史詩電影配樂、交響管弦大編制、好萊塢大片伴奏。",
-          "list": [
-            "Symphonic Brass (小號獨奏/合奏、圓號群奏、長號、低音長號、大號)",
-            "Symphonic Woodwinds (交響木管全套聲部，含英國管、低音單簧管)"
-          ]
-        }
-      },
-      {
-        "id": "vintage_horns",
-        "name": "Vintage Horns 1 & 2 (復古摩城與爵士管樂套件)",
-        "desc": "60~70 年代摩城 (Motown) 與放克復古管樂音色，粗獷有力、個性鮮明",
-        "size": 5,
-        "default": false,
-        "badge": "選配擴充",
-        "details": {
-          "overview": "專為復古老唱片音色設計的管樂庫。採樣音色帶有濃厚的類比粗粒感與老式磁帶染色。",
-          "suitable": "復古放克、70 年代摩城流行、復古 R&B、獨立復古風格編曲。",
-          "list": [
-            "復古小號、長號、薩克斯管與長笛短句採樣"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "category": "F. 國樂與亞洲傳統樂器 (Chinese & Asian Instruments)",
-    "icon": "🪕",
-    "badge": "國樂民樂",
-    "items": [
-      {
-        "id": "threebody_chinese",
-        "name": "三體聲音科技國樂全套 (Three-Body Technology 旗艦六件套)",
-        "desc": "國產物理建模與高解析真實取樣，包含揉弦、滑音與地道中式演奏法 (S 碟已裝載)",
-        "size": 30,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "被譽為目前演奏法最地道的國樂採樣音源。利用物理建模與先進演奏法捕捉，還原中國傳統樂器細微的滑音、揉弦、打音、擻音等特色。",
-          "suitable": "古風流行、國風電音、仙俠影視配樂、民族管弦、現場演奏。",
-          "list": [
-            "鳳凰笛 (Dizi - 竹笛：曲笛與梆笛，具備真實氣聲與滑音)",
-            "尋音簫 (Xiao - 洞簫：幽深空靈，氣聲與弱奏自然)",
-            "傾城二胡 (Erhu - 二胡：具備快弓、慢弓、揉弦與墊指滑音)",
-            "臥龍古箏 (Guzheng - 古箏：真實搖指、刮奏與滑音技巧)",
-            "國色琵琶 (Pipa - 琵琶：輪指、煞音與絞弦特色演奏法)",
-            "裂空嗩吶 (Suona - 嗩吶：嘹亮穿透，氣鳴滑音逼真)"
-          ]
-        }
-      },
-      {
-        "id": "kong_audio",
-        "name": "空音 Kong Audio 完整合集 (23 款中國民族樂器全套)",
-        "desc": "華語音樂經典民族音源，涵蓋吹管、彈撥、拉弦、打擊四大聲部所有樂器",
-        "size": 120,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "華語流行與配樂製作最齊全的中國民族樂器庫。音色純粹樸實，在華語流行編曲中極易調配混音。",
-          "suitable": "國風流行音樂、大型民族管弦樂編曲、武俠戲劇配樂、民族打擊樂鋪陳。",
-          "list": [
-            "吹管：曲笛、梆笛、簫、嗩吶、管子、笙、葫蘆絲、巴烏",
-            "彈撥：古箏、琵琶、中阮、大阮、柳琴、揚琴、三弦",
-            "拉弦：二胡、中胡、高胡、板胡、京胡",
-            "打擊：堂鼓、排鼓、大鑼、小鑼、碰鈴、木魚等全套中式打擊"
-          ]
-        }
-      },
-      {
-        "id": "jade_ethnic_orchestra",
-        "name": "Strezov Sampling JADE Ethnic Orchestra & Evolutions (亞洲管弦旗艦)",
-        "desc": "華人演奏家實錄之亞洲管弦樂合集，多種傳統樂器與亞洲民族合唱",
-        "size": 135,
-        "default": false,
-        "badge": "選配擴充",
-        "details": {
-          "overview": "由保加利亞 Strezov 與華人音樂家合作錄製的大型亞洲管弦樂庫。聲場宏大立體，包含罕見的亞洲弓弦樂隊合奏。",
-          "suitable": "史詩級東方管弦配樂、大型紀錄片、大製作仙俠遊戲、影視配樂。",
-          "list": [
-            "蒙古馬頭琴獨奏與合奏、呼麥喉音 (Khoomei)",
-            "日本尺八 (Shakuhachi)、日本箏 (Koto)",
-            "完整中國民族弓弦樂隊合奏 (Chinese String Ensemble)",
-            "特色亞洲合唱團人聲 (Asian Choirs)"
-          ]
-        }
-      },
-      {
-        "id": "evolution_world_colors",
-        "name": "Evolution Series World Colors 國樂系列合集",
-        "desc": "澳洲 Evolution 系列出品之乾音細膩取樣：二胡、琵琶、笛子、簫、塤、古琴、揚琴、古箏、巴烏",
-        "size": 25,
-        "default": false,
-        "badge": "選配擴充",
-        "details": {
-          "overview": "Evolution Series 出品的亞洲傳統樂器精細乾音庫。麥克風擺位極近，細節清晰，極好添加自訂空間殘響效果。",
-          "suitable": "現代流行國風編曲、清爽好混音的國樂點綴。",
-          "list": [
-            "World Colors Erhu, Pipa, Dizi, Xiao, Xun, Guqin, Yangqin, Guzheng, Bawu 全套 9 款"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "category": "G. 世界音樂與特色民族樂器 (World & Ethnic Instruments)",
-    "icon": "🌍",
-    "badge": "世界民樂",
-    "items": [
-      {
-        "id": "ethno_world_6",
-        "name": "Best Service - Ethno World 6 Complete (全球樂器庫 + 人聲庫)",
-        "desc": "涵蓋全球五大洲 320 多款民族樂器與原生態特色人聲，世界音樂最權威庫",
-        "size": 33,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "由 Marcel Barsotti 歷時數十年錄製的世界音樂巨作。涵蓋中東、非洲、歐洲、美洲與大洋洲的所有重要民間樂器與原住民人聲短句。",
-          "suitable": "世界音樂、旅遊紀錄片、異域風情流行歌曲、大片背景音樂。",
-          "list": [
-            "弦樂器：西塔琴 (Sitar)、烏德琴 (Oud)、薩茲琴 (Saz)、曼陀鈴、布祖基琴 (Bouzouki)",
-            "管樂器：杜讀管 (Duduk)、印加排笛 (Pan Flute)、愛爾蘭低音哨笛、印第安笛",
-            "打擊樂：達布卡鼓 (Darbuka)、非洲金貝鼓 (Djembe)、鋼鼓 (Steel Pan)、框鼓 (Frame Drum)",
-            "人聲庫：全球原生態人聲採樣、宗教吟唱、呼麥、民族短句"
-          ]
-        }
-      },
-      {
-        "id": "accordions_2",
-        "name": "Best Service - Accordions 2 (Eduardo Tarilonte 手風琴全套)",
-        "desc": "收錄全球 13 款特色手風琴與簧片風鳴樂器，從皮亞佐拉探戈班多鈕到法式香頌手風琴",
-        "size": 8,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "採樣名家 Eduardo Tarilonte 傾力打造的手風琴音源。完美還原風箱的動態控制與簧片震動。",
-          "suitable": "阿根廷探戈、法式香頌、義大利民謠、流行歌曲特色配器。",
-          "list": [
-            "Bandoneon (阿根廷班多鈕琴 - 皮亞佐拉探戈靈魂)",
-            "French Musette (法式香頌手風琴)",
-            "Concertina (愛爾蘭六角手風琴)",
-            "Accordion (標準鍵盤手風琴與巴揚手風琴)"
-          ]
-        }
-      },
-      {
-        "id": "uilleann_pipes",
-        "name": "Ilya Efimov Uilleann Pipes (愛爾蘭風笛)",
-        "desc": "極致真實的愛爾蘭風笛，具備細膩演奏裝飾音與無縫連奏 (已完成底層二進制修補)",
-        "size": 1.5,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "愛爾蘭風笛權威取樣音源。完美捕捉風笛特有的連奏滑音、顫音與裝飾跳音，具備極佳的民族旋律感。",
-          "suitable": "愛爾蘭風格音樂、居爾特民謠、電影英雄主題曲、大河之舞風情。",
-          "list": [
-            "無縫真實 Legato 連奏、裝飾音演奏鍵位切換、風箱氣鳴伴奏管聲"
-          ]
-        }
-      },
-      {
-        "id": "harp_collection",
-        "name": "電影級雙豎琴合集 (Cinesamples CineHarp & Skaila Kanga Harp)",
-        "desc": "索尼配樂棚實錄好萊塢電影豎琴，以及傳奇豎琴大師 Skaila Kanga 重製版",
-        "size": 17,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "涵蓋好萊塢大片中常用的華麗豎琴刮奏 (Glissando) 與古典單音指彈。",
-          "suitable": "電影配樂、流行浪漫抒情歌曲、童話氛圍音樂、管弦伴奏。",
-          "list": [
-            "CineHarp (Sony 哥倫比亞影業傳奇配樂舞台實錄，多麥克風通道)",
-            "Skaila Kanga Harp Redux (英國傳奇大師 Skaila Kanga 演奏取樣)"
-          ]
-        }
-      },
-      {
-        "id": "world_percussion_taiko",
-        "name": "Evolution Series World Percussion Taiko (和太鼓全套)",
-        "desc": "日本傳統和太鼓獨奏與合奏，強大衝擊力與動態範圍 (已完成二進制規範化)",
-        "size": 3,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "由世界頂級打擊樂大師在專業配樂棚錄製。收錄巨大太鼓的震撼低音震動與中高太鼓的急促排擊。",
-          "suitable": "大片戰鬥節奏、東方史詩音樂、動作片高潮打擊鋪陳。",
-          "list": [
-            "大太鼓 (O-Daiko)、長胴太鼓、締太鼓合奏與單擊技巧"
-          ]
-        }
-      },
-      {
-        "id": "harmonica_suite",
-        "name": "藍調口琴與半音階口琴合集 (Chris Hein / Ilya Efimov / Bolder Sounds)",
-        "desc": "收錄十孔藍調口琴 (Blues Harp) 與爵士半音階口琴，吸吐氣切換與壓音技巧逼真",
-        "size": 5,
-        "default": true,
-        "badge": "常用推薦",
-        "details": {
-          "overview": "收錄各類常用口琴音源。真實還原口琴吸氣 (Draw)、吐氣 (Blow) 與壓音 (Bending) 技巧。",
-          "suitable": "美式藍調、鄉村民謠、爵士樂口琴獨奏、流行民謠插曲。",
-          "list": [
-            "Chris Hein Chromatic Harmonica (爵士與流行半音階口琴)",
-            "Ilya Efimov Retro Harmonica (十孔藍調口琴，真實壓音滑音)",
-            "Bolder Sounds Harmonica"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "category": "H. 影視氛圍、大型管弦合集與聲音設計 (Cinematic & Sound Design)",
-    "icon": "🌌",
+    "category": "J. 影視配樂與聲音設計 (Cinematic & Sound Design)",
+    "icon": "🎬",
     "badge": "影視氛圍",
     "items": [
       {
-        "id": "spectrasonics_omnisphere",
-        "name": "Spectrasonics Omnisphere 2 (旗艦合成器與聲響設計引擎)",
-        "desc": "全球專業音樂製作與配樂界標竿合成器，收錄 60GB 原廠核心取樣與音色預設",
+        "id": "spectrasonics_omnisphere_2",
+        "name": "Spectrasonics Omnisphere 2 (旗艦綜合合成器與聲音設計)",
+        "desc": "收錄超過 14,000 款原廠音色、硬體合成器模型整合，現代配樂與流行必備 (已裝載 60 GB)",
         "size": 60,
         "default": true,
         "badge": "常用推薦",
         "details": {
-          "overview": "幾乎出現在所有好萊塢電影配樂與當代流行專輯中的旗艦合成器。結合深度取樣與多種合成架構，內建數千種音色預設。",
-          "suitable": "所有流行音樂、電影配樂、遊戲聲音設計、氛圍鋪墊 (Pad)、現代電子流行。",
+          "overview": "軟體合成器代表作。結合深度取樣與多重合成引擎，無論是流行鋪底 (Pad)、電影音效、清脆鈴音還是宏大聲景均極為出色。",
+          "suitable": "所有音樂風格、電影配樂、現代流行情歌、電子音樂、氛圍鋪墊。",
           "list": [
             "硬體合成器模型整合 (支援數十款經典實體合成器面板對應)",
             "電影氛圍聲景 (Cinematic Soundscapes & Textures)",
@@ -2167,7 +2624,7 @@
         "default": false,
         "badge": "影視選配",
         "details": {
-          "overview": "Spitfire 最著名的一站式管弦配樂合集。全系列 6 大部合集，各自擁有鮮明獨特的音色性格。",
+          "overview": "Spitfire 一站式管弦配樂合集。全系列 6 大部合集，各自擁有鮮明獨特的音色性格。",
           "suitable": "電影預告片、現代遊戲配樂、史詩戰鬥、暗黑氛圍、北歐極簡管弦。",
           "list": [
             "Albion ONE (經典配樂旗艦：大編制管弦、史詩打擊、合成器紋理)",
@@ -2182,13 +2639,13 @@
       {
         "id": "spitfire_hz_percussion",
         "name": "Spitfire 漢斯季默打擊全套 (HZ01 倫敦 / HZ02 洛杉磯 / HZ03 獨奏家)",
-        "desc": "AIR Studios Lyndhurst Hall 實錄之巨型電影打擊樂團與特色打擊",
+        "desc": "AIR Studios Lyndhurst Hall 實錄之電影打擊樂團與特色打擊",
         "size": 60,
         "default": false,
         "badge": "影視選配",
         "details": {
-          "overview": "Spitfire 與漢斯季默聯名開發之電影打擊樂庫。收錄倫敦頂尖打擊樂團在傳奇大廳的合奏重擊。",
-          "suitable": "好萊塢動作大片配樂、史詩戰鬥、遊戲打擊樂鋪陳。",
+          "overview": "Spitfire 與漢斯季默聯名開發之電影打擊樂庫。收錄倫敦打擊樂團在傳奇大廳的合奏重擊。",
+          "suitable": "動作電影配樂、史詩戰鬥、遊戲打擊樂鋪陳。",
           "list": [
             "HZ01 Hans Zimmer Percussion London Ensembles (倫敦大型打擊樂團版)",
             "HZ02 Hans Zimmer Percussion Los Angeles (洛杉磯版特色打擊)",
@@ -2199,12 +2656,12 @@
       {
         "id": "olafur_arnalds_suite",
         "name": "Ólafur Arnalds 系列 (Stratus / Chamber Evolutions / Composer Toolkit)",
-        "desc": "冰島極簡大師聯名：演算法矩陣鋼琴、室內樂演變紋理與極簡聲景",
+        "desc": "冰島極簡作曲家聯名：演算法矩陣鋼琴、室內樂演變紋理與極簡聲景",
         "size": 30,
         "default": false,
         "badge": "影視選配",
         "details": {
-          "overview": "收錄冰島新古典作曲家 Ólafur Arnalds 的標誌性極簡聲景與自製演算法鋼琴。",
+          "overview": "收錄冰島新古典作曲家 Ólafur Arnalds 的標誌性極簡聲景與演算法鋼琴。",
           "suitable": "獨立文藝電影、北歐新古典音樂、抒情安靜聲景。",
           "list": [
             "Stratus (矩陣演算法雙鋼琴系統)",
@@ -2221,7 +2678,7 @@
         "default": false,
         "badge": "影視選配",
         "details": {
-          "overview": "動作電影預告片中最常聽到的金屬撞擊、重裝爆炸與電子工業循環節奏。",
+          "overview": "動作電影預告片中常用的金屬撞擊、重裝爆炸與電子工業循環節奏。",
           "suitable": "動作片、預告片、懸疑緊張氛圍、混種電子搖滾。",
           "list": [
             "工業廢棄物撞擊打擊、巨型史詩大鼓合奏、節奏切片循環"
@@ -2242,24 +2699,40 @@
             "包含 Core Library 加上 BackBeat, Retro Funk, Metamorphosis, Burning Grooves 等全套擴充"
           ]
         }
+      },
+      {
+        "id": "voxos_choirs",
+        "name": "Cinesamples Voxos 2 & All Saints 聖徒合唱團 (好萊塢史詩合唱與人聲)",
+        "desc": "好萊塢管弦人聲合唱團、男女聲部與倫敦全聖徒大教堂合唱管風琴",
+        "size": 35,
+        "default": false,
+        "badge": "影視選配",
+        "details": {
+          "overview": "好萊塢電影常用的拉丁文合唱與史詩聖歌人聲。包含 Phrase Builder 樂句構建器。",
+          "suitable": "史詩電影配樂、奇幻題材、宏大管弦交響背景。",
+          "list": [
+            "Voxos 2 (完整的 Sopranos, Altos, Tenors, Basses 與童聲 Boys Choir)",
+            "All Saints Choir (倫敦 Tooting 全聖徒大教堂莊嚴管風琴與唱詩班)"
+          ]
+        }
       }
     ]
   },
   {
-    "category": "I. 常用合成器與效果器外掛 (💻 電腦內建 1TB SSD，不佔外接空間)",
+    "category": "K. 常用本機外掛 (💻 電腦內建 1TB SSD，不佔外接空間)",
     "icon": "💻",
     "badge": "本機外掛",
     "items": [
       {
         "id": "arturia_v_collection",
-        "name": "Arturia V Collection (33 款傳奇類比與數位鍵盤名機)",
-        "desc": "Minimoog, Prophet-5, CS-80, Jupiter-8, Juno-6, Mellotron 等經典硬體合成器物理建模",
+        "name": "Arturia V Collection (33 款類比與數位鍵盤名機)",
+        "desc": "Minimoog, Prophet-5, CS-80, Jupiter-8, Juno-6, Mellotron 等硬體合成器物理建模",
         "size": 40,
         "default": true,
         "isInternal": true,
         "badge": "本機常用",
         "details": {
-          "overview": "法國 Arturia 開發的經典鍵盤旗艦套件。採用專利 TAE 物理建模技術，完美重現上世紀所有最著名的硬體合成器與電子琴聲響。",
+          "overview": "法國 Arturia 開發的鍵盤套件。採用專利 TAE 物理建模技術，重現上世紀著名的硬體合成器與電子琴聲響。",
           "suitable": "流行音樂、合成波 Synthwave、電影配樂、放克 Funk、現代流行電子。",
           "list": [
             "類比合成器：Mini V (Minimoog), Prophet-5 V, CS-80 V, Jup-8 V, Jun-6 V, ARP 2600 V",
@@ -2277,8 +2750,8 @@
         "isInternal": true,
         "badge": "本機常用",
         "details": {
-          "overview": "Roland 官方雲端音色庫，涵蓋華語流行音樂 80~00 年代所有經典硬體音色，包括著名的 SRX World 國樂世界卡與 SRX Brass/Strings。",
-          "suitable": "華語流行情歌、90 年代流行金曲、演唱會經典鍵盤音色。",
+          "overview": "Roland 官方音色庫，涵蓋流行音樂 80~00 年代經典硬體音色，包括 SRX World 國樂世界卡與 SRX Brass/Strings。",
+          "suitable": "流行情歌、90 年代流行金曲、現場舞台經典鍵盤音色。",
           "list": [
             "經典機型：D-50, JD-800, JV-1080, XV-5080 音源模組",
             "節奏機：TR-808, TR-909 鼓機",
@@ -2289,17 +2762,17 @@
       {
         "id": "korg_collection_gadget",
         "name": "KORG Collection (Triton / M1 / Wavestation) + Gadget 2 Bundle",
-        "desc": "華語流行經典 TRITON 工作站、M1 音色模組與 40 款 Gadget 城市音色模組",
+        "desc": "流行經典 TRITON 工作站、M1 音色模組與 40 款 Gadget 城市音色模組",
         "size": 20,
         "default": true,
         "isInternal": true,
         "badge": "本機常用",
         "details": {
-          "overview": "KORG 經典名琴合集。包含華語流行音樂演唱會最常用的 TRITON 工作站名琴與 M1 鋼琴/風琴音色。",
+          "overview": "KORG 經典鍵盤合集。包含流行音樂現場與編曲常用的 TRITON 工作站與 M1 鋼琴/風琴音色。",
           "suitable": "流行音樂編曲、現場演出、舞曲製作。",
           "list": [
-            "KORG TRITON & TRITON Extreme (華語流行編曲核心工作站)",
-            "KORG M1 (90 年代流行舞曲 House 鋼琴與風琴標竿)",
+            "KORG TRITON & TRITON Extreme (流行編曲核心工作站)",
+            "KORG M1 (90 年代流行舞曲 House 鋼琴與風琴代表)",
             "KORG Wavestation (波形向量合成器)",
             "KORG Gadget 2 (40 款各具特色之輕量合成器與打擊模組)"
           ]
@@ -2314,7 +2787,7 @@
         "isInternal": true,
         "badge": "本機常用",
         "details": {
-          "overview": "現代流行歌曲、EDM 與電音編曲中最常使用的軟體合成器，音色明亮銳利、低頻扎實。",
+          "overview": "現代流行歌曲、EDM 與電音編曲中常用的軟體合成器，音色明亮銳利、低頻扎實。",
           "suitable": "現代流行、EDM、Hip-Hop、Trap、電子舞曲。",
           "list": [
             "Xfer Serum (當代波表合成器標準)",
@@ -2332,13 +2805,13 @@
         "isInternal": true,
         "badge": "本機常用",
         "details": {
-          "overview": "專業混音與母帶工程必備之高階效果器套裝，安裝於本機系統槽。",
+          "overview": "專業混音與母帶工程高階效果器套裝，安裝於本機系統槽。",
           "suitable": "錄音、人聲後製、分軌混音、母帶後期處理。",
           "list": [
             "FabFilter Total Bundle (Pro-Q 3, Pro-C 2, Pro-L 2, Saturn 2 等全套)",
-            "Soundtoys 5 (Decapitator 磁帶飽和, Echoboy 延遲神器, Little AlterBoy 人聲變調)",
+            "Soundtoys 5 (Decapitator 磁帶飽和, Echoboy 延遲效果器, Little AlterBoy 人聲變調)",
             "iZotope Ozone 11 Advanced & Neutron 4 (母帶後期與智慧混音套裝)",
-            "Valhalla DSP (VintageVerb, Delay, Shimmer 經典空間系效果器)"
+            "Valhalla DSP (VintageVerb, Delay, Shimmer 空間效果器)"
           ]
         }
       }
@@ -2457,7 +2930,7 @@
           } else if (item.isInternal) {
             badgeTag = `<span class="badge-tag badge-internal-tag">💻 電腦本機</span>`;
           } else if (item.badge) {
-            const isCore = item.badge.includes("常備") || item.badge.includes("標竿") || item.badge.includes("聖杯") || item.badge.includes("指名") || item.badge.includes("流行") || item.badge.includes("全能");
+            const isCore = item.badge.includes("常備") || item.badge.includes("標竿") || item.badge.includes("標準") || item.badge.includes("指名") || item.badge.includes("流行") || item.badge.includes("全能");
             badgeTag = `<span class="badge-tag ${isCore ? 'badge-core' : 'badge-opt'}">${item.badge}</span>`;
           }
 
@@ -2572,7 +3045,7 @@
             }
           });
         });
-        showToast("🎯 已切換至「阿三老師演唱會常備推薦 (~1.8 TB)」");
+        showToast("🎯 已切換至「常用基礎配置 (~1.0 TB)」");
       } else if (mode === "sd3_combo") {
         // Core + SD3 Core + Hitmaker + Fields of Rock + Jazz Sessions
         PRODUCTS_DATA.forEach(cat => {
@@ -2588,7 +3061,7 @@
         selectionState["sdx_hitmaker"] = true;
         selectionState["sdx_fields_of_rock"] = true;
         selectionState["sdx_jazz_sessions"] = true;
-        showToast("🥁 已啟用「常備 + SD3 頂級生鼓升級套裝 (~2.3 TB)」");
+        showToast("🥁 已啟用「常用配置 + SD3 錄音棚鼓組擴充 (~1.5 TB)」");
       }
       saveState();
       renderList();
@@ -2674,7 +3147,7 @@
         alertEl.style.background = "rgba(56, 189, 248, 0.15)";
         alertEl.style.color = "var(--primary)";
         alertEl.style.borderColor = "rgba(56, 189, 248, 0.35)";
-        alertEl.innerText = "👍 空間配置良好！滿足多數頂級管弦與演唱會音源需求。";
+        alertEl.innerText = "👍 空間配置良好！滿足多數管弦、樂隊與流行編曲音源需求。";
       } else {
         circleEl.style.stroke = "var(--accent-green)";
         alertEl.style.background = "rgba(16, 185, 129, 0.15)";
