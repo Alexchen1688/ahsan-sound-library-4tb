@@ -911,7 +911,7 @@
     <header>
       <div class="title-group">
         <h1>🎹 阿三老師 <span>4TB 外接硬碟音源配置挑選器</span></h1>
-        <div class="subtitle">MacBook Pro (M5 Pro 1TB 內建 SSD) + Crucial X9 4TB APFS 外接音色專用硬碟 — 現場演唱會實體方案</div>
+        <div class="subtitle">MacBook Pro (M5 Pro 1TB 內建 SSD) + Crucial X9 4TB APFS 外接音色專用硬碟 — 空間挑選與實體配置方案</div>
       </div>
       <div class="badges-row">
         <div class="badge-info">💾 Crucial X9 4TB APFS</div>
@@ -972,10 +972,10 @@
             <span>📋 一鍵複製配置回傳給小林</span>
           </button>
           <button class="btn btn-preset" onclick="applyPreset('core')">
-            <span>🎯 恢復阿三老師演唱會常備 (~1.8 TB)</span>
+            <span>🎯 常用基礎配置 (~1.8 TB)</span>
           </button>
           <button class="btn btn-preset" onclick="applyPreset('sd3_combo')">
-            <span>🥁 常備 + SD3 頂級生鼓升級 (~2.3 TB)</span>
+            <span>🥁 常用配置 + SD3 爵士鼓 (~2.3 TB)</span>
           </button>
           <button class="btn btn-secondary" onclick="openImportModal()">
             <span>🔑 匯入代碼還原配置</span>
@@ -1064,7 +1064,7 @@
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#10b981;">Ample Sound</strong> (華語演唱會專用：民謠木吉他、電吉他、古典吉他旗艦全套)</span>
+                <span><strong style="color:#10b981;">Ample Sound</strong> (民謠木吉他、電吉他、古典吉他全套)</span>
                 <span style="color:#fff; font-weight:600;">111 GB</span>
               </div>
               <div class="folder-progress-bg">
@@ -1248,3073 +1248,1103 @@
 
     // Full verified database with real disk measurements from /Volumes/S
     const PRODUCTS_DATA = [
+  {
+    "category": "A. 原聲鋼琴與鍵盤樂器 (Pianos & Keyboards)",
+    "icon": "🎹",
+    "badge": "鍵盤聲部",
+    "items": [
       {
-        category: "A. 華語演唱會主力弦樂與頂級鋼琴",
-        icon: "🎹",
-        badge: "現場核心",
-        items: [
-          {
-            id: "lass3",
-            name: "Audiobro LASS 3 (LA Scoring Strings 3)",
-            desc: "華語流行演唱會現場與頂級配樂標竿弦樂，具極強穿透力與真實 Legato",
-            size: 220,
-            default: true,
-            badge: "演唱會標竿",
-            details: {
-              overview: "華語流行音樂、演唱會現場伴奏樂隊與好萊塢電視電影配樂業界首選弦樂。以強烈的穿透力、超真實的 Legato 連奏與靈活的分軌著稱，無論是快歌頓弓或是慢歌抒情長音皆屬頂峰。",
-              suitable: "流行演唱會現場 Live 伴奏、大流行副歌爆發弦樂、電影電視主題曲、室內樂重奏。",
-              list: [
-                "First Chair Solo 獨奏首席組（獨奏小提琴、獨奏中提琴、獨奏大提琴、獨奏低音提琴）",
-                "Section A / B / C 彈性編制合奏（可單獨載入小編制或疊加為龐大交響弦樂隊）",
-                "全套 Articulations：Real Legato (真連奏)、Portamento (滑音)、Glissando (滑奏)、Spiccato (頓弓)、Staccato (斷奏)、Pizzicato (撥弦)、Tremolo (震音)",
-                "Sordino 弱音器音色庫（抒情、溫暖、柔和聲線必備）",
-                "ARC 高級控制引擎：動態力度交叉淡入淡出、色彩濾波器與微調律系統 (Micro-tuning)"
-              ]
-            }
-          },
-          {
-            id: "keyscape",
-            name: "Spectrasonics Keyscape",
-            desc: "當代鍵盤樂器終極寶庫，收錄極致三角鋼琴、立式鋼琴、電鋼琴與復古鍵盤",
-            size: 90,
-            default: true,
-            badge: "鍵盤聖杯",
-            details: {
-              overview: "Spectrasonics 歷時 10 年尋訪全球珍稀鍵盤、修復名琴並進行深度極致採樣的鍵盤音源聖杯。包含 36 款歷史名琴，多重力度感應與踏板噪聲物理模型。",
-              suitable: "流行音樂、R&B、爵士、演唱會現場彈奏、電影配樂抒情鋼琴。",
-              list: [
-                "LA Custom C7 Grand Piano（洛杉磯定製版 Yamaha C7 平台鋼琴，現代流行標誌音色）",
-                "Wing Upright Piano（經典立式鋼琴）",
-                "Custom 'E' Rhodes Electric Piano（經典洛杉磯 E-Piano，80/90 年代流行情歌必備）",
-                "Classic Rhodes Mark I / Mark II（經典手提電鋼琴）",
-                "Wurlitzer 140B & 200A（經典電子手提琴，溫暖復古過載）",
-                "Clavinet C & D6（放克 Funk 必備敲弦鍵盤）",
-                "Dolceola、Celeste（鋼片琴）、Dulcitone",
-                "Vintage Vibe 系列、Chimeatron、Toy Piano（玩具鋼琴）、Bell Tone 鐘音鍵盤"
-              ]
-            }
-          },
-          {
-            id: "ivory",
-            name: "Synthogy Ivory by JR Samples V2.0.1 (象牙鋼琴)",
-            desc: "經典象牙鋼琴完整版，音色乾淨通透、動態層次豐富，流行彈奏首選",
-            size: 20,
-            default: true,
-            badge: "流行純鋼琴",
-            details: {
-              overview: "Synthogy 經典象牙鋼琴完整版。以音質純淨、立體聲場寬廣、動態階梯平滑著稱，是華語流行音樂演唱會樂手最常備的即時彈奏鋼琴之一。",
-              suitable: "華語流行抒情歌、演唱會現場 Keyboard 1/2 彈奏、純鋼琴伴奏、錄音室獨奏。",
-              list: [
-                "German Steinway D 9呎旗艦三角鋼琴（德國史坦威 D，顆粒感清晰，高頻通透）",
-                "深度共振建模（Sympathetic Resonance 琴弦交疊共鳴）",
-                "踏板升降噪音、制音器離鍵取樣（Key-Release 物理反饋）",
-                "多麥克風透視調整（可切換近場乾淨彈奏或音樂廳宏大空間感）"
-              ]
-            }
-          },
-          {
-            id: "modernd",
-            name: "VI Labs Modern D 鋼琴 (⚠️ 系統不相容，無法安裝)",
-            desc: "【注意告知】經實測在最新 macOS Apple Silicon 架構下無法相容安裝，特此告知老師！鋼琴主力建議使用 Keyscape (90GB) 與 Synthogy Ivory (20GB)",
-            size: 0,
-            default: false,
-            disabled: true,
-            badge: "系統不相容",
-            details: {
-              overview: "⚠️ 【系統相容性告知】：經實測在最新 macOS Apple Silicon (M3/M5) 架構下目前無法相容安裝，特此告知老師！",
-              suitable: "本系統中已自動排除，建議使用 Keyscape (90GB) 與 Synthogy Ivory (20GB) 作為主力鋼琴。",
-              list: ["本套件在當前系統架構不相容，已排除，不佔用硬碟空間。"]
-            }
-          }
-        ]
+        "id": "ni_noire",
+        "name": "Native Instruments Noire (Nils Frahm 現代傳奇平台鋼琴)",
+        "desc": "Yamaha CFX 9 呎頂級演奏三角鋼琴，收錄純淨 (Pure) 與毛氈 (Felt) 雙音色，內建粒子引擎",
+        "size": 15,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "德國當代作曲家 Nils Frahm 於包豪斯 Saal 3 錄音棚錄製的傳奇客製化 Yamaha CFX 平台鋼琴。具有極佳的動態解析度與獨特粒子演算法（Particles Engine）。",
+          "suitable": "現代流行、抒情伴奏、新古典、電影與遊戲配樂。",
+          "list": [
+            "Noire Pure (純淨原聲平台鋼琴：清晰明亮、動態層次分明)",
+            "Noire Felt (毛氈弱音鋼琴：溫暖柔和、空氣感豐富，新古典與抒情首選)",
+            "Particles Engine (粒子引擎：隨彈奏力度自動生成泛音脈衝與聲響織體)"
+          ]
+        }
       },
       {
-        category: "B. Spectrasonics 核心旗艦合成器與 Bass",
-        icon: "⚡",
-        badge: "現場核心",
-        items: [
-          {
-            id: "omnisphere",
-            name: "Spectrasonics Omnisphere 3 (80GB 原廠核心 + 40GB 擴充 PACK)",
-            desc: "當代旗艦合成器 3 代，收錄 80GB 原廠核心音色與 40GB 流行影視擴充包，放於外接 STEAM 槽",
-            size: 120,
-            default: true,
-            badge: "編曲神機",
-            details: {
-              overview: "現代音樂製作不可或缺的旗艦合成器 3 代。結合極深度的採樣聲音庫與強大波表合成引擎。本次配置完整 80GB 原廠核心音色庫，外加 40GB 流行演唱會與影視擴充 Sound Packs。",
-              suitable: "全風格流行編曲、演唱會 Pad 氛圍鋪底、重型副歌琶音、電影配樂、電子舞曲。",
-              list: [
-                "80GB 原廠核心音色庫（數千種經典類比、數位、物理聲響取樣）",
-                "40GB 官方與頂級第三方擴充 PACK（流行舞曲、大編制電影配樂、氛圍鋪墊）",
-                "硬體合成器整合（支援數十款實體鍵盤硬體 1:1 控制）",
-                "全套琶音器、強大顆粒合成 (Granular) 與內建 58 款高品質 FX 效果器"
-              ]
-            }
-          },
-          {
-            id: "trilian",
-            name: "Spectrasonics Trilian",
-            desc: "業界公認最強貝斯音源，收錄傳奇聲學低音提琴、電貝斯與經典合成 Bass",
-            size: 40,
-            default: true,
-            badge: "Bass聖杯",
-            details: {
-              overview: "貝斯音源的全球最高標準。收錄歷史上最受推崇的原聲貝斯 (Acoustic Bass)、電貝斯 (Electric Bass) 以及傳奇類比合成器低音 (Synth Bass)。",
-              suitable: "流行樂、放克 Funk、搖滾、爵士、R&B、嘻哈與電子音樂低音聲部。",
-              list: [
-                "Acoustic Upright Bass（頂級聲學立式低音提琴，溫暖木質低頻）",
-                "Clean Fender Jazz Bass / Precision Bass（錄音室經典指彈、撥片、悶音）",
-                "Chapman Stick、Fretless 無品貝斯（細膩滑音表現）",
-                "Slap Bass（放克敲弦貝斯，打擊感強烈）",
-                "Classic Synth Bass（Moog Minimoog, Roland TB-303, ARP 等傳奇類比合成低音）"
-              ]
-            }
-          }
-        ]
+        "id": "ni_the_grandeur",
+        "name": "Native Instruments The Grandeur (漢堡史坦威 D 平台鋼琴)",
+        "desc": "Steinway Model D-274 平台鋼琴，古典與現代流行標準音色，中高頻通透平衡",
+        "size": 6,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "採樣自一台狀況極佳的漢堡 Steinway D 平台鋼琴，在頂級聲學空間實錄。低音渾厚扎實，高頻晶瑩剔透，音色動態均勻好混音。",
+          "suitable": "古典獨奏、流行歌曲鋼琴伴奏、爵士與管弦配樂。",
+          "list": [
+            "Steinway Model D Concert Grand (完整力度層與踏板共鳴採樣)",
+            "內建多樣化音色輪廓調整 (Tone, Color, Dynamic Resonance)",
+            "半音與弱音踏板物理建模噪音"
+          ]
+        }
       },
       {
-        category: "C. 國樂與亞洲傳統樂器 (完整旗艦版)",
-        icon: "🏮",
-        badge: "現場國樂",
-        items: [
-          {
-            id: "kong",
-            name: "KONG Audio 完整旗艦版 (23款中國民族樂器全套)",
-            desc: "市場罕見 120GB 完整旗艦版 (非市售 6GB 簡配)，收錄二胡、琵琶、古箏、笛子、嗩吶等 23 款樂器",
-            size: 120,
-            default: true,
-            badge: "國樂全能",
-            details: {
-              overview: "中國傳統民族樂器音源的最權威代表。本版本為業界極其罕見之 120GB 完整旗艦版（市售多為 6GB 壓縮閹割版），涵蓋吹、拉、彈、打等 23 款全套民族樂器，技巧與演奏法極度完整。",
-              suitable: "古風流行歌曲、演唱會國樂客串、武俠仙俠、影視歷史劇配樂。",
-              list: [
-                "拉弦類：二胡 (Erhu I & II)、高胡 (GaoHu)、中胡 (ZhongHu)、板胡 (BanHu)、京胡 (JingHu)、馬頭琴 (MaTouQin)",
-                "吹管類：笛子 (DiZi)、簫 (Xiao)、嗩吶 (SuoNa)、笙 (Sheng)、巴烏 (BaWu)、葫蘆絲 (HuLuSi)、管子 (GuanZi)、塤 (Xun)",
-                "彈撥類：古箏 (GuZheng)、琵琶 (PiPa)、柳琴 (LiuQin)、古琴 (GuQin)、揚琴 (YangQin)、三弦 (SanXian)",
-                "打擊與特色：川劇打擊樂 (Chuan Ju DaJi)、中式大鑼大堂鼓 (Chinee Kong)、中式圓號 (Chinee Yuan)"
-              ]
-            }
-          },
-          {
-            id: "threebody",
-            name: "三體國樂全套 (Three-Body Technology)",
-            desc: "三體科技出品，極致動態物理建模與真實中式揉弦、滑音演奏法",
-            size: 30,
-            default: true,
-            badge: "現代國樂",
-            details: {
-              overview: "三體音樂科技出品的次世代中樂取樣音源。利用先進建模技術還原中國傳統樂器極致細微的滑音、揉弦、打音等特色，操作直覺、音色極具現代感。",
-              suitable: "古風國潮流行、流行歌曲副歌獨奏、精緻室內民樂重奏。",
-              list: [
-                "三體笛子、三體簫、三體嗩吶（超強氣流感與吐音控制）",
-                "三體二胡（流暢真連奏 Legato 與深度揉弦）",
-                "三體古箏、三體琵琶（泛音、掃弦、輪指真實還原）"
-              ]
-            }
-          },
-          {
-            id: "jade_orch",
-            name: "Strezov Sampling JADE Ethnic Orchestra",
-            desc: "亞洲管弦樂旗艦，由華人演奏家於保加利亞頂級錄音棚實錄，超過 50 種民族樂器",
-            size: 115,
-            default: true,
-            badge: "亞洲管弦",
-            details: {
-              overview: "專為電影、大型影視與流行演唱會打造之亞洲民族管弦樂旗艦音源。涵蓋中國、蒙古、日本、韓國與東南亞超過 50 種民族樂器，編制宏大。",
-              suitable: "大編制國風交響、電影史詩、遊戲大地圖音樂、演唱會震撼前奏/間奏。",
-              list: [
-                "全編制中式弓弦樂隊（二胡群奏、高胡合奏、大提琴與民樂弦樂交融）",
-                "民族打擊樂陣列（大堂鼓、排鼓、扁鼓、中式大鑼、小鑼、板鼓）",
-                "亞洲吹管群奏與獨奏（笛簫、嗩吶群奏、葫蘆絲、越南與蒙古特色管樂）",
-                "亞洲特色彈撥合奏（古箏、揚琴、阮咸樂隊合奏）",
-                "民族合唱團與特色人聲吟唱"
-              ]
-            }
-          },
-          {
-            id: "jade_evo",
-            name: "Strezov Sampling JADE Evolutions",
-            desc: "JADE 擴充進階紋理音色庫，提供隨時間流動演變的亞洲環境與民樂聲景",
-            size: 20,
-            default: true,
-            badge: "流動紋理",
-            details: {
-              overview: "JADE 系列的延伸進化篇。專注於長音演變、呼吸感動態紋理與神秘東方聲景設計。",
-              suitable: "流行慢歌前奏空靈鋪底、意境抒情段落、唯美古風電影氛圍。",
-              list: [
-                "長時間有機變化的亞洲民族樂器長音 (Evolving Textures)",
-                "微調顫音、滑音與泛音交織的動態聲景",
-                "專屬 X/Y 向量控制混合引擎"
-              ]
-            }
-          }
-        ]
+        "id": "ni_alicias_keys",
+        "name": "Native Instruments Alicia's Keys (Yamaha C3 流行平台鋼琴)",
+        "desc": "葛萊美歌后 Alicia Keys 專用 Yamaha C3 Neo-Soul 平台鋼琴，流行、靈魂與 R&B 標誌音色",
+        "size": 7,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由 Alicia Keys 本人與著名採樣專家 Thomas Skarbye 合作，在她個人的「Oven Studios」錄音室使用其專屬的 1984 年 Yamaha C3 實錄。音色圓潤溫暖、極具靈魂樂特質。",
+          "suitable": "華語流行情歌、R&B、靈魂樂、Urban Pop、現場伴奏。",
+          "list": [
+            "Alicia Keys 專屬調音 Yamaha C3 平台鋼琴",
+            "真實踏板與琴鍵釋放噪音採樣",
+            "在流行樂混音中不突兀、自然融入人聲的溫暖頻響"
+          ]
+        }
       },
       {
-        category: "D. 演唱會常用特色樂器與世界音樂",
-        icon: "🪗",
-        badge: "特色獨奏",
-        items: [
-          {
-            id: "chris_hein_harmonica",
-            name: "Chris Hein - Chromatic Harmonica (克里斯·海恩 半音階口琴)",
-            desc: "👑 全球職業鍵盤手公認第一名獨奏口琴！具備無縫呼吸動態、4種真實連奏與即興壓音",
-            size: 3.8,
-            default: true,
-            badge: "現場口琴首選",
-            details: {
-              overview: "【現代口琴天花板 · 職業樂手指名推薦】由世界頂級爵士半音階口琴大師 Bergen Karlsen 親自演奏採樣。採用業界領先的 Phase-Aligned 動態相位無縫過渡技術，支援表情踏板與 Mod Wheel 無階呼吸動態控制。無論是 Stevie Wonder 風格的靈魂樂/放克切音，或是張學友/林俊傑式華語流行金曲中的深情口琴 Solo，皆能完美模擬真實人嘴氣息吸吐與真實壓音 (Bending)，現場演奏極具穿透力與生命力！",
-              suitable: "華語流行演唱會 Live 獨奏 (Solo)、藍調/爵士即興、R&B 靈魂樂、影視主題曲深情旋律。",
-              list: [
-                "核心引擎：Phase-Aligned Dynamic Transitions (零階梯感氣息動態)",
-                "真實連奏：4 種 True Legato 演奏法 (慢速抒情、快速跑動、滑音 Portamento、滑奏 Glissando)",
-                "特殊技巧：真實壓音 (Bending)、吸氣吐氣切換 (Blow/Draw)、音頭吐音與顫音控制",
-                "現場優化：專門為 MIDI 鍵盤觸鍵靈敏度調校，支援呼吸控制器 (Breath Controller)",
-                "相容性：Kontakt Player 官方授權規格，5.6.0 入庫與 Kontakt 7 完美相容"
-              ]
-            }
-          },
-          {
-            id: "tarilonte_accordions",
-            name: "Best Service - Accordions 2 (Eduardo Tarilonte, 手風琴與口琴聖杯)",
-            desc: "🎹 老師指定手風琴第一品牌！收錄 13 款世界名琴（探戈班多鈕、六角風琴、法式風琴、極致口琴）",
-            size: 8.5,
-            default: true,
-            badge: "老師指名聖杯",
-            details: {
-              overview: "【阿三老師指定手風琴音源】由世界採樣大師 Eduardo Tarilonte 親自於西班牙馬德里精心採樣打造的手風琴終極寶庫。收錄全球 13 款極致風鳴樂器，從皮亞佐拉探戈的靈魂 Bandoneon (班多鈕琴)、法式香頌必備的 French Musette、到愛爾蘭 Concertina 與純淨口琴 (Harmonica)，風箱推拉動態 (Bellows Dynamic) 逼真至極，鍵盤回彈雜音與簧片震動皆可精準控制。",
-              suitable: "演唱會現場鍵盤手多功能切換、探戈與拉丁音樂、法式浪漫香頌、民謠抒情曲、歐陸世界音樂。",
-              list: [
-                "Bandoneon (探戈班多鈕琴，皮亞佐拉風格靈魂)",
-                "Concertina (愛爾蘭六角手風琴，居爾特民謠必備)",
-                "French Musette (法式風琴，巴黎香頌街頭浪漫感)",
-                "Accordion Single Reed & Double Reed (傳統單/雙簧片手風琴)",
-                "Harmonica (Tarilonte 高解析度原聲口琴)",
-                "木質手風琴、古董風琴與微音調律系統 (Micro-tuning)"
-              ]
-            }
-          },
-          {
-            id: "bolder_sounds_harmonica",
-            name: "Bolder Sounds - Harmonica (早期採樣口琴 · 舊版評估備註)",
-            desc: "⚠️ 早期經典採樣口琴（2008年初版），具基礎音色但無現代 Legato 連奏與表情滑音",
-            size: 1.2,
-            default: false,
-            badge: "舊版動態受限",
-            details: {
-              overview: "【技術現狀分析與樂手實測評估】本套音源為 2008 年開發之早期 Kontakt 採樣庫，雖具備基礎口琴聲線，但底層缺乏現代採樣的核心技術——無 True Legato 真實連奏、無即時吸氣/吐氣動態過渡、亦缺乏觸鍵壓音 (Bending) 滑音控制。在現場 Live 演奏或高動態流行慢歌中，若進行單音連續旋律演奏，塑膠感較重、動態較為死板，難以傳遞人情味與靈魂。",
-              suitable: "背景簡易點綴、復古 Lo-Fi 小品插音；不建議用於高難度現場獨奏 (Live Solo)。",
-              list: [
-                "採樣版本：2008 年 Bolder Sounds 早期採樣庫 (約 1.2 GB)",
-                "技術規格：單層靜態力度觸發，無 CC11 氣息動態控制器",
-                "演奏限制：缺乏真實連奏 (True Legato) 與真實滑音 (Portamento)",
-                "★ 建議升級方案：強烈建議改選上方「Chris Hein」或「Eduardo Tarilonte」旗艦庫！"
-              ]
-            }
-          },
-          {
-            id: "ilya_efimov_retro_harmonica",
-            name: "Ilya Efimov - Retro Harmonica (十孔藍調口琴)",
-            desc: "🌾 美式藍調與鄉村民謠必備！十孔 Blues Harp 真實吸吐氣切換與動態壓音",
-            size: 1.2,
-            default: false,
-            badge: "藍調民謠首選",
-            details: {
-              overview: "【藍調與鄉村音樂神器】俄羅斯採樣名廠 Ilya Efimov 精心製作的十孔藍調口琴 (Blues Harp)。針對美式鄉村、南方搖滾、民謠吉他伴奏專屬設計，具備極強的真實連奏與動態吸氣呼氣切換，壓音 (Bend) 質感粗獷有靈魂。",
-              suitable: "木吉他彈唱現場伴奏、鄉村民謠口琴、經典美式藍調與搖滾。",
-              list: [
-                "十孔 Blues Harp 經典 C 調與常用調性採樣",
-                "True Legato 真連奏與吸吐氣動態切換",
-                "顫音 (Vibrato) 與按鍵手部共鳴箱控制 (Hand Wah)"
-              ]
-            }
-          },
-          {
-            id: "uilleann",
-            name: "Ilya Efimov Uilleann Pipes (愛爾蘭風笛)",
-            desc: "最動人的愛爾蘭風笛，具備極致連奏、指顫音與裝飾音 [手寫筆記指名]",
-            size: 1,
-            default: true,
-            badge: "筆記指名",
-            details: {
-              overview: "Ilya Efimov 製作的愛爾蘭風笛（Uilleann Pipes）業界標竿。收錄風笛特有的指孔微滑音、裝飾音與風箱按壓顫音，音色深沉悠揚。",
-              suitable: "流行世界風情歌、凱爾特風格曲風、民謠搖滾、感人獨奏片段。",
-              list: ["Chanter 旋律管真實連奏 Legato", "Drones 與 Regulators 和弦伴奏管", "多重特色裝飾音（Popping, Birl, Shake）", "風箱物理按壓微動態控制"]
-            }
-          },
-          {
-            id: "accordions2",
-            name: "Eduardo Tarilonte Accordions 2 (手風琴全套)",
-            desc: "全球頂級手風琴大全，收錄法國香頌手風琴、班多鈕探戈手風琴等 [手寫筆記指名]",
-            size: 7,
-            default: true,
-            badge: "筆記指名",
-            details: {
-              overview: "傳奇音源設計師 Eduardo Tarilonte 傾力打造的手風琴聖典。涵蓋 13 款世界各地名手風琴，風箱進出氣流細節完美還原。",
-              suitable: "流行情歌伴奏、法國香頌、阿根廷探戈 (Tango)、民謠、義大利風情音樂。",
-              list: [
-                "Bandoneon（班多鈕手風琴，探戈靈魂之聲）",
-                "French Musette Accordion（法國小酒館香頌風琴）",
-                "Concertina（六角手風琴）、Accordion（流行全鍵盤手風琴）",
-                "Steirische Harmonika、Bajan、Melodica（口風琴）",
-                "風箱換氣噪音、按鍵物理機械雜音微調"
-              ]
-            }
-          },
-          {
-            id: "cineharp",
-            name: "Cinesamples CineHarp (電影高解像豎琴)",
-            desc: "好萊塢索尼片場錄製，音質晶瑩剔透，極致琶音與滑奏 [手寫筆記指名]",
-            size: 11,
-            default: true,
-            badge: "筆記指名",
-            details: {
-              overview: "Cinesamples 在傳奇的 Sony Pictures 錄音棚錄製的頂級音樂會踏板豎琴。顆粒感極其通透晶瑩，琶音與滑奏極度自然。",
-              suitable: "流行慢歌前奏/副歌琶音、大編制管弦華麗烘托、浪漫唯美抒情段落。",
-              list: ["多麥克風透視（Close, Room, Surround）", "真實 Glissando 滑奏生成器（可依調性自動配置踏板排列）", "單音撥弦、泛音 (Harmonics)、消音演奏法"]
-            }
-          },
-          {
-            id: "sessionhorns",
-            name: "Native Instruments Session Horns Pro",
-            desc: "流行、Funk、流行管樂團全套，涵蓋小號、長號、薩克斯風與長笛 [手寫筆記指名]",
-            size: 28,
-            default: true,
-            badge: "流行管樂",
-            details: {
-              overview: "華語流行音樂、演唱會現場 Live Band 最常用的流行銅管合奏與獨奏音源。具備強烈的衝擊力與現代流行律動感。",
-              suitable: "流行演唱會現場吹奏組、Funk、R&B、動感快歌、拉丁流行。",
-              list: [
-                "10 人編制自由配置（小號、長號、中音/次中音/上低音薩克斯風、長笛）",
-                "Smart Voice Split 智慧聲部自動分配（彈奏和弦時自動分配給對應樂器）",
-                "豐富演奏法：Rip, Fall, Doit, Shake, Staccato, Growl",
-                "內建 200 組現代流行管樂旋律與和弦切分音短句庫"
-              ]
-            }
-          },
-          {
-            id: "swam",
-            name: "Audio Modeling SWAM 物理建模全套 (管樂/弦樂獨奏)",
-            desc: "義大利物理建模黑科技，無需龐大取樣，現場即時吹管控制器與表現力頂峰 [手寫筆記指名]",
-            size: 5,
-            default: true,
-            badge: "物理建模",
-            details: {
-              overview: "Audio Modeling 物理建模技術巔峰之作。非傳統取樣，而是利用物理數學方程即時計算發聲。體積僅約 5GB，但能做到連續無縫的氣流與運弓表現力控制，是吹管控制器 (EWI) 與現場獨奏的第一選擇。",
-              suitable: "現場即時獨奏 (Solo)、吹管控制器 EWI 演奏、極度細膩的情感主線。",
-              list: [
-                "SWAM Solo Brass：小號、長號、法國號、大號、短號、柔音號",
-                "SWAM Solo Woodwinds：薩克斯風全套 (Soprano/Alto/Tenor/Baritone)、單簧管、雙簧管、長笛、英國管、低音管",
-                "SWAM Solo Strings：小提琴、中提琴、大提琴、低音提琴",
-                "無級連續動態、即時滑音、顫音速度與深度連續控制"
-              ]
-            }
-          },
-          {
-            id: "evo_world",
-            name: "Evolution Series World Colors & Percussion (23款合集)",
-            desc: "涵蓋中東、印度、非洲與南美民族樂器與太鼓打擊 [影視選配擴充]",
-            size: 45,
-            default: false,
-            badge: "選配擴充",
-            details: {
-              overview: "專注於世界各地民族樂器的高品質實錄，涵蓋波斯卡曼查、中東薩孜琴、印度簧風琴、日本太鼓與南美打擊。",
-              suitable: "異國風情配樂、史詩電影、打擊合奏。",
-              list: [
-                "Alto Kamanche (中音卡曼查)、Clar-Duduk (都都克)、Shah Kaman (沙卡曼)、Saz (薩孜琴)",
-                "World Percussion 2.0、World Percussion South America、World Percussion Taiko (日本太鼓)",
-                "World Reeds Harmonium (印度簧風琴)、Tanpura (印度坦普拉琴)、Santur (桑圖爾琴)"
-              ]
-            }
-          },
-          {
-            id: "ni_spotlight",
-            name: "Native Instruments Spotlight Collection (全套 6 區)",
-            desc: "NI 官方世界音樂系列：東亞、印度、中東、西非、古巴、峇里島甘美朗 [影視選配擴充]",
-            size: 25,
-            default: false,
-            badge: "選配擴充",
-            details: {
-              overview: "Native Instruments 官方出品的 6 大世界音樂取樣庫，具備優美的介面與道地的原生節奏樂句。",
-              suitable: "世界音樂製作、地域特色配樂、文化主題創作。",
-              list: ["East Asia (東亞)、India (印度)、Middle East (中東)、West Africa (西非)、Cuba (古巴)、Balinese Gamelan (甘美朗)"]
-            }
-          }
-        ]
+        "id": "cinematic_studio_piano",
+        "name": "Cinematic Studio Piano (CSP 電影配樂 Yamaha C7 平台鋼琴)",
+        "desc": "澳洲 Trackdown Studios 實錄 Yamaha C7 平台鋼琴，電影配樂溫暖立體聲場",
+        "size": 5,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "Cinematic Studio Series 家族專屬鋼琴，與著名 CSS 弦樂在相同配樂舞台錄製。使用經典 Yamaha C7 錄音室平台鋼琴，具備多組麥克風位置，立體空間感極佳。",
+          "suitable": "電影配樂、情感氛圍音樂、電視戲劇配樂、現代流行伴奏。",
+          "list": [
+            "Yamaha C7 Concert Grand (電影錄音棚實錄)",
+            "獨立 Close (近麥)、Main (主立體聲)、Room (空間麥) 混合推桿",
+            "流暢的動態響應與自然的長音延音"
+          ]
+        }
       },
       {
-        category: "E. 影視配樂與現代管弦樂團 (Spitfire / Audio Imperia)",
-        icon: "🎻",
-        badge: "管弦配樂",
-        items: [
-          {
-            id: "spitfire_strings",
-            name: "Spitfire Symphonic & Studio Strings (交響與錄音室弦樂大套組)",
-            desc: "英國倫敦 AIR Studios 實錄交響弦樂 + 錄音室弦樂專業版，電影與流行必備標竿 [手寫筆記指名]",
-            size: 350,
-            default: true,
-            badge: "交響標竿",
-            details: {
-              overview: "Spitfire Audio 的旗艦主力弦樂。在倫敦傳奇 AIR Studios Lyndhurst Hall 錄製，具備世界上最昂貴的交響大廳自然殘響；另含 Studio Strings 錄音室編制，清晰好混音。",
-              suitable: "華語大流行管弦副歌、好萊塢大片主題曲、抒情大弦樂。",
-              list: [
-                "Spitfire Symphonic Strings (SSS 倫敦交響弦樂大套組，60人編制)",
-                "Spitfire Studio Strings (錄音室弦樂，乾淨好定位，適合流行編曲)",
-                "Spitfire Solo Strings & Solo Violin (獨奏弦樂與小提琴獨奏)",
-                "Sacconi Strings Quartet (薩科尼頂級室內樂四重奏)",
-                "多麥克風視角（Close, Tree, Ambient, Outrigger）"
-              ]
-            }
-          },
-          {
-            id: "spitfire_chamber",
-            name: "Spitfire Chamber Strings (室內樂精緻弦樂旗艦)",
-            desc: "AIR Studios 錄製 16 人精緻室內樂編制，華語流行慢歌最美弦樂 [手寫筆記指名]",
-            size: 110,
-            default: true,
-            badge: "室內樂旗艦",
-            details: {
-              overview: "華語流行音樂編曲界口碑第一的精緻弦樂！16 位頂尖演奏家組成的小編制室內樂，細節無可比擬，絕不混濁，無論是情歌弱音長音或快歌彈性頓弓均是極致。",
-              suitable: "流行抒情慢歌、精緻情境配樂、現代民謠、高品質重奏。",
-              list: [
-                "16 人小編制（4-3-3-3-3）精準細緻定位",
-                "全套 Legato（包含 Slurred, Fingered, Portamento 滑音連奏）",
-                "Flautando (笛音奏法)、Sul Tasto、Sul Ponticello (琴橋奏法)、Harmonics (泛音)",
-                "超弱音 (Pianissimo) 細膩表現"
-              ]
-            }
-          },
-          {
-            id: "spitfire_albion",
-            name: "Spitfire Albion 系列 6 大合集 (ONE / NEO / Tundra / UIST / Iceni / Loegria)",
-            desc: "好萊塢配樂全能套裝，提供交響管弦、極弱音苔原、低頻重管弦與新古典聲景 [影視選配擴充]",
-            size: 280,
-            default: false,
-            badge: "影視選配",
-            details: {
-              overview: "電影與遊戲配樂界最著名的「一站式管弦配樂軍火庫」。全系列 6 大部合集，各自擁有鮮明獨特的音色性格與整體配樂模板。",
-              suitable: "電影預告片、現代遊戲配樂、史詩戰鬥、暗黑氛圍、北歐極簡管弦。",
-              list: [
-                "Albion ONE (經典配樂旗艦：大編制管弦、史詩打擊、合成器紋理)",
-                "Albion NEO (新古典融合弦樂、精緻小編制、現代混種聲景)",
-                "Albion V Tundra (苔原：北歐極弱音安靜管弦樂，空靈冰冷之美)",
-                "Albion IV UIST (極地實驗聲景與隨機不規則前衛演奏法)",
-                "Albion III Iceni (低音重裝管弦：大提琴、低音提琴、低音銅管與低頻重擊)",
-                "Albion Loegria REDUX (精緻小巧民間管弦樂與唯美懷舊弦樂)"
-              ]
-            }
-          },
-          {
-            id: "spitfire_composers",
-            name: "Spitfire 漢斯季默與作曲家系列 (HZ Piano / HZ 打擊全套 / Olafur Arnalds)",
-            desc: "漢斯季默大型電影鋼琴、HZ01-03 倫敦/洛杉磯電影打擊全套、奧拉夫極簡鋼琴與聲景 [影視選配擴充]",
-            size: 420,
-            default: false,
-            badge: "影視選配",
-            details: {
-              overview: "Spitfire 與好萊塢配樂宗師 Hans Zimmer 及冰島極簡大師 Ólafur Arnalds 聯名開發的極致旗艦系列。收錄電影級震撼打擊樂與北歐極簡聲景。",
-              suitable: "好萊塢電影級配樂、大片打擊樂震撼鋪陳、北歐新古典鋼琴、氛圍聲景。",
-              list: [
-                "Hans Zimmer Piano (AIR Hall 巨型史詩鋼琴 - ⚠️ 實測約 74GB，中後段取樣切片缺失，建議搭配 CSP/Emotional)",
-                "HZ01 Hans Zimmer Percussion London Ensembles (倫敦大型打擊樂團版)",
-                "HZ02 Hans Zimmer Percussion Los Angeles (洛杉磯版特色打擊)",
-                "HZ03 Hans Zimmer Percussion London Soloists (倫敦頂尖打擊獨奏家版)",
-                "Ólafur Arnalds Stratus (虛實交織的矩陣演算法鋼琴與聲景)",
-                "Ólafur Arnalds Chamber Evolutions & Composer Toolkit (室內樂演變紋理與作曲工具箱)",
-                "Hauschka Composer Toolkit (準備鋼琴與現代特色敲擊音響)"
-              ]
-            }
-          },
-          {
-            id: "spitfire_woodwinds_swarms",
-            name: "Spitfire 交響木管、群奏 Swarms、eDNA 聲響與戲劇工具箱",
-            desc: "交響與錄音室木管、管弦/馬林巴/曼陀鈴群奏 Swarms、eDNA 地球聲響設計器 [影視選配擴充]",
-            size: 280,
-            default: false,
-            badge: "影視選配",
-            details: {
-              overview: "涵蓋 Spitfire 高品質管弦木管樂器、以動態起伏為特色的群奏 (Swarms) 系列，以及雙引擎聲音設計工具 eDNA Earth。",
-              suitable: "交響配樂木管聲部、電影緊張與有機起伏鋪陳、現代戲劇氛圍音樂。",
-              list: [
-                "Spitfire Symphonic Woodwinds (AIR Studios 錄製交響木管旗艦庫)",
-                "Spitfire Studio Woodwinds (錄音室木管專業版，清晰乾淨好定位)",
-                "Orchestral Swarm (管弦群奏：如蜂群般起伏的電影有機動態紋理)",
-                "Mandolin Swarm (曼陀鈴群奏) & Marimba Swarm (馬林巴琴群奏)",
-                "British Drama Toolkit (英國戲劇工具包：依鍵盤力度直接變換情緒演奏法)",
-                "eDNA 01 Earth (地球聲響設計器：雙引擎混合合成器與管弦取樣)",
-                "Skaila Kanga Harp Redux v2.1 (傳奇豎琴大師重製版)",
-                "David Fanshawe Earth Encounters 1 (大衛·范肖地球之聲一代)"
-              ]
-            }
-          },
-          {
-            id: "audio_imperia",
-            name: "Audio Imperia 好萊塢預告片與 3A 遊戲配樂全套 (實測 17 款，539 GB)",
-            desc: "【/Volumes/S 實測 539 GB】Areia 77G, Solo 84G, Dolce 75G, Chorus 65G, Jaeger 56G, Poseidon 35G, Nucleus 28G [影視選配擴充]",
-            size: 539,
-            default: false,
-            badge: "實測 539G",
-            details: {
-              overview: "好萊塢電影預告片與 3A 級遊戲配樂專用重裝音源。在 /Volumes/S 上實測整整 539 GB，包含 Areia 弦樂、Dolce 浪漫室內樂、Chorus 合唱、Jaeger 預告片旗艦等 17 款大作。",
-              suitable: "現代電影預告片、動作遊戲配樂、史詩管弦、賽博龐克與重型電子管弦。",
-              list: [
-                "Solo 管弦樂獨奏大師系列 (實測 83.7 GB)",
-                "Areia 影視旗艦弦樂合奏 (實測 77.0 GB)",
-                "Dolce 浪漫細緻室內弦樂 (實測 74.6 GB)",
-                "Chorus 現代電影交響合唱團 (實測 64.5 GB)",
-                "Jaeger 現代電影預告片旗艦打擊/弦樂/人聲 (實測 55.8 GB)",
-                "Poseidon 強勁銅管樂 (實測 34.8 GB)、Constrictor 緊張氛圍弦樂 (實測 28.3 GB)",
-                "Nucleus 管弦全能核心 (實測 27.6 GB)、Fluid Brass 銅管短奏 (實測 24.4 GB)",
-                "Fluid Woods 交響木管 (實測 20.2 GB)、Cerberus 影視巨鼓組 (實測 18.2 GB)",
-                "Talos 銅管合奏 (實測 10.0 GB)、Legacy (實測 6.7 GB)、Artifact Reanimate (實測 5.8 GB)",
-                "Trailer Guitars 2 (實測 5.2 GB)、Otamatone (實測 1.2 GB)、Solo Boy Soloists (實測 1.1 GB)"
-              ]
-            }
-          }
-        ]
+        "id": "emotional_piano",
+        "name": "Soundiron Emotional Piano (抒情木質電影鋼琴)",
+        "desc": "Soundiron 出品，專注於弱音與抒情演奏的木質溫暖三角鋼琴",
+        "size": 5,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "專為抒情、傷感與電影伴奏設計的鋼琴音源。採用深沉柔和的敲擊力度採樣，音色極具木質溫暖度與空間包覆感。",
+          "suitable": "抒情慢歌、配樂背景鋼琴、安靜氛圍音樂。",
+          "list": [
+            "Kawai 經典演奏三角鋼琴深度取樣",
+            "精細的低力度層動態分佈",
+            "木質共鳴箱體與踏板柔和機械聲"
+          ]
+        }
       },
       {
-        category: "F. 獨特世界聲響、打擊與實驗環境 (Soniccouture / Cinematique / Soundiron)",
-        icon: "🌌",
-        badge: "氛圍聲景",
-        items: [
-          {
-            id: "voxos",
-            name: "Cinesamples VOXOS 史詩虛擬合唱團",
-            desc: "好萊塢電影級史詩大型合唱團，含男女混聲、童聲合唱與歌詞編輯器 [手寫筆記指名]",
-            size: 27,
-            default: true,
-            badge: "合唱標竿",
-            details: {
-              overview: "Cinesamples 在世界級音樂廳深度採樣的史詩人聲合唱團標竿，具備完整的 Phrase Builder 歌詞編輯器與多重聲部切換。",
-              suitable: "好萊塢預告片、史詩戰鬥、奇幻神話、宗教聖歌、演唱會宏大背景人聲。",
-              list: ["男女混聲合唱團、Boy Soloists 天籟童聲獨唱、童聲合唱團、拉丁文/自定義歌詞 Phrase Builder 引擎"]
-            }
-          },
-          {
-            id: "soniccouture",
-            name: "Soniccouture 世界音樂與實驗聲景全套 (實測 50 款，256 GB)",
-            desc: "【/Volumes/S 實測 256 GB】The Hammersmith Pro 48G, The Attic 2 17G, Electro Acoustic 14G, Box of Tricks 13G, Gamelan 13G, Moonkits 12G [選配擴充]",
-            size: 256,
-            default: false,
-            badge: "實測 256G",
-            details: {
-              overview: "全球最具個性的世界民族樂器、環境氛圍與實驗聲音設計品牌。在 /Volumes/S 上實測 256 GB，收錄 50 款精品子音色庫完整合集。",
-              suitable: "異域民族地圖音樂、超現實聲音設計、角色專屬音效、獨立遊戲配樂。",
-              list: [
-                "The Hammersmith Pro Edition 頂級三角鋼琴 (實測 48.2 GB)",
-                "The Attic 2 復古合成器寶庫 (實測 16.9 GB)、Electro Acoustic 電子原聲鼓 (實測 14.0 GB)",
-                "Box of Tricks 女聲特殊樂器 (實測 13.1 GB)、Balinese Gamelan 2 甘美朗 (實測 12.9 GB)",
-                "Moonkits 爵士土鼓/刷鼓 (實測 12.0 GB)、The Canterbury Suitcase 電鋼琴 (實測 8.1 GB)",
-                "Sun Drums 現代復古架子鼓 (實測 8.1 GB)、Geosonics II 地球環境採樣 (實測 8.0 GB)",
-                "Vibraphone 顫音琴 (實測 7.6 GB)、Glass Works 2 (實測 7.4 GB)、Haunted Spaces (實測 5.6 GB)",
-                "Array Mbira (4.3G)、NyckelHarpas (4.2G)、Novachord (3.6G)、All Saints Organ (3.6G)",
-                "Grand Marimba (3.3G)、Pan Drums (3.3G)、Ondioline (2.9G)、Kora (2.7G)、Sheng (2.5G)"
-              ]
-            }
-          },
-          {
-            id: "soundiron",
-            name: "Soundiron 世界音樂、合唱團與打擊樂全套 (實測 354 GB)",
-            desc: "【/Volumes/S 實測 354 GB】Standard Library 300 GB + Custom Library 54 GB (史詩打擊、火星/金星人聲、塔布拉鼓) [選配擴充]",
-            size: 354,
-            default: false,
-            badge: "實測 354G",
-            details: {
-              overview: "美國頂級虛擬樂器開發商，涵蓋宏大人聲合唱、世界民族樂器與怪奇實驗打擊。在 /Volumes/S 上實測 354 GB（含 Standard Library 300GB 與 Custom Library 54GB）。",
-              suitable: "神話與奇幻風格配樂、史詩戰爭場景、部落風格、恐怖遊戲與聲音實驗。",
-              list: [
-                "Soundiron Standard Library 核心標準大庫 (實測 300.0 GB)",
-                "Soundiron Custom Library Collection 精選庫 (實測 54.0 GB)",
-                "Mars (男聲交響合唱)、Venus (女聲交響合唱)、Olympus Choir Elements、Mercury Boys Choir",
-                "Apocalypse Percussion Ensemble (史詩打擊合集)、Grit Kit FX、Circle Bells (共鳴鐘)",
-                "Angklung (印尼昂克隆竹琴)、Bizarre Sitar (實驗錫塔琴)、Tablas 2.0 (印度塔布拉鼓)"
-              ]
-            }
-          },
-          {
-            id: "cinematique",
-            name: "Cinematique Instruments 全套 + KLANG 抽象氛圍系列 (實測 35 GB)",
-            desc: "【/Volumes/S 實測 35 GB】德國小眾原聲樂器、自然打擊合奏、木工鋼琴與 20 套 KLANG 抽象氛圍 [選配擴充]",
-            size: 35,
-            default: false,
-            badge: "實測 35G",
-            details: {
-              overview: "德國精品小眾聲響設計品牌，專注於精緻原聲樂器、自然打擊合奏與 KLANG 抽象氛圍系列。在 /Volumes/S 上實測 34.7 GB (~35 GB)。",
-              suitable: "獨立文藝電影、原聲民謠、懸疑神秘場景、極簡現代配樂。",
-              list: [
-                "原聲特色樂器：鐘琴、自動豎琴、巴拉萊卡琴、竹樂器、凱爾特豎琴、齊特琴、低音手風琴、擊弦揚琴、鋼舌鼓",
-                "KLANG 系列 20 款：覺醒氛圍、黑色鈴鐺、黑木氛圍、冰封小提琴、童聲殘響、管狀打擊、保羅的玻璃杯、水晶玻璃、毀滅聲響、玩具鋼琴",
-                "Vertigo 特色室內樂：大提琴、長笛、玻璃和金屬音、特殊弦樂合奏、中提琴、小提琴"
-              ]
-            }
-          },
-          {
-            id: "triplespiral",
-            name: "Triple Spiral Audio 氛圍電影合集 14 款 (實測 54 GB)",
-            desc: "【/Volumes/S 實測 54 GB】黑暗工業、大氣環境吉他、北極音色與超自然聲景 (全套合併版) [選配擴充]",
-            size: 54,
-            default: false,
-            badge: "實測 54G",
-            details: {
-              overview: "14 款專為電影、電視與環境音樂打造的氛圍音色庫。在 /Volumes/S 上實測 54.3 GB (~54 GB)。",
-              suitable: "科幻片、懸疑驚悚、末日廢土風格、環境冥想音樂。",
-              list: [
-                "Broken Worlds (破碎世界)、Endless Guitar (環境大氣吉他)、Fission A (工業反烏托邦)",
-                "Gh'nuhan (民族奇幻)、Memories (復古模擬)、Nova (北極原始聲景)",
-                "Universe (宇宙詩篇)、Veil of Secrets (神秘面紗)、Withered (末日驚悚黑暗)"
-              ]
-            }
-          }
-        ]
+        "id": "synthogy_ivory_ii",
+        "name": "Synthogy Ivory II (經典象牙鋼琴四巨頭 · Kontakt 轉換版)",
+        "desc": "收錄 German Concert D, Bösendorfer 290, Italian Grand, Studio Grand 四款名琴",
+        "size": 15,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "全球專業錄音室與現場演出的標竿鋼琴音色庫，本版本為 Kontakt 封裝轉換版。收錄世界四大頂級三角平台鋼琴。",
+          "suitable": "古典演奏、現場演出、流行伴奏、大編制配樂。",
+          "list": [
+            "Ivory German Concert D (德國漢堡史坦威 D 平台鋼琴)",
+            "Ivory Bösendorfer 290 Imperial (維也納貝森朵夫 97 鍵帝王鋼琴)",
+            "Ivory Italian Grand (義大利 10 呎手工平台三角鋼琴)",
+            "Ivory Studio Grand (7 呎錄音室平台鋼琴)"
+          ]
+        }
       },
       {
-        category: "G. 寫實原聲吉他與電貝斯 (Ample Sound / NI)",
-        icon: "🎸",
-        badge: "吉他貝斯",
-        items: [
-          {
-            id: "ample_guitar",
-            name: "Ample Sound 寫實吉他系列全套 (14款木/電/金屬吉他)",
-            desc: "涵蓋 Martin 木吉他、Les Paul、Strat、Tele、重金屬吉他與電烏克麗麗，真實掃弦引擎",
-            size: 130,
-            default: true,
-            badge: "寫實吉他",
-            details: {
-              overview: "最受華語流行音樂人喜愛的寫實虛擬吉他。配備專屬 Strummer 掃弦引擎與 Riffer 旋律創作器，推弦、滑音、打品音效極度擬真。",
-              suitable: "流行民謠木吉他掃弦、搖滾電吉他 Solo、流行 Funk 節奏切音、金屬重音牆。",
-              list: [
-                "木吉他：AGM (Martin 原聲吉他)、AGSJ (小型 Jumbo 木吉他)、AG12 (12弦原聲吉他)、AGL (古典尼龍吉他)",
-                "電吉他：AGLP (Gibson Les Paul)、AGSC (Fender Stratocaster)、AGT (Fender Telecaster)、AGSH (現代搖滾 Superstrat)、AGPF (Fusion 風格)、AGTC (Custom Tele)",
-                "金屬重音：AME (Metal Eclipse)、AMH (Metal Hellrazer)、AMR (Metal Ray 另類金屬)",
-                "特殊樂器：AEU (Ample Electric Ukulele 電烏克麗麗)"
-              ]
-            }
-          },
-          {
-            id: "ample_bass",
-            name: "Ample Sound 寫實貝斯系列全套 (8款全功能貝斯)",
-            desc: "Jaco 傑可式無品電貝斯、經典 P-Bass、立式 Double Bass 與原聲木貝斯",
-            size: 50,
-            default: true,
-            badge: "寫實貝斯",
-            details: {
-              overview: "細節豐富的專業原聲與電貝斯系列。涵蓋指彈、撥片、拍弦 (Slap) 與人工泛音等全套技巧。",
-              suitable: "流行流行樂、搖滾樂、爵士重奏、放克 Slap、不插電民謠。",
-              list: [
-                "ABP (Ample Bass P 經典 Precision 電貝斯)",
-                "ABJ & AEBJ (Ample Bass Jaco 傑可風格電貝斯)",
-                "ABJF (Jazz Fusion 爵士融合電貝斯)",
-                "ABU (Ample Bass Upright 爵士立式低音大提琴)",
-                "ABA (Ample Bass Acoustic 原聲木貝斯)",
-                "ABY (Ample Bass Yinyang 陰陽風格原創高動態電貝斯)"
-              ]
-            }
-          },
-          {
-            id: "session_guitarist",
-            name: "Native Instruments Session Guitarist 系列 (5款木/電吉他)",
-            desc: "德國 Native Instruments 官方吉他伴奏神器：Electric Sunburst, Picked Acoustic 等",
-            size: 70,
-            default: true,
-            badge: "伴奏神器",
-            details: {
-              overview: "由頂級棚內吉他手實錄的流行伴奏掃弦與分解和弦神器。鍵盤按下和弦即時輸出完美錄音室吉他音軌。",
-              suitable: "流行歌曲快速編排、現場演出 Keyboard 手即時吉他伴奏、電視廣告配樂。",
-              list: [
-                "Electric Sunburst Deluxe (經典 Gibson Les Paul 電吉他掃弦與即時旋律)",
-                "Picked Acoustic (經典 Martin 鋼弦木吉他精緻指彈分解和弦)",
-                "Strummed Acoustic 1 & 2 (高音/低音木吉他節奏掃弦)",
-                "Electric Vintage (經典 50 年代復古電吉他)"
-              ]
-            }
-          },
-          {
-            id: "scarbee_bass",
-            name: "Native Instruments Scarbee 吉他與貝斯系列",
-            desc: "Scarbee 經典貝斯大系：Jay-Bass, Pre-Bass, MM-Bass, Rickenbacker Bass, Funk Guitarist",
-            size: 80,
-            default: true,
-            badge: "經典復古",
-            details: {
-              overview: "Thomas Scarbee 操刀的傳奇取樣系列。以極致細膩的琴弦觸感、動態階梯與復古過載溫暖度享譽全球。",
-              suitable: "流行金曲、70/80年代復古 Funk、摩城音樂 (Motown)、經典搖滾。",
-              list: [
-                "Scarbee Jay-Bass (Fender Jazz Bass 經典指彈與拍弦)",
-                "Scarbee Pre-Bass (Fender Precision Bass 厚實溫暖低頻)",
-                "Scarbee MM-Bass (Music Man 現代主動式貝斯，高頻清脆)",
-                "Scarbee Rickenbacker Bass (官方認證 Rickenbacker 4003，前衛搖滾與英倫搖滾必備)",
-                "Scarbee Funk Guitarist (放克吉他刷弦神器，和弦切分節奏利器)"
-              ]
-            }
-          }
-        ]
+        "id": "session_keys_grand_s",
+        "name": "e-instruments Session Keys Grand S (現代現場 Steinway D 鋼琴)",
+        "desc": "Steinway Model D 現場流行平台鋼琴，具備 Concert 與 Pop 雙聲學物理建模模式",
+        "size": 10,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "德國 e-instruments 出品，專為流行編曲與舞台演奏設計。提供一鍵切換 Concert（古典宏大）與 Pop（明亮緊湊）雙重性格引擎。",
+          "suitable": "現場演出、現代流行舞曲伴奏、搖滾樂隊鋼琴。",
+          "list": [
+            "Steinway D 平台鋼琴精細採樣",
+            "Pop / Concert 雙引擎切換",
+            "Smart Chord 與 Animator 伴奏律動工具"
+          ]
+        }
       },
       {
-        category: "H. 專業爵士鼓與聲學打擊 (Toontrack / BFD3)",
-        icon: "🥁",
-        badge: "現場鼓組",
-        items: [
-          {
-            id: "ezdrummer3",
-            name: "Toontrack EZdrummer 3 全套 (含旗艦核心擴充)",
-            desc: "流行、搖滾、民謠全能鼓組取樣與龐大 MIDI 律動節奏庫 [手寫筆記指名]",
-            size: 130,
-            default: true,
-            badge: "筆記指名",
-            details: {
-              overview: "全球銷量最高、使用率第一的專業鼓組音源，在傳奇柏林 Hansa 錄音棚錄製，全套核心與主要擴充總量約 130 GB。",
-              suitable: "流行樂、搖滾樂、金屬、民謠、藍調、放克全風格鼓組編排。",
-              list: [
-                "7 套由格萊美工程師操刀調音的完整鼓組（涵蓋現代清脆、復古溫暖、重型力量）",
-                "額外打擊樂器組（沙錘、手鼓、牛鈴、響板等）",
-                "Bandmate 智慧伴奏功能（丟入吉他或鋼琴音軌自動生成完美律動）",
-                "海量世界頂尖鼓手演奏的 MIDI 節奏庫（涵蓋主歌、副歌、過門 Fill、橋段）"
-              ]
-            }
-          },
-          {
-            id: "bfd3",
-            name: "FXpansion / InMusic BFD3 聲學鼓旗艦版",
-            desc: "細膩的多麥克風室內混音聲學鼓，發燒級無壓縮採樣 (40 GB) [手寫筆記指名]",
-            size: 40,
-            default: true,
-            badge: "筆記指名",
-            details: {
-              overview: "FXpansion / InMusic 出品的發燒級原聲聲學鼓，以無壓縮極致動態與多麥克風室內混音著稱。容量精簡 (40 GB)，現場最省空間之生鼓首選！",
-              suitable: "高階錄音室混音、極致自然的搖滾、金屬、爵士與原聲鼓組表現。",
-              list: [
-                "無壓縮 24-bit 聲學鼓取樣，多達 11 個麥克風視角（含直接收音、Overhead、Room 近中遠）",
-                "深度自定義鼓皮調音、阻尼 (Damping)、踩鑔響弦控制",
-                "純乾音直錄，混音彈性極大"
-              ]
-            }
-          },
-          {
-            id: "superior_drummer_3",
-            name: "Toontrack Superior Drummer 3 (SD3 旗艦本體生鼓核心庫)",
-            desc: "【/Volumes/S 實測 122.7 GB】Galaxy Studios 實錄未壓縮 11.1 聲道生鼓核心庫 (實體目錄 SL-SuperiorDrummer3) [頂級母體]",
-            size: 123,
-            default: false,
-            badge: "SD3核心 123G",
-            details: {
-              overview: "Toontrack 鼓音源終極旗艦（EZdrummer 3 的高階母體），在比利時 Galaxy Studios 由傳奇大師 George Massenburg 實錄。在 /Volumes/S 上實測核心庫為 122.67 GB (~123 GB)。",
-              suitable: "頂級錄音室混音、大編制金屬、搖滾、極度還原真鼓動態與客製化麥克風串音控制。",
-              list: [
-                "實體目錄：/Volumes/S/SD DRUM EXP/SL-SuperiorDrummer3 (實測 122.67 GB)",
-                "核心收錄 6 套世界頂級經典鼓組（Ayotte, Gretsch, Pearl, Premier, Ludwig, Yamaha）",
-                "25 款獨立軍鼓、16 款底鼓與龐大鑔片陣列",
-                "高達 11.1 聲道沉浸式多麥克風陣列收音（可自定義每顆麥克風串音 Bleed）",
-                "內建 35 款錄音室級原廠效果器與龐大專業調音 Presets"
-              ]
-            }
-          },
-          {
-            id: "sdx_fields_of_rock",
-            name: "Toontrack SDX Fields of Rock (搖滾聖堂旗艦)",
-            desc: "【/Volumes/S 實測 150.4 GB】Tom Dalgety 操刀於倫敦名棚，7 款經典與現代搖滾鼓組 (實體目錄 SL-FieldsOfRock)",
-            size: 150,
-            default: false,
-            badge: "SDX 150G",
-            details: {
-              overview: "Toontrack 頂級 SDX 擴充包。在英格蘭 Rockfield Studios 錄製，由名製作人 Tom Dalgety (Ghost, Royal Blood) 操刀，涵蓋 7 套經典到現代搖滾鼓組。",
-              suitable: "大編制搖滾、另類搖滾、英倫搖滾、重型流行音樂。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-FieldsOfRock (實測 150.36 GB)", "7 款完整聲學鼓組、多套打擊鑔片與室內環境麥克風", "專屬 Tom Dalgety 簽名預設 Presets"]
-            }
-          },
-          {
-            id: "sdx_jazz_sessions",
-            name: "Toontrack SDX The Jazz Sessions (頂級爵士鼓組全套)",
-            desc: "【/Volumes/S 實測 149.8 GB】傳奇爵士錄音，含刷奏、棒奏、槌奏多重極致動態 (實體目錄 SL-JazzSessions)",
-            size: 150,
-            default: false,
-            badge: "SDX 150G",
-            details: {
-              overview: "專為爵士、融合爵士與精緻原聲音樂打造的頂級旗艦鼓組。由爵士傳奇大師錄製，提供極其罕見的刷奏 (Brushes)、槌奏 (Mallets) 與棒奏 (Sticks) 完整取樣。",
-              suitable: "爵士樂 (Jazz)、巴薩諾瓦 (Bossa Nova)、不插電現場 (Acoustic)、流行民謠。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-JazzSessions (實測 149.77 GB)", "刷奏、槌奏、常規棒奏三種完整演奏技法", "精選古董名琴、溫暖細緻的高頻鑔片敲擊動態"]
-            }
-          },
-          {
-            id: "sdx_death",
-            name: "Toontrack SDX Death (重型搖滾與金屬鼓組)",
-            desc: "【/Volumes/S 實測 105.8 GB】Mark Lewis 於 Ghostship Studios 操刀，兇猛爆發力 (實體目錄 SL-Death)",
-            size: 106,
-            default: false,
-            badge: "SDX 106G",
-            details: {
-              overview: "Death & Darkness 雙部曲之一。由重金屬大師 Mark Lewis 操刀錄製，聲音緊實、爆發力驚人，底鼓與軍鼓穿透力無與倫比。",
-              suitable: "重型金屬、硬搖滾、金屬核 (Metalcore)、高動態震撼節奏。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-Death (實測 105.84 GB)", "專為重型節奏調校的高張力鼓皮與踩槌反饋", "多套金屬專用鑔片與特殊效果鑔"]
-            }
-          },
-          {
-            id: "sdx_darkness",
-            name: "Toontrack SDX Darkness (暗黑與前衛金屬鼓組)",
-            desc: "【/Volumes/S 實測 64.3 GB】Tue Madsen 於 Antfarm Studios 操刀，深沉穿透力 (實體目錄 SL-Darkness)",
-            size: 64,
-            default: false,
-            badge: "SDX 64G",
-            details: {
-              overview: "Death & Darkness 雙部曲之二。由丹麥傳奇製作人 Tue Madsen 於 Antfarm Studios 錄製，主打深沉、黑暗、極具質感的低頻與寬闊的空間殘響。",
-              suitable: "前衛金屬 (Prog Metal)、末日金屬、黑暗搖滾、現代金屬混音。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-Darkness (實測 64.34 GB)", "獨特錄音室反射聲學與客製化麥克風配置", "Tue Madsen 經典混音 Presets"]
-            }
-          },
-          {
-            id: "sdx_state_of_the_art",
-            name: "Toontrack SDX State of the Art (當代頂級錄音棚鼓組)",
-            desc: "【/Volumes/S 實測 77.8 GB】現代流行、R&B 與當代商業錄音棚標竿音色 (實體目錄 SL-StateOfTheArt)",
-            size: 78,
-            default: false,
-            badge: "SDX 78G",
-            details: {
-              overview: "現代流行音樂與當代商業製作的頂級錄音棚鼓組。聲音乾淨、凝聚力極高，專為 2020 年代以後的現代流行、R&B 與當代搖滾量身打造。",
-              suitable: "現代華語流行、R&B、放克流行、當代商業電台金曲。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-StateOfTheArt (實測 77.79 GB)", "多套超清晰現代流行鼓組、極度立體的軍鼓與踩鑔", "專為電台播放調校的平衡頻譜"]
-            }
-          },
-          {
-            id: "sdx_hitmaker",
-            name: "Toontrack SDX Hitmaker (經典流行金曲鼓組)",
-            desc: "【/Volumes/S 實測 77.5 GB】Hugh Padgham 操刀，Motown、80 年代至當代流行金曲必備 (實體目錄 SL-Hitmaker)",
-            size: 78,
-            default: false,
-            badge: "流行必備",
-            details: {
-              overview: "流行音樂史上最具代表性的「金曲製造機」擴充包！由曾為 Phil Collins、Sting、The Police 操刀的格萊美宗師 Hugh Padgham 親自錄製調音。",
-              suitable: "流行情歌、80 年代復古流行、Motown 摩城、經典搖滾、當代流行。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-Hitmaker (實測 77.54 GB)", "標誌性的 80 年代 Gated Reverb 門限殘響軍鼓", "無數流行金曲的原版鼓組音色架構"]
-            }
-          },
-          {
-            id: "sdx_hitmaker_elec",
-            name: "Toontrack SDX Hitmaker Electronic (電子鼓與混合打擊)",
-            desc: "【/Volumes/S 實測 9.6 GB】復古與現代電子鼓機、打擊合成音色擴充 (實體目錄 SL-HitmakerElec)",
-            size: 10,
-            default: false,
-            badge: "SDX 9.6G",
-            details: {
-              overview: "Hitmaker 的電子打擊姊妹篇。收錄傳奇電子鼓機 (808, 909, Simmons) 與現代合成打擊音色，可與聲學鼓組無縫混合分軌。",
-              suitable: "電子流行 (Synth-pop)、舞曲、現代流行副歌疊鼓、嘻哈。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-HitmakerElec (實測 9.55 GB)", "經典與現代電子打擊取樣、合成 Sub 衝擊底鼓", "與 Superior Drummer 3 聲學鼓無縫堆疊 (Layering)"]
-            }
-          },
-          {
-            id: "sdx_progressive_foundry",
-            name: "Toontrack SDX The Progressive Foundry (前衛搖滾與金屬)",
-            desc: "【/Volumes/S 實測 58.6 GB】澳洲 Sing Sing Studios 錄製，高技術前衛搖滾風格 (實體目錄 SL-ProgressiveFoundry)",
-            size: 59,
-            default: false,
-            badge: "SDX 59G",
-            details: {
-              overview: "在澳洲墨爾本著名的 Sing Sing 錄音棚錄製，由 Forrest Whitehead 操刀。專為高難度節奏、切分音與前衛金屬設計。",
-              suitable: "前衛搖滾、數學搖滾 (Math Rock)、融合金屬、高技巧現場樂手。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-ProgressiveFoundry (實測 58.59 GB)", "5 套完整鼓組、17 款獨立軍鼓、31 款鑔片", "極度靈敏的輕擊 (Ghost Note) 與快節奏動態反饋"]
-            }
-          },
-          {
-            id: "sdx_stockholm",
-            name: "Toontrack SDX Stockholm (北歐獨立與現代流行)",
-            desc: "【/Volumes/S 實測 38.7 GB】瑞典斯德哥爾摩錄製，北歐獨立流行與空靈聲響 (實體目錄 SL-Stockholm)",
-            size: 39,
-            default: false,
-            badge: "SDX 39G",
-            details: {
-              overview: "在瑞典斯德哥爾摩錄製，呈現北歐流行音樂標誌性的空靈、通透與高解析度質感。",
-              suitable: "北歐流行、獨立搖滾、現代民謠、文藝電影配樂。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-Stockholm (實測 38.71 GB)", "獨特斯德哥爾摩錄音棚自然空間聲學", "輕盈通透的高頻鑔片與緊實圓潤的底鼓"]
-            }
-          },
-          {
-            id: "sdx_metal_foundry",
-            name: "Toontrack SDX The Metal Foundry (金屬重炮經典)",
-            desc: "【/Volumes/S 實測 33.6 GB】Meshuggah 鼓手參與，現代金屬鼓指標 (實體目錄 SL-MetalFoundry)",
-            size: 34,
-            default: false,
-            badge: "SDX 34G",
-            details: {
-              overview: "金屬鼓音源的長青樹經典！由前衛金屬巨擘 Meshuggah 鼓手 Tomas Haake 親自演奏錄製，音色剛猛銳利。",
-              suitable: "現代金屬、重型搖滾、激烈節奏編排。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-MetalFoundry (實測 33.55 GB)", "7 套完整金屬鼓組、海量特色軍鼓與長延音重型鑔片"]
-            }
-          },
-          {
-            id: "sdx_indiependent",
-            name: "Toontrack SDX The Indiependent (西雅圖獨立搖滾)",
-            desc: "【/Volumes/S 實測 21.3 GB】Kevin Killen 操刀，西雅圖 Avast! 錄製之原聲獨立鼓組 (實體目錄 SL-Indiependent)",
-            size: 21,
-            default: false,
-            badge: "SDX 21G",
-            details: {
-              overview: "由名製作人 Kevin Killen (Peter Gabriel, Elvis Costello) 於西雅圖 Avast! 錄製，帶有濃厚的 90 年代西雅圖車庫與獨立搖滾靈魂。",
-              suitable: "獨立搖滾 (Indie Rock)、車庫搖滾、復古民謠、Lo-Fi 原聲音樂。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-Indiependent (實測 21.26 GB)", "未經修飾的純真溫暖原聲質感、天然復古室內麥克風"]
-            }
-          },
-          {
-            id: "sdx_avatar",
-            name: "Toontrack SDX Avatar (紐約傳奇 Avatar Studios 經典)",
-            desc: "【/Volumes/S 實測 18.3 GB】紐約傳奇名棚，全能流行、爵士與經典搖滾 (實體目錄 SL-Avatar)",
-            size: 18,
-            default: false,
-            badge: "SDX 18G",
-            details: {
-              overview: "Superior Drummer 2 的傳奇黃金經典核心！錄製於紐約傳奇名棚 Avatar Studios（原名 Power Station），音質平衡度最高，耐聽度極佳。",
-              suitable: "流行、經典搖滾、藍調、放克、通用伴奏。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-Avatar (實測 18.28 GB)", "錄音棚聲學業界黃金標準、全能適用度第一"]
-            }
-          },
-          {
-            id: "sdx_metal_machinery",
-            name: "Toontrack SDX Metal Machinery (極致穿透金屬鼓)",
-            desc: "【/Volumes/S 實測 18.0 GB】Andy Sneap 混音調校，刀刀見骨的穿透力 (實體目錄 SL-MetalMachinery)",
-            size: 18,
-            default: false,
-            badge: "SDX 18G",
-            details: {
-              overview: "由重型音樂混音教父 Andy Sneap 操刀精煉調音的金屬鼓組，高頻亮麗、中頻有力、底鼓顆粒極其分明。",
-              suitable: "激流金屬 (Thrash Metal)、速度金屬、現代高能量流行搖滾。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-MetalMachinery (實測 18.01 GB)", "Andy Sneap 錄音棚簽名混音鏈 Presets"]
-            }
-          },
-          {
-            id: "sdx_rock_warehouse",
-            name: "Toontrack SDX Rock Warehouse (溫哥華名棚大空間搖滾)",
-            desc: "【/Volumes/S 實測 17.7 GB】The Warehouse Studios 實錄，Randy Staub 操刀經典大鼓聲 (實體目錄 SL-RockWare)",
-            size: 18,
-            default: false,
-            badge: "SDX 18G",
-            details: {
-              overview: "由 Metallica、Nickelback 御用混音師 Randy Staub 於溫哥華 The Warehouse Studios 錄製，大空間殘響磅礡震撼。",
-              suitable: "大編制搖滾、體育館演唱會搖滾 (Arena Rock)、重金屬。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-RockWare (實測 17.69 GB)", "極具厚度與深度的自然大房間 Room 殘響"]
-            }
-          },
-          {
-            id: "sdx_ny_vol3",
-            name: "Toontrack SDX New York Studios Vol.3 (紐約棚系列 Vol.3)",
-            desc: "【/Volumes/S 實測 16.1 GB】紐約頂級錄音棚，流行、靈魂與藍調經典原聲 (實體目錄 SL-NYVol3_SDX)",
-            size: 16,
-            default: false,
-            badge: "SDX 16G",
-            details: {
-              overview: "紐約錄音棚三部曲之終章。在紐約 Avatar Studios Studio C 錄製，主打溫暖、緊湊、富有靈魂質感的原聲鼓聲。",
-              suitable: "當代流行、R&B、新靈魂樂 (Neo-Soul)、布魯斯藍調。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-NYVol3_SDX (實測 16.11 GB)", "極度細膩的敲擊微動態、自然木質溫潤聲線"]
-            }
-          },
-          {
-            id: "sdx_music_city",
-            name: "Toontrack SDX Music City USA (納許維爾鄉村與原聲搖滾)",
-            desc: "【/Volumes/S 實測 11.4 GB】納許維爾名棚，溫暖乾淨原聲鼓，適合民謠、鄉村 (實體目錄 SL-MusicCity)",
-            size: 11,
-            default: false,
-            badge: "SDX 11G",
-            details: {
-              overview: "在音樂之都納許維爾著名的 Sound Kitchen 錄製。聲音純淨、溫暖、乾淨，無過多染色，是原聲吉他民謠與鄉村音樂的絕配。",
-              suitable: "鄉村音樂 (Country)、民謠 (Folk)、不插電現場 (Acoustic)、清爽流行慢歌。",
-              list: ["實體目錄：/Volumes/S/SD DRUM EXP/SL-MusicCity (實測 11.44 GB)", "納許維爾傳奇工程師 Chuck Ainlay 操刀調音"]
-            }
-          }
-        ]
+        "id": "hammersmith_pro",
+        "name": "Soniccouture The Hammersmith Pro (Steinway D 21力度層極致解析)",
+        "desc": "倫敦 Mark Knopfler British Grove 錄音室實錄 Steinway D，高達 21 力度層超精細取樣",
+        "size": 18,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "目前取樣層次最豐富的 Steinway D 平台鋼琴之一。在倫敦頂尖 British Grove Studios 錄製，每一鍵均採樣多達 21 個真實力度層，動態過渡無階梯感。",
+          "suitable": "精細古典鋼琴獨奏、專業鋼琴家編曲、高動態要求錄音。",
+          "list": [
+            "Steinway Model D 平台鋼琴 (21 Velocity Layers)",
+            "6 組立體聲錄音室麥克風配置 (Neumann, Schoeps, AKG, B&K)",
+            "真實半音與弱音踏板連鎖反應取樣"
+          ]
+        }
       },
       {
-        category: "I. 傳奇合成器與效果器外掛 (💻 安裝於電腦內建 1TB SSD，不佔用外接硬碟空間)",
-        icon: "🎛️",
-        badge: "本機安裝",
-        isInternal: true,
-        items: [
-          {
-            id: "arturia_v",
-            name: "Arturia V Collection 2026 全套 33款傳奇名機",
-            desc: "收錄 Prophet-5, Jupiter-8, CS-80, DX7, Synclavier, 經典電鋼琴與錄音室前級/壓縮 [💻 電腦本機]",
-            size: 40,
-            default: true,
-            isInternal: true,
-            badge: "合成器名機",
-            details: {
-              overview: "Arturia 2026 旗艦經典鍵盤與類比/數位合成器大全。安裝於 MacBook Pro 內建 1TB SSD 系統槽，完全不佔用外接 4TB 硬碟空間。",
-              suitable: "流行音樂、經典復古、電影配樂、電子舞曲。",
-              list: [
-                "類比名機：Prophet-5 V, Jupiter-8 V, CS-80 V, Mini V, MS-20 V, OB-Xa V, Juno-6 V, ARP 2600 V, Matrix-12 V, Modular V",
-                "數位名機：DX7 V, Synclavier V, Fairlight CMI V, Emulator II V, CZ V, SQ-80 V",
-                "復古鍵盤：Stage-73 V, Wurli V, Clavinet V, Piano V 3, B-3 V, Mellotron V, Solina V",
-                "錄音室效果器：Bus Force, Comp FET-76, Delay Tape-201, Rev Plate-140, Pre 1973"
-              ]
-            }
-          },
-          {
-            id: "roland_cloud",
-            name: "Roland Cloud 經典名機合集 + SRX 全系列擴充卡",
-            desc: "D-50, JD-800, Juno-106, Jupiter-8, XV-5080, TR-808/909 及 SRX 10張擴充卡全套 [💻 電腦本機]",
-            size: 25,
-            default: true,
-            isInternal: true,
-            badge: "Roland名機",
-            details: {
-              overview: "Roland 官方雲端正版架構名機庫。收錄 80/90 年代華語流行金曲最標誌性的 Roland 經典硬件音色，安裝於電腦本機系統槽。",
-              suitable: "華語流行經典編排、90 年代情歌、當代 Trap/嘻哈、千禧年代流行曲風。",
-              list: [
-                "經典合成名機：D-50, JD-800, Juno-60, Juno-106, JUPITER-8, JV-1080, XV-5080, ZENOLOGY",
-                "傳奇節奏機：TR-808, TR-909, TR-707, TB-303 (Acid Bass)",
-                "SRX 傳奇擴充卡 10 張全套：SRX BRASS, SRX STRINGS, SRX PIANO 1 & 2, SRX ORCHESTRA, SRX WORLD, SRX STUDIO, SRX Dance"
-              ]
-            }
-          },
-          {
-            id: "korg_collection",
-            name: "KORG Collection (Triton / M1) + Gadget 2 Bundle",
-            desc: "TRITON (華語流行演唱會招牌神機)、M1、WAVESTATION、MS-20 及 Gadget 2 40款城市模組 [💻 電腦本機]",
-            size: 20,
-            default: true,
-            isInternal: true,
-            badge: "KORG標竿",
-            details: {
-              overview: "KORG 官方旗艦軟體版。收錄華語流行演唱會 Keyboard 手無可取代的招牌名機 TRITON 與 M1，安裝於電腦本機系統槽。",
-              suitable: "演唱會現場彈奏、流行 R&B、千禧流行鋼琴、電子舞曲。",
-              list: [
-                "TRITON (千禧年代華語流行演唱會無可替代的招牌名機，全套擴充板)",
-                "M1 (House 鋼琴與 90 年代流行名曲招牌標誌音色)",
-                "WAVESTATION, MS-20, Polysix, MonoPoly, Prophecy, Opsix Native",
-                "KORG Gadget 2 Bundle (全套 40 款城市模組：London, Berlin, Tokyo 等)"
-              ]
-            }
-          },
-          {
-            id: "modern_synths",
-            name: "現代電音與流行編曲雙雄 (Serum 2 / Spire 1.5)",
-            desc: "Xfer Records SERUM 2.0 (波表之王) + Reveal Sound Spire 1.5 (高穿透力 EDM/流行合成器) [💻 電腦本機]",
-            size: 5,
-            default: true,
-            isInternal: true,
-            badge: "電音雙雄",
-            details: {
-              overview: "當代電子音樂與流行編曲必備的兩大高頻穿透力波表合成器。安裝於電腦本機系統槽。",
-              suitable: "現代流行流行電音、EDM、動感快歌、穿透力主音 Lead 與 Pluck。",
-              list: ["Xfer Records - SERUM 2.0.239 (波表合成器之王)", "Reveal Sound - Spire 1.5.1 (超強高頻穿透力合成器)"]
-            }
-          },
-          {
-            id: "fx_master_suite",
-            name: "專業混音、母帶與效果器外掛大全套 (Waves / iZotope / FabFilter 等)",
-            desc: "Waves 2025、FabFilter 2025、Melodyne 5、Vocalign、Valhalla、Softube、Plugin Alliance [💻 電腦本機]",
-            size: 35,
-            default: true,
-            isInternal: true,
-            badge: "母帶效果器",
-            details: {
-              overview: "全球業界最高標準的錄音室混音與母帶外掛大全。安裝於電腦本機系統槽 (/Library/Audio/Plug-Ins/Components 及 VST3)，檔案大小另計，不佔外接 4TB！",
-              suitable: "全軌錄音室混音、母帶處理、現場演出音質塑形、人聲修音對齊。",
-              list: [
-                "業界標準修音：Celemony Melodyne 5.4.1、Synchro Arts Vocalign Pro 4.2.0",
-                "Waves Audio 2025.10 通用完整版 (業界錄音室通用標配)",
-                "FabFilter 2025 全系列：Pro-Q 3/4, Pro-C 2, Pro-L 2, Pro-MB, Pro-R, Saturn 2",
-                "Valhalla DSP 全系列：ValhallaVintageVerb, Delay, Plate, Room, Shimmer",
-                "Plugin Alliance 旗艦：bx_digital V3, Maag EQ4, SPL Transient Designer, ADPTR Metric AB",
-                "Softube 模擬硬體：Tube-Tech CL 1B, Classic Channel, FET Compressor",
-                "IK Multimedia T-RackS 6 全系列、Positive Grid BIAS FX 2、XLN RC-20"
-              ]
-            }
-          }
-        ]
+        "id": "concert_grands_trio",
+        "name": "Native Instruments 經典古典三名琴 (Berlin / Vienna / New York)",
+        "desc": "柏林古典琴、維也納貝森朵夫琴與紐約史坦威傳統三名琴合集",
+        "size": 15,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Native Instruments 與 Galaxy Instruments 早期聯手打造的古典三大名琴標竿庫，音色質樸純粹，佔用記憶體小。",
+          "suitable": "古典練習、合唱伴奏、傳統室內樂編曲。",
+          "list": [
+            "Berlin Concert Grand (德國柏林古典平台鋼琴)",
+            "Vienna Concert Grand (維也納貝森朵夫平台鋼琴)",
+            "New York Concert Grand (紐約古典史坦威平台鋼琴)"
+          ]
+        }
+      },
+      {
+        "id": "upright_character_suite",
+        "name": "Native Instruments 特色立式與古董鋼琴套裝 (Gentleman / Maverick / Giant)",
+        "desc": "1908 年古董立式鋼琴、1905 年貝希斯坦平台鋼琴、Klavins 370 巨型鋼琴與 Piano Colors",
+        "size": 25,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "涵蓋傳統立式鋼琴的溫暖木質聲，到具有百餘年歷史的古董平台鋼琴，以及全世界最高的巨型立式鋼琴，提供豐富的特色鍵盤選擇。",
+          "suitable": "獨立民謠、復古流行、影視氛圍、實驗現代音樂。",
+          "list": [
+            "The Gentleman (1908 年古董立式鋼琴 Upright Piano，溫暖復古)",
+            "The Maverick (1905 年 C. Bechstein 古董平台鋼琴，古典歷史韻味)",
+            "The Giant (Klavins Piano 370 巨型直立鋼琴，超深沉次低音頻響)",
+            "Piano Colors (前衛現代粒子演算與預置演奏法鋼琴)"
+          ]
+        }
+      },
+      {
+        "id": "spectrasonics_keyscape",
+        "name": "Spectrasonics Keyscape (當代鍵盤樂器全集 · 36款名琴)",
+        "desc": "收錄 LA Custom C7 平台鋼琴、立式鋼琴、Rhodes、Wurlitzer、Clavinet 等 36 款鍵盤名機",
+        "size": 77,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "Spectrasonics 歷時 10 年修復並深入取樣的鍵盤音源。收錄 36 款珍稀鍵盤名琴，多重力度感應與踏板噪音取樣。",
+          "suitable": "所有音樂風格、流行演唱會、爵士、R&B、放克、福音音樂。",
+          "list": [
+            "LA Custom C7 Grand Piano (錄音室客製化 9 呎演奏三角鋼琴)",
+            "Wing Upright Piano (經典立式鋼琴)",
+            "經典電鋼琴：Classic Rhodes Mark I, Wurlitzer 140B, 200A",
+            "敲弦鍵盤：Clavinet C, Pianet T, Dolceola, Celesta",
+            "可與 Omnisphere 2 雙引擎無縫連動載入"
+          ]
+        }
+      },
+      {
+        "id": "scarbee_vintage_keys",
+        "name": "Native Instruments Scarbee 經典電鋼琴全套 (A-200 / Clavinet / EP-88s)",
+        "desc": "70 年代經典電鋼琴取樣，放克、靈魂樂、流行與爵士常用鍵盤",
+        "size": 18,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "採樣大師 Thomas Skarbye 打造的經典電鋼琴系列。精確還原模擬前級放大器、箱體與真實鍵盤動態響應。",
+          "suitable": "70/80 年代流行、放克 Funk、靈魂樂 Soul、Neo-Soul、Fusion 爵士。",
+          "list": [
+            "Scarbee Vintage Keys (Rhodes Mark I, Wurlitzer A-200)",
+            "Scarbee Clavinet / Pianet (放克必備敲弦鍵盤)",
+            "Scarbee Classic EP-88s (88 鍵手作電鋼琴，動態極致細膩)",
+            "Soniccouture Broken Wurli & EP73 Deconstructed"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_hz_piano_status",
+        "name": "Spitfire Audio - Hans Zimmer Piano (⚠️ 實測現況標註)",
+        "desc": "⚠️ 實測僅 74 GB (官方完整版為 211 GB)，缺少 33 個取樣切片，多麥克風預設會有取樣缺失，保留現況供評估",
+        "size": 74,
+        "default": false,
+        "badge": "殘缺標註",
+        "details": {
+          "overview": "Spitfire 與漢斯季默聯名開發之巨型鋼琴。經底層二進制體檢，目前目錄僅有 37 個 .nkx 取樣切片，遺失 33 個區塊（1~7 號及中後段麥克風切片），存在百度網盤下載中斷檔。",
+          "suitable": "僅供備查；正式製作建議優先使用 Noire、The Grandeur、CSP 或 Ivory II。",
+          "list": [
+            "官方規格：約 211.2 GB (AIR Hall 16 組多視角麥克風信號)",
+            "實測現況：73.89 GB (約 35% 取樣完整度)",
+            "部分單一麥克風預設可出聲，多麥克風組合預設載入會提示 Missing Samples",
+            "已注入標準 .nicnt 容器與專屬封面供辨識"
+          ]
+        }
       }
-      ,
+    ]
+  },
+  {
+    "category": "B. 弦樂聲部 (Strings)",
+    "icon": "🎻",
+    "badge": "弦樂聲部",
+    "items": [
       {
-        "category": "J. Native Instruments 旗艦管弦交響、電影預告與重擊打擊 (Aron 2T 擴充 · 51套)",
-        "icon": "🎻",
-        "badge": "好萊塢電影管弦",
-        "items": [
-                {
-                        "id": "ni_action_strikes",
-                        "name": "NI Action Strikes",
-                        "desc": "電影動作大片即時打擊樂節奏引擎，一鍵生成史詩節奏",
-                        "size": 3.1,
-                        "default": false,
-                        "badge": "動作節奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Action Strikes。電影動作大片即時打擊樂節奏引擎，一鍵生成史詩節奏。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Action Strikes",
-                                        "實體容量：3.11 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_action_strings",
-                        "name": "NI Action Strings",
-                        "desc": "好萊塢動作電影經典即時弦樂節奏庫",
-                        "size": 9.3,
-                        "default": false,
-                        "badge": "動作節奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Action Strings。好萊塢動作電影經典即時弦樂節奏庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Action Strings",
-                                        "實體容量：9.26 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_action_strings_2_library",
-                        "name": "NI Action Strings 2 Library",
-                        "desc": "好萊塢電影大片即時弦樂動作樂句引擎（升級第二代，極致震撼節奏）",
-                        "size": 28.6,
-                        "default": false,
-                        "badge": "動作節奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Action Strings 2 Library。好萊塢電影大片即時弦樂動作樂句引擎（升級第二代，極致震撼節奏）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Action Strings 2 Library",
-                                        "實體容量：28.55 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_amati_viola_library",
-                        "name": "NI Amati Viola Library",
-                        "desc": "阿瑪蒂 1614 年珍品中提琴，醇厚天鵝絨般溫暖音色",
-                        "size": 21.7,
-                        "default": false,
-                        "badge": "名琴獨奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Amati Viola Library。阿瑪蒂 1614 年珍品中提琴，醇厚天鵝絨般溫暖音色。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Amati Viola Library",
-                                        "實體容量：21.71 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_arkhis_library",
-                        "name": "NI Arkhis Library",
-                        "desc": "現代電影氛圍管弦樂織體與下潛重低音紋理庫",
-                        "size": 12.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Arkhis Library。現代電影氛圍管弦樂織體與下潛重低音紋理庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Arkhis Library",
-                                        "實體容量：12.24 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_ashlight_library",
-                        "name": "NI Ashlight Library",
-                        "desc": "顆粒合成與金屬音景引擎（專攻深沉、黑暗、冰冷前衛電影氛圍）",
-                        "size": 2.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Ashlight Library。顆粒合成與金屬音景引擎（專攻深沉、黑暗、冰冷前衛電影氛圍）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Ashlight Library",
-                                        "實體容量：2.50 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_choir_omnia",
-                        "name": "NI Choir_Omnia",
-                        "desc": "NI 旗艦 65GB 史詩交響合唱團（Strezov 採樣，男女聲部自由拼詞音節引擎）",
-                        "size": 65.6,
-                        "default": false,
-                        "badge": "史詩合唱",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Choir_Omnia。NI 旗艦 65GB 史詩交響合唱團（Strezov 採樣，男女聲部自由拼詞音節引擎）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Choir_Omnia",
-                                        "實體容量：65.57 GB",
-                                        "類別屬性：🎤 合唱人聲與語音合成",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_damage",
-                        "name": "NI Damage",
-                        "desc": "好萊塢電影配樂震撼工業與重型金屬打擊樂始祖",
-                        "size": 15.0,
-                        "default": false,
-                        "badge": "好萊塢重擊",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Damage。好萊塢電影配樂震撼工業與重型金屬打擊樂始祖。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Damage",
-                                        "實體容量：15.01 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_damage_2",
-                        "name": "NI Damage 2",
-                        "desc": "好萊塢電影預告片傳奇第一重擊打擊樂（Heavyocity 打造 22GB 旗艦第 2 代）",
-                        "size": 22.6,
-                        "default": false,
-                        "badge": "好萊塢重擊",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Damage 2。好萊塢電影預告片傳奇第一重擊打擊樂（Heavyocity 打造 22GB 旗艦第 2 代）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Damage 2",
-                                        "實體容量：22.64 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_duets_library",
-                        "name": "NI Duets Library",
-                        "desc": "多重聲部男女聲和聲與流行人聲織體",
-                        "size": 0.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Duets Library。多重聲部男女聲和聲與流行人聲織體。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Duets Library",
-                                        "實體容量：963.1 MB",
-                                        "類別屬性：🎤 合唱人聲與語音合成",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_emotive_strings",
-                        "name": "NI Emotive Strings",
-                        "desc": "抒情交響弦樂連奏與電影長音情感樂句庫",
-                        "size": 19.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Emotive Strings。抒情交響弦樂連奏與電影長音情感樂句庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Emotive Strings",
-                                        "實體容量：19.78 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_evolve_mutations",
-                        "name": "NI Evolve Mutations",
-                        "desc": "電影預告片金屬質感與律動變異音效庫",
-                        "size": 2.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Evolve Mutations。電影預告片金屬質感與律動變異音效庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Evolve Mutations",
-                                        "實體容量：2.16 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_evolve_mutations_2",
-                        "name": "NI Evolve Mutations 2",
-                        "desc": "電影預告片音效突變系列 2 代",
-                        "size": 1.4,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Evolve Mutations 2。電影預告片音效突變系列 2 代。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Evolve Mutations 2",
-                                        "實體容量：1.42 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_evolve_r2",
-                        "name": "NI Evolve R2",
-                        "desc": "好萊塢配樂必備現代節奏打擊與電影脈衝音色庫",
-                        "size": 3.1,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Evolve R2。好萊塢配樂必備現代節奏打擊與電影脈衝音色庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Evolve R2",
-                                        "實體容量：3.14 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_fables",
-                        "name": "NI Fables",
-                        "desc": "NI 旗艦 53GB 幻想史詩交響故事樂團（Lores 姐妹作，溫暖木質與弦樂交織）",
-                        "size": 53.0,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Fables。NI 旗艦 53GB 幻想史詩交響故事樂團（Lores 姐妹作，溫暖木質與弦樂交織）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Fables",
-                                        "實體容量：52.97 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_glaze_library",
-                        "name": "NI Glaze Library",
-                        "desc": "光滑亮麗的流行與 R&B 人聲切片合唱音色庫",
-                        "size": 1.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Glaze Library。光滑亮麗的流行與 R&B 人聲切片合唱音色庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Glaze Library",
-                                        "實體容量：1.28 GB",
-                                        "類別屬性：🎤 合唱人聲與語音合成",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_guarneri_violin_library",
-                        "name": "NI Guarneri Violin Library",
-                        "desc": "耶穌·瓜奈里 1743 年傳奇名琴小提琴，高亢剛勁、極具張力",
-                        "size": 22.8,
-                        "default": false,
-                        "badge": "名琴獨奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Guarneri Violin Library。耶穌·瓜奈里 1743 年傳奇名琴小提琴，高亢剛勁、極具張力。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Guarneri Violin Library",
-                                        "實體容量：22.78 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_kinetic_metal",
-                        "name": "NI Kinetic Metal",
-                        "desc": "金屬樂器奇幻變形與敲擊音景",
-                        "size": 1.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Kinetic Metal。金屬樂器奇幻變形與敲擊音景。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Kinetic Metal",
-                                        "實體容量：1.53 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_kinetic_toys",
-                        "name": "NI Kinetic Toys",
-                        "desc": "復古玩具與機械聲學奇幻變形音色庫",
-                        "size": 3.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Kinetic Toys。復古玩具與機械聲學奇幻變形音色庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Kinetic Toys",
-                                        "實體容量：3.53 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_kinetic_treats",
-                        "name": "NI Kinetic Treats",
-                        "desc": "八音盒與童年玩具發聲實驗庫",
-                        "size": 0.4,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Kinetic Treats。八音盒與童年玩具發聲實驗庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Kinetic Treats",
-                                        "實體容量：409.8 MB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_lores_library",
-                        "name": "NI Lores Library",
-                        "desc": "NI 旗艦 67GB 跨界民族與交響混合傳奇音色庫（極致空靈與電影敘事感）",
-                        "size": 67.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Lores Library。NI 旗艦 67GB 跨界民族與交響混合傳奇音色庫（極致空靈與電影敘事感）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Lores Library",
-                                        "實體容量：67.22 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_low_end_strings",
-                        "name": "NI Low End Strings",
-                        "desc": "震撼低頻弦樂（大提琴與低音提琴重低音強調）",
-                        "size": 3.4,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Low End Strings。震撼低頻弦樂（大提琴與低音提琴重低音強調）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Low End Strings",
-                                        "實體容量：3.42 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_mallet_flux",
-                        "name": "NI Mallet Flux",
-                        "desc": "馬林巴、鋼片琴與木琴流動節奏音景引擎",
-                        "size": 5.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Mallet Flux。馬林巴、鋼片琴與木琴流動節奏音景引擎。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Mallet Flux",
-                                        "實體容量：5.27 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_mysteria_library",
-                        "name": "NI Mysteria Library",
-                        "desc": "電影人聲張力音景引擎（大型合唱懸疑、恐懼、史詩張力）",
-                        "size": 27.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Mysteria Library。電影人聲張力音景引擎（大型合唱懸疑、恐懼、史詩張力）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Mysteria Library",
-                                        "實體容量：27.77 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_native_instruments_schema_dark",
-                        "name": "NI Native_Instruments_Schema_Dark",
-                        "desc": "暗黑驅動步進音序器與重型低音律動庫",
-                        "size": 1.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Native_Instruments_Schema_Dark。暗黑驅動步進音序器與重型低音律動庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Native_Instruments_Schema_Dark",
-                                        "實體容量：1.86 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_pharlight_library",
-                        "name": "NI Pharlight Library",
-                        "desc": "人聲顆粒合成氛圍引擎（空靈人聲光澤與情感長音）",
-                        "size": 1.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Pharlight Library。人聲顆粒合成氛圍引擎（空靈人聲光澤與情感長音）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Pharlight Library",
-                                        "實體容量：1.20 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_rise_and_hit",
-                        "name": "NI Rise and Hit",
-                        "desc": "電影預告片專用 Crescendo 上升音效與終極爆炸重擊音效庫",
-                        "size": 5.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Rise and Hit。電影預告片專用 Crescendo 上升音效與終極爆炸重擊音效庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Rise and Hit",
-                                        "實體容量：5.93 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_sequis_library",
-                        "name": "NI Sequis Library",
-                        "desc": "聲學採樣循環與多重節拍律動音色引擎",
-                        "size": 4.1,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Sequis Library。聲學採樣循環與多重節拍律動音色引擎。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Sequis Library",
-                                        "實體容量：4.06 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_session_strings_2_library",
-                        "name": "NI Session Strings 2 Library",
-                        "desc": "現代流行樂緊湊小編制弦樂室內樂 2 代",
-                        "size": 10.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Session Strings 2 Library。現代流行樂緊湊小編制弦樂室內樂 2 代。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Session Strings 2 Library",
-                                        "實體容量：10.53 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_session_strings_library",
-                        "name": "NI Session Strings Library",
-                        "desc": "經典現代流行樂弦樂組",
-                        "size": 1.7,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Session Strings Library。經典現代流行樂弦樂組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Session Strings Library",
-                                        "實體容量：1.68 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_session_strings_pro",
-                        "name": "NI Session Strings Pro",
-                        "desc": "流行樂專用弦樂合奏旗艦版（現代緊湊聲響）",
-                        "size": 29.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Session Strings Pro。流行樂專用弦樂合奏旗艦版（現代緊湊聲響）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Session Strings Pro",
-                                        "實體容量：29.58 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_session_strings_pro_2",
-                        "name": "NI Session Strings Pro 2",
-                        "desc": "現代流行樂與錄音室專用大型弦樂合奏庫 2 代（靈活編程、流行/Disco 必備）",
-                        "size": 34.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Session Strings Pro 2。現代流行樂與錄音室專用大型弦樂合奏庫 2 代（靈活編程、流行/Disco 必備）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Session Strings Pro 2",
-                                        "實體容量：34.33 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_stradivari_cello_library",
-                        "name": "NI Stradivari Cello Library",
-                        "desc": "史特拉底瓦里大提琴，渾厚溫暖、極高表現力獨奏大提琴",
-                        "size": 23.1,
-                        "default": false,
-                        "badge": "名琴獨奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Stradivari Cello Library。史特拉底瓦里大提琴，渾厚溫暖、極高表現力獨奏大提琴。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Stradivari Cello Library",
-                                        "實體容量：23.12 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_stradivari_violin_library",
-                        "name": "NI Stradivari Violin Library",
-                        "desc": "義大利克雷莫納 1727 年史特拉底瓦里名琴小提琴，極致細膩獨奏與揉弦",
-                        "size": 21.8,
-                        "default": false,
-                        "badge": "名琴獨奏",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Stradivari Violin Library。義大利克雷莫納 1727 年史特拉底瓦里名琴小提琴，極致細膩獨奏與揉弦。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Stradivari Violin Library",
-                                        "實體容量：21.84 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_straylight",
-                        "name": "NI Straylight",
-                        "desc": "顆粒合成電影光影音景（科幻、沉浸式、懸疑配樂神兵）",
-                        "size": 2.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Straylight。顆粒合成電影光影音景（科幻、沉浸式、懸疑配樂神兵）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Straylight",
-                                        "實體容量：2.34 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_essentials_brass_ensemble_library",
-                        "name": "NI Symphony Essentials Brass Ensemble Library",
-                        "desc": "交響銅管合奏精簡版",
-                        "size": 4.0,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Essentials Brass Ensemble Library。交響銅管合奏精簡版。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Essentials Brass Ensemble Library",
-                                        "實體容量：3.96 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_essentials_brass_solo_library",
-                        "name": "NI Symphony Essentials Brass Solo Library",
-                        "desc": "交響銅管獨奏精簡版",
-                        "size": 2.0,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Essentials Brass Solo Library。交響銅管獨奏精簡版。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Essentials Brass Solo Library",
-                                        "實體容量：2.00 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_essentials_percussion_library",
-                        "name": "NI Symphony Essentials Percussion Library",
-                        "desc": "交響打擊樂精簡版",
-                        "size": 3.8,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Essentials Percussion Library。交響打擊樂精簡版。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Essentials Percussion Library",
-                                        "實體容量：3.84 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_essentials_string_ensemble",
-                        "name": "NI Symphony Essentials String Ensemble",
-                        "desc": "交響弦樂精簡版 (輕量化、載入快速)",
-                        "size": 3.2,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Essentials String Ensemble。交響弦樂精簡版 (輕量化、載入快速)。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Essentials String Ensemble",
-                                        "實體容量：3.20 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_essentials_woodwind_ensemble_library",
-                        "name": "NI Symphony Essentials Woodwind Ensemble Library",
-                        "desc": "交響木管合奏精簡版",
-                        "size": 2.9,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Essentials Woodwind Ensemble Library。交響木管合奏精簡版。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Essentials Woodwind Ensemble Library",
-                                        "實體容量：2.91 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_essentials_woodwind_solo_library",
-                        "name": "NI Symphony Essentials Woodwind Solo Library",
-                        "desc": "交響木管獨奏精簡版",
-                        "size": 1.6,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Essentials Woodwind Solo Library。交響木管獨奏精簡版。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Essentials Woodwind Solo Library",
-                                        "實體容量：1.62 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_series_brass_ensemble_library",
-                        "name": "NI Symphony Series Brass Ensemble Library",
-                        "desc": "NI 旗艦大型交響銅管合奏庫 (32 人銅管，宏偉壯闊好萊塢聲響)",
-                        "size": 27.1,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Series Brass Ensemble Library。NI 旗艦大型交響銅管合奏庫 (32 人銅管，宏偉壯闊好萊塢聲響)。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Series Brass Ensemble Library",
-                                        "實體容量：27.08 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_series_brass_solo_library",
-                        "name": "NI Symphony Series Brass Solo Library",
-                        "desc": "NI 旗艦交響銅管獨奏庫 (小號、長號、法國號、低音號頂級獨奏)",
-                        "size": 17.6,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Series Brass Solo Library。NI 旗艦交響銅管獨奏庫 (小號、長號、法國號、低音號頂級獨奏)。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Series Brass Solo Library",
-                                        "實體容量：17.57 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_series_percussion",
-                        "name": "NI Symphony Series Percussion",
-                        "desc": "NI 旗艦大型交響打擊樂庫 (定音鼓、大鼓、交響鈸、打擊合奏)",
-                        "size": 27.1,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Series Percussion。NI 旗艦大型交響打擊樂庫 (定音鼓、大鼓、交響鈸、打擊合奏)。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Series Percussion",
-                                        "實體容量：27.12 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_series_string_ensemble",
-                        "name": "NI Symphony Series String Ensemble",
-                        "desc": "NI 旗艦大型交響弦樂合奏庫 (60 人交響大編制，完整麥克風位)",
-                        "size": 31.8,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Series String Ensemble。NI 旗艦大型交響弦樂合奏庫 (60 人交響大編制，完整麥克風位)。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Series String Ensemble",
-                                        "實體容量：31.78 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_series_woodwind_ensemble_library",
-                        "name": "NI Symphony Series Woodwind Ensemble Library",
-                        "desc": "NI 旗艦大型交響木管合奏庫",
-                        "size": 30.9,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Series Woodwind Ensemble Library。NI 旗艦大型交響木管合奏庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Series Woodwind Ensemble Library",
-                                        "實體容量：30.88 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_symphony_series_woodwind_solo_library",
-                        "name": "NI Symphony Series Woodwind Solo Library",
-                        "desc": "NI 旗艦交響木管獨奏庫 (長笛、雙簧管、單簧管、低音管)",
-                        "size": 20.0,
-                        "default": false,
-                        "badge": "旗艦交響",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Symphony Series Woodwind Solo Library。NI 旗艦交響木管獨奏庫 (長笛、雙簧管、單簧管、低音管)。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Symphony Series Woodwind Solo Library",
-                                        "實體容量：19.98 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_thrill",
-                        "name": "NI Thrill",
-                        "desc": "好萊塢驚悚、懸疑與史詩張力宏偉聲響引擎（X-Y 軸即時控制張力）",
-                        "size": 30.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Thrill。好萊塢驚悚、懸疑與史詩張力宏偉聲響引擎（X-Y 軸即時控制張力）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Thrill",
-                                        "實體容量：30.16 GB",
-                                        "類別屬性：💥 電影預告、史詩重擊與氛圍音效",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_valves",
-                        "name": "NI Valves",
-                        "desc": "溫暖柔和的銅管流動音景與氛圍織體",
-                        "size": 10.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Valves。溫暖柔和的銅管流動音景與氛圍織體。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Valves",
-                                        "實體容量：10.84 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_valves_pro",
-                        "name": "NI Valves Pro",
-                        "desc": "次世代溫暖銅管合奏與流動紋理庫（專業升級版）",
-                        "size": 28.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Valves Pro。次世代溫暖銅管合奏與流動紋理庫（專業升級版）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Valves Pro",
-                                        "實體容量：28.64 GB",
-                                        "類別屬性：🎻 弦樂、管弦交響與電影管樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_vocal_colors",
-                        "name": "NI Vocal Colors",
-                        "desc": "人聲色彩實驗室，將真實人聲與合成器結合之現代先鋒人聲庫",
-                        "size": 15.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Vocal Colors。人聲色彩實驗室，將真實人聲與合成器結合之現代先鋒人聲庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Vocal Colors",
-                                        "實體容量：15.57 GB",
-                                        "類別屬性：🎤 合唱人聲與語音合成",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                }
-        ]
-},
+        "id": "lass3",
+        "name": "Audiobro LASS 3 (LA Scoring Strings 3 完整版)",
+        "desc": "乾音編制、分部 (Divisi) 控制、具備真實 Legato 連奏與穿透力，流行編曲與管弦弦樂常備",
+        "size": 60,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "好萊塢與華語流行音樂廣泛使用的弦樂音源。具備真實乾音錄音、獨特的 Divisi 分部控制與真實 Legato，在流行樂混音中穿透力極強。",
+          "suitable": "華語流行情歌副歌鋪墊、大編制交響、快節奏弦樂切分、電視電影配樂。",
+          "list": [
+            "第一小提琴 (First Violins, 16人分部)",
+            "第二小提琴 (Second Violins, 12人分部)",
+            "中提琴 (Violas, 10人分部)",
+            "大提琴 (Cellos, 8人分部)",
+            "低音提琴 (Basses, 4人分部)",
+            "First Chair 首席獨奏聲部 (小提琴、中提琴、大提琴、低音提琴獨奏)"
+          ]
+        }
+      },
       {
-        "category": "K. Native Instruments 經典鍵盤鼓組、世界民族與潮流合成 (Aron 2T 擴充 · 59套)",
-        "icon": "🎹",
-        "badge": "鍵盤鼓組潮流",
-        "items": [
-                {
-                        "id": "ni_40s_very_own___drums",
-                        "name": "NI 40s Very Own - Drums",
-                        "desc": "Drake 製作人 40 標誌性沉浸式低頻與鼓組",
-                        "size": 0.1,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】40s Very Own - Drums。Drake 製作人 40 標誌性沉浸式低頻與鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/40s Very Own - Drums",
-                                        "實體容量：48.8 MB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_40s_very_own___keys",
-                        "name": "NI 40s Very Own - Keys",
-                        "desc": "Noah 40 Shebib 專屬打造之 OVO Drake 標誌性下潛靈魂鍵盤",
-                        "size": 3.0,
-                        "default": false,
-                        "badge": "經典鍵盤",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】40s Very Own - Keys。Noah 40 Shebib 專屬打造之 OVO Drake 標誌性下潛靈魂鍵盤。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/40s Very Own - Keys",
-                                        "實體容量：2.95 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_abbey_road__1950",
-                        "name": "NI Abbey Road -1950",
-                        "desc": "傳奇 Abbey Road 錄音室 1950 年代復古爵士/搖滾鼓組",
-                        "size": 7.9,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Abbey Road -1950。傳奇 Abbey Road 錄音室 1950 年代復古爵士/搖滾鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Abbey Road -1950",
-                                        "實體容量：7.88 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_abbey_road__1960",
-                        "name": "NI Abbey Road -1960",
-                        "desc": "傳奇 Abbey Road 1960 年代復古搖滾鼓組（披頭四標誌性音色）",
-                        "size": 6.3,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Abbey Road -1960。傳奇 Abbey Road 1960 年代復古搖滾鼓組（披頭四標誌性音色）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Abbey Road -1960",
-                                        "實體容量：6.35 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_abbey_road__1970",
-                        "name": "NI Abbey Road -1970",
-                        "desc": "傳奇 Abbey Road 1970 年代經典搖滾與放克鼓組",
-                        "size": 6.6,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Abbey Road -1970。傳奇 Abbey Road 1970 年代經典搖滾與放克鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Abbey Road -1970",
-                                        "實體容量：6.57 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_abbey_road__1980",
-                        "name": "NI Abbey Road -1980",
-                        "desc": "傳奇 Abbey Road 1980 年代流行搖滾重型經典鼓組",
-                        "size": 8.0,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Abbey Road -1980。傳奇 Abbey Road 1980 年代流行搖滾重型經典鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Abbey Road -1980",
-                                        "實體容量：7.95 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_abbey_road_modern",
-                        "name": "NI Abbey Road Modern",
-                        "desc": "傳奇 Abbey Road 現代錄音室全方位多功能高解析鼓組",
-                        "size": 7.3,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Abbey Road Modern。傳奇 Abbey Road 現代錄音室全方位多功能高解析鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Abbey Road Modern",
-                                        "實體容量：7.33 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_abbey_road_vintage",
-                        "name": "NI Abbey Road Vintage",
-                        "desc": "傳奇 Abbey Road 早期復古爵士錄音鼓組",
-                        "size": 7.1,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Abbey Road Vintage。傳奇 Abbey Road 早期復古爵士錄音鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Abbey Road Vintage",
-                                        "實體容量：7.13 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_analog_dreams_library",
-                        "name": "NI Analog Dreams Library",
-                        "desc": "經典 80 年代復古類比合成器經典音色（Synthwave/流行必備）",
-                        "size": 3.8,
-                        "default": false,
-                        "badge": "潮流合成",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Analog Dreams Library。經典 80 年代復古類比合成器經典音色（Synthwave/流行必備）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Analog Dreams Library",
-                                        "實體容量：3.80 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_balinese_gamelan",
-                        "name": "NI Balinese Gamelan",
-                        "desc": "印尼巴厘島甘美朗傳統青銅打擊樂團合奏",
-                        "size": 2.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Balinese Gamelan。印尼巴厘島甘美朗傳統青銅打擊樂團合奏。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Balinese Gamelan",
-                                        "實體容量：2.32 GB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_balinese_gamelan_library",
-                        "name": "NI Balinese Gamelan Library",
-                        "desc": "印尼巴厘島甘美朗傳統青銅打擊樂團合奏",
-                        "size": 2.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Balinese Gamelan Library。印尼巴厘島甘美朗傳統青銅打擊樂團合奏。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Balinese Gamelan Library",
-                                        "實體容量：2.31 GB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_bazzazian_tapes_library",
-                        "name": "NI Bazzazian Tapes Library",
-                        "desc": "傳奇製作人 Bazzazian 磁帶暗黑特調音色",
-                        "size": 2.4,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Bazzazian Tapes Library。傳奇製作人 Bazzazian 磁帶暗黑特調音色。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Bazzazian Tapes Library",
-                                        "實體容量：2.40 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_butch_vig_drums",
-                        "name": "NI Butch Vig Drums",
-                        "desc": "超脫樂團製作人 Butch Vig 專屬調校之重型搖滾與衝擊力鼓組",
-                        "size": 0.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Butch Vig Drums。超脫樂團製作人 Butch Vig 專屬調校之重型搖滾與衝擊力鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Butch Vig Drums",
-                                        "實體容量：181.3 MB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_cloud_supply_library",
-                        "name": "NI Cloud Supply Library",
-                        "desc": "Trap 與現代嘻哈夢幻飄渺合成音色庫",
-                        "size": 2.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Cloud Supply Library。Trap 與現代嘻哈夢幻飄渺合成音色庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Cloud Supply Library",
-                                        "實體容量：2.46 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_cuba_library",
-                        "name": "NI Cuba Library",
-                        "desc": "古巴傳統曼波、薩爾薩節奏與打擊拉丁合奏",
-                        "size": 2.8,
-                        "default": false,
-                        "badge": "世界民族",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Cuba Library。古巴傳統曼波、薩爾薩節奏與打擊拉丁合奏。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Cuba Library",
-                                        "實體容量：2.75 GB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_deft_lines_library",
-                        "name": "NI Deft Lines Library",
-                        "desc": "英國 Drill、Grime 與現代低音重拍音色",
-                        "size": 3.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Deft Lines Library。英國 Drill、Grime 與現代低音重拍音色。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Deft Lines Library",
-                                        "實體容量：3.65 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_drum_lab",
-                        "name": "NI Drum Lab",
-                        "desc": "真實聲學鼓與電子打擊音色混合實驗室",
-                        "size": 2.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Drum Lab。真實聲學鼓與電子打擊音色混合實驗室。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Drum Lab",
-                                        "實體容量：2.56 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_electric_sunburst",
-                        "name": "NI Electric Sunburst",
-                        "desc": "Gibson Les Paul 電吉他節奏與掃弦庫",
-                        "size": 5.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Electric Sunburst。Gibson Les Paul 電吉他節奏與掃弦庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Electric Sunburst",
-                                        "實體容量：5.45 GB",
-                                        "類別屬性：🎸 經典吉他與電貝斯",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_empire_breaks_library",
-                        "name": "NI Empire Breaks Library",
-                        "desc": "黃金年代 Boom Bap 經典黑膠切片碎拍鼓組",
-                        "size": 2.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Empire Breaks Library。黃金年代 Boom Bap 經典黑膠切片碎拍鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Empire Breaks Library",
-                                        "實體容量：2.90 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_ethereal_earth_library",
-                        "name": "NI Ethereal Earth Library",
-                        "desc": "聲學世界樂器與合成器空靈氛圍融合庫",
-                        "size": 1.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Ethereal Earth Library。聲學世界樂器與合成器空靈氛圍融合庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Ethereal Earth Library",
-                                        "實體容量：1.26 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_feel_it_library",
-                        "name": "NI Feel It Library",
-                        "desc": "現代流行舞曲與熱門單曲鍵盤合成",
-                        "size": 0.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Feel It Library。現代流行舞曲與熱門單曲鍵盤合成。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Feel It Library",
-                                        "實體容量：910.0 MB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_funk_guitarist",
-                        "name": "NI Funk Guitarist",
-                        "desc": "放克切音節奏電吉他（Funk 律動即時彈奏神器）",
-                        "size": 7.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Funk Guitarist。放克切音節奏電吉他（Funk 律動即時彈奏神器）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Funk Guitarist",
-                                        "實體容量：7.45 GB",
-                                        "類別屬性：🎸 經典吉他與電貝斯",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_george_duke_soul_treasures",
-                        "name": "NI George Duke Soul Treasures",
-                        "desc": "爵士傳奇大師 George Duke 親自演奏之靈魂樂鍵盤切片與樂句庫",
-                        "size": 3.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】George Duke Soul Treasures。爵士傳奇大師 George Duke 親自演奏之靈魂樂鍵盤切片與樂句庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/George Duke Soul Treasures",
-                                        "實體容量：3.61 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_hybrid_keys_library",
-                        "name": "NI Hybrid Keys Library",
-                        "desc": "混合鍵盤音色，融合鋼琴、合成器與聲學採樣",
-                        "size": 3.7,
-                        "default": false,
-                        "badge": "經典鍵盤",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Hybrid Keys Library。混合鍵盤音色，融合鋼琴、合成器與聲學採樣。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Hybrid Keys Library",
-                                        "實體容量：3.68 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_hypha_library",
-                        "name": "NI Hypha Library",
-                        "desc": "大自然與聲學微粒合成有機庫",
-                        "size": 1.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Hypha Library。大自然與聲學微粒合成有機庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Hypha Library",
-                                        "實體容量：1.82 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_ignition_keys",
-                        "name": "NI Ignition Keys",
-                        "desc": "流行、嘻哈與 R&B 專用潮流明亮鍵盤音色",
-                        "size": 1.5,
-                        "default": false,
-                        "badge": "經典鍵盤",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Ignition Keys。流行、嘻哈與 R&B 專用潮流明亮鍵盤音色。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Ignition Keys",
-                                        "實體容量：1.51 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_india_library",
-                        "name": "NI India Library",
-                        "desc": "印度傳統樂器合輯（西塔琴、薩羅德琴、塔布拉手鼓、竹笛與即時律動）",
-                        "size": 2.8,
-                        "default": false,
-                        "badge": "世界民族",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】India Library。印度傳統樂器合輯（西塔琴、薩羅德琴、塔布拉手鼓、竹笛與即時律動）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/India Library",
-                                        "實體容量：2.75 GB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_irish_harp_library",
-                        "name": "NI Irish Harp Library",
-                        "desc": "愛爾蘭居爾特豎琴，清脆空靈傳統豎琴",
-                        "size": 0.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Irish Harp Library。愛爾蘭居爾特豎琴，清脆空靈傳統豎琴。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Irish Harp Library",
-                                        "實體容量：900.5 MB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_karriem_riggins_drums",
-                        "name": "NI Karriem Riggins Drums",
-                        "desc": "嘻哈傳奇製作人 Karriem Riggins 專屬嘻哈與爵士律動鼓組",
-                        "size": 5.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Karriem Riggins Drums。嘻哈傳奇製作人 Karriem Riggins 專屬嘻哈與爵士律動鼓組。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Karriem Riggins Drums",
-                                        "實體容量：5.22 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_kontakt_factory_library",
-                        "name": "NI Kontakt Factory Library",
-                        "desc": "經典 Kontakt 6 出廠庫完整合集（23GB 全能工具包）",
-                        "size": 23.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Kontakt Factory Library。經典 Kontakt 6 出廠庫完整合集（23GB 全能工具包）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Kontakt Factory Library",
-                                        "實體容量：23.32 GB",
-                                        "類別屬性：📦 Kontakt 原廠通用音色庫",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_kontakt_factory_library_2_library",
-                        "name": "NI Kontakt Factory Library 2 Library",
-                        "desc": "Kontakt 7 旗艦全新二代出廠庫（管弦、聲學、流行、合成、打擊樂全面革新 37GB）",
-                        "size": 36.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Kontakt Factory Library 2 Library。Kontakt 7 旗艦全新二代出廠庫（管弦、聲學、流行、合成、打擊樂全面革新 37GB）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Kontakt Factory Library 2 Library",
-                                        "實體容量：36.86 GB",
-                                        "類別屬性：📦 Kontakt 原廠通用音色庫",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_kontakt_factory_selection",
-                        "name": "NI Kontakt Factory Selection",
-                        "desc": "Kontakt 原廠輕量化精選體驗庫",
-                        "size": 0.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Kontakt Factory Selection。Kontakt 原廠輕量化精選體驗庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Kontakt Factory Selection",
-                                        "實體容量：628.0 MB",
-                                        "類別屬性：📦 Kontakt 原廠通用音色庫",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_lo_fi_glow_library",
-                        "name": "NI Lo-Fi Glow Library",
-                        "desc": "Lo-Fi 嘻哈、復古錄音帶抖動與溫暖毛刺鍵盤合成庫",
-                        "size": 0.5,
-                        "default": false,
-                        "badge": "潮流合成",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Lo-Fi Glow Library。Lo-Fi 嘻哈、復古錄音帶抖動與溫暖毛刺鍵盤合成庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Lo-Fi Glow Library",
-                                        "實體容量：550.1 MB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_maschine_drum_selection",
-                        "name": "NI Maschine Drum Selection",
-                        "desc": "Maschine 精選傳奇電子鼓與打擊音色精選",
-                        "size": 0.1,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Maschine Drum Selection。Maschine 精選傳奇電子鼓與打擊音色精選。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Maschine Drum Selection",
-                                        "實體容量：81.3 MB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_melted_vibes_library",
-                        "name": "NI Melted Vibes Library",
-                        "desc": "微融變音、波形彎折與現代熱門 R&B/嘻哈音色",
-                        "size": 0.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Melted Vibes Library。微融變音、波形彎折與現代熱門 R&B/嘻哈音色。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Melted Vibes Library",
-                                        "實體容量：771.8 MB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_middle_east_library",
-                        "name": "NI Middle East Library",
-                        "desc": "中東傳統樂器合輯（烏德琴、卡龍琴、奈伊笛、中東打擊樂與樂句引擎）",
-                        "size": 9.8,
-                        "default": false,
-                        "badge": "世界民族",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Middle East Library。中東傳統樂器合輯（烏德琴、卡龍琴、奈伊笛、中東打擊樂與樂句引擎）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Middle East Library",
-                                        "實體容量：9.78 GB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_modular_icons_library",
-                        "name": "NI Modular Icons Library",
-                        "desc": "傳奇模組化合成器標誌性音色合輯",
-                        "size": 3.7,
-                        "default": false,
-                        "badge": "潮流合成",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Modular Icons Library。傳奇模組化合成器標誌性音色合輯。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Modular Icons Library",
-                                        "實體容量：3.73 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_nord_stage_3",
-                        "name": "NI Nord Stage 3",
-                        "desc": "Nord Stage 3 標誌性舞台旗艦鍵盤採樣合成套裝",
-                        "size": 5.0,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Nord Stage 3。Nord Stage 3 標誌性舞台旗艦鍵盤採樣合成套裝。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Nord Stage 3",
-                                        "實體容量：5.04 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_play_series_selection_library",
-                        "name": "NI Play Series Selection Library",
-                        "desc": "NI Play Series 潮流音色精選體驗包",
-                        "size": 1.6,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Play Series Selection Library。NI Play Series 潮流音色精選體驗包。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Play Series Selection Library",
-                                        "實體容量：1.60 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_playbox_library",
-                        "name": "NI Playbox Library",
-                        "desc": "隨機和弦與聲音靈感骰子生成器，快速打破創作瓶頸",
-                        "size": 1.2,
-                        "default": false,
-                        "badge": "潮流合成",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Playbox Library。隨機和弦與聲音靈感骰子生成器，快速打破創作瓶頸。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Playbox Library",
-                                        "實體容量：1.25 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_retro_machines_mk2",
-                        "name": "NI Retro Machines Mk2",
-                        "desc": "16 款 70/80 年代傳奇復古硬體合成器精粹",
-                        "size": 3.7,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Retro Machines Mk2。16 款 70/80 年代傳奇復古硬體合成器精粹。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Retro Machines Mk2",
-                                        "實體容量：3.73 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_rudiments",
-                        "name": "NI Rudiments",
-                        "desc": "現代嘻哈/電子鼓組基礎節奏庫",
-                        "size": 0.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Rudiments。現代嘻哈/電子鼓組基礎節奏庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Rudiments",
-                                        "實體容量：186.2 MB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_sway_library",
-                        "name": "NI SWAY Library",
-                        "desc": "流暢有機律動與搖擺微醺聲響",
-                        "size": 2.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】SWAY Library。流暢有機律動與搖擺微醺聲響。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/SWAY Library",
-                                        "實體容量：2.29 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_scarbee_mark",
-                        "name": "NI Scarbee Mark",
-                        "desc": "經典 Rhodes Mark I 電鋼琴原版音色庫",
-                        "size": 1.3,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Scarbee Mark。經典 Rhodes Mark I 電鋼琴原版音色庫。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Scarbee Mark",
-                                        "實體容量：1.32 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_scarbee_rickenbacker",
-                        "name": "NI Scarbee Rickenbacker",
-                        "desc": "Rickenbacker 4003 傳奇搖滾貝斯（經官方認證採樣）",
-                        "size": 6.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Scarbee Rickenbacker。Rickenbacker 4003 傳奇搖滾貝斯（經官方認證採樣）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Scarbee Rickenbacker",
-                                        "實體容量：6.75 GB",
-                                        "類別屬性：🎸 經典吉他與電貝斯",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_session_percussionist",
-                        "name": "NI Session Percussionist",
-                        "desc": "現代錄音室打擊樂手（康加鼓、邦哥鼓、沙錘、手鼓智能律動引擎）",
-                        "size": 5.8,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Session Percussionist。現代錄音室打擊樂手（康加鼓、邦哥鼓、沙錘、手鼓智能律動引擎）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Session Percussionist",
-                                        "實體容量：5.85 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_soul_sessions_library",
-                        "name": "NI Soul Sessions Library",
-                        "desc": "70 年代靈魂樂到現代 Neo-Soul 經典合成與鍵盤",
-                        "size": 0.4,
-                        "default": false,
-                        "badge": "潮流合成",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Soul Sessions Library。70 年代靈魂樂到現代 Neo-Soul 經典合成與鍵盤。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Soul Sessions Library",
-                                        "實體容量：393.4 MB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_stacks_library",
-                        "name": "NI Stacks Library",
-                        "desc": "經典 Boom Bap 黑膠取樣質感合成器",
-                        "size": 0.5,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Stacks Library。經典 Boom Bap 黑膠取樣質感合成器。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Stacks Library",
-                                        "實體容量：485.3 MB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_studio_drummer_library",
-                        "name": "NI Studio Drummer Library",
-                        "desc": "錄音室三大頂級套鼓（珍珠、山葉、Sonor），自帶專業調音台與數千律動",
-                        "size": 6.9,
-                        "default": false,
-                        "badge": "傳奇鼓組",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Studio Drummer Library。錄音室三大頂級套鼓（珍珠、山葉、Sonor），自帶專業調音台與數千律動。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Studio Drummer Library",
-                                        "實體容量：6.93 GB",
-                                        "類別屬性：🥁 真實鼓組與打擊樂",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_the_gentleman",
-                        "name": "NI The Gentleman",
-                        "desc": "1908 年復古經典立式鋼琴，溫柔柔和抒情必備",
-                        "size": 3.4,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】The Gentleman。1908 年復古經典立式鋼琴，溫柔柔和抒情必備。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/The Gentleman",
-                                        "實體容量：3.35 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_the_giant",
-                        "name": "NI The Giant",
-                        "desc": "世界最大立式鋼琴 Klavins 370，極具震撼低頻與前衛音色",
-                        "size": 4.0,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】The Giant。世界最大立式鋼琴 Klavins 370，極具震撼低頻與前衛音色。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/The Giant",
-                                        "實體容量：4.03 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_the_maverick",
-                        "name": "NI The Maverick",
-                        "desc": "1905 年傳奇演奏級三角鋼琴，獨特復古色彩與歷史質感",
-                        "size": 4.9,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】The Maverick。1905 年傳奇演奏級三角鋼琴，獨特復古色彩與歷史質感。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/The Maverick",
-                                        "實體容量：4.90 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_twenty_five_library",
-                        "name": "NI Twenty Five Library",
-                        "desc": "NI 成立 25 週年珍藏經典合成器與鼓機精選",
-                        "size": 2.2,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Twenty Five Library。NI 成立 25 週年珍藏經典合成器與鼓機精選。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Twenty Five Library",
-                                        "實體容量：2.23 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_una_corda",
-                        "name": "NI Una Corda",
-                        "desc": "單弦特製毛氈鋼琴，極致空靈純淨、現代電影配樂必備",
-                        "size": 10.0,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Una Corda。單弦特製毛氈鋼琴，極致空靈純淨、現代電影配樂必備。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Una Corda",
-                                        "實體容量：9.98 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_upright_piano_library",
-                        "name": "NI Upright Piano Library",
-                        "desc": "經典現代立式鋼琴，乾淨凝聚",
-                        "size": 2.6,
-                        "default": false,
-                        "badge": "經典鍵盤",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Upright Piano Library。經典現代立式鋼琴，乾淨凝聚。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Upright Piano Library",
-                                        "實體容量：2.56 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_utopia_library",
-                        "name": "NI Utopia Library",
-                        "desc": "現代 EDM 與流行電音純淨閃爍合成器",
-                        "size": 1.1,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Utopia Library。現代 EDM 與流行電音純淨閃爍合成器。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Utopia Library",
-                                        "實體容量：1.07 GB",
-                                        "類別屬性：🎛️ 現代合成與潮流音色",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_vienna_concert_grand",
-                        "name": "NI Vienna Concert Grand",
-                        "desc": "維也納貝森朵夫帝王帝國 290 鋼琴，深沉低頻與渾厚共鳴",
-                        "size": 3.1,
-                        "default": false,
-                        "badge": "經典鍵盤",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Vienna Concert Grand。維也納貝森朵夫帝王帝國 290 鋼琴，深沉低頻與渾厚共鳴。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Vienna Concert Grand",
-                                        "實體容量：3.12 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_vintage_organs",
-                        "name": "NI Vintage Organs",
-                        "desc": "經典風琴系列（Hammond B-3, C-3, M-3, Vox Continental, Farfisa）",
-                        "size": 1.4,
-                        "default": false,
-                        "badge": "NI擴充",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】Vintage Organs。經典風琴系列（Hammond B-3, C-3, M-3, Vox Continental, Farfisa）。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/Vintage Organs",
-                                        "實體容量：1.37 GB",
-                                        "類別屬性：🎹 鋼琴與經典鍵盤",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                },
-                {
-                        "id": "ni_west_africa",
-                        "name": "NI West Africa",
-                        "desc": "西非打擊樂與科拉琴、木琴傳統合奏律動",
-                        "size": 1.4,
-                        "default": false,
-                        "badge": "世界民族",
-                        "details": {
-                                "overview": "【Aron 2T 庫存珍藏】West Africa。西非打擊樂與科拉琴、木琴傳統合奏律動。",
-                                "suitable": "流行音樂、影視配樂、現場演奏、前衛氛圍編曲。",
-                                "list": [
-                                        "來源目錄：/Volumes/Aron 2T/NI/West Africa",
-                                        "實體容量：1.36 GB",
-                                        "類別屬性：🌍 世界民族與傳統樂器",
-                                        "完整支援 Kontakt 5.6.0 入庫與 Kontakt 7 加載"
-                                ]
-                        }
-                }
-        ]
-}
-    ];
+        "id": "cinematic_strings_suite",
+        "name": "Cinematic Studio Strings (CSS) & CS2 經典管弦弦樂套組",
+        "desc": "澳洲 Trackdown Studios 實錄，抒情連奏流暢自然；搭配 CS2 大編制管弦，音色溫潤醇厚",
+        "size": 55,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "電影配樂界極受推崇的連奏弦樂庫。CSS 的動態層次平滑，低力度溫婉細膩，高力度飽滿深情；CS2 則具備經典好萊塢管弦的醇厚混音感。",
+          "suitable": "影視抒情主題曲、管弦慢板、主旋律長音連奏、流行抒情弦樂。",
+          "list": [
+            "Cinematic Studio Strings (CSS, 抒情連奏標竿庫，流暢動態響應)",
+            "Cinematic Strings 2 (CS2, 好萊塢經典大編制交響弦樂，好混音好上手)"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_symphonic_strings",
+        "name": "Spitfire Symphonic Strings (SSS 倫敦交響大編制弦樂旗艦)",
+        "desc": "倫敦 AIR Studios Lyndhurst Hall 實錄 60 人大編制交響弦樂隊，宏大空間殘響",
+        "size": 60,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Spitfire Audio 的旗艦交響弦樂庫。在傳奇的 AIR Studios 錄音棚由英國頂尖樂手合奏錄製，具有著名的空氣感與自然堂音。",
+          "suitable": "大編制電影配樂、交響史詩、古典管弦編曲。",
+          "list": [
+            "60 位管弦演奏家大編制合奏 (16 小提琴 I, 14 小提琴 II, 12 中提琴, 10 大提琴, 8 低音提琴)",
+            "包含完整傳統運音法、Flautando (笛音奏法)、Sul Ponticello (琴橋奏法)",
+            "多組世界級麥克風位置 (Close, Tree, Ambient, Outrigger)"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_chamber_strings",
+        "name": "Spitfire Chamber Strings (SCS 室內樂精緻小編制弦樂)",
+        "desc": "16 人精緻小編制室內樂弦樂隊，細節清晰、線條分明，流行樂極佳融入感",
+        "size": 35,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Spitfire 最受好評的弦樂庫之一。相較於大編制的宏大殘響，16 人小編制室內樂線條更細膩，每把琴的摩擦質感與空氣感分毫畢現。",
+          "suitable": "流行編曲、抒情慢歌、新古典、獨立電影配樂。",
+          "list": [
+            "4 小提琴 I、3 小提琴 II、3 中提琴、3 大提琴、3 低音提琴",
+            "細膩的 Legato 與各類特色演奏法",
+            "乾淨好混音，不掩蓋流行人聲與主旋律"
+          ]
+        }
+      },
+      {
+        "id": "solo_chamber_quartets",
+        "name": "獨奏弦樂與名琴四重奏合集 (Spitfire Solo / Sacconi / Cremona Quartet)",
+        "desc": "小提琴/中提琴/大提琴獨奏庫，以及 Stradivari / Guarneri / Amati 傳奇名琴四重奏",
+        "size": 45,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "收錄世界頂級獨奏家與傳奇古董名琴的單獨聲部庫，適合旋律主奏與精緻室內樂編制。",
+          "suitable": "主旋律小提琴獨奏、大提琴主奏、弦樂四重奏室內樂、古裝或歷史劇配樂。",
+          "list": [
+            "Spitfire Solo Strings (倫敦頂尖首席演奏家獨奏小提琴、中提琴、大提琴、低音提琴)",
+            "Spitfire Sacconi Strings Quartet (英國頂尖室內樂四重奏實錄)",
+            "Cremona Quartet (克雷莫納名琴：Stradivari 小提琴、Guarneri 小提琴、Amati 中提琴)"
+          ]
+        }
+      },
+      {
+        "id": "modern_scoring_strings",
+        "name": "Audiobro Modern Scoring Strings (MSS 現代高解像弦樂)",
+        "desc": "新一代高解像度弦樂庫，含 Expanded Legato 延伸連奏與動態分部",
+        "size": 45,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "LASS 開發團隊的新一代旗艦。採用高解像錄音技術，具備全新的 Auto Divisi 自動分部與先進連奏引擎。",
+          "suitable": "現代管弦配樂、高動態需求編曲、複雜聲部織體。",
+          "list": [
+            "現代錄音棚清晰度，分部聲道獨立控制",
+            "Expanded Legato 延伸連奏音色庫",
+            "精準的速度同步與短音運音法切換"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "C. 吉他與貝斯 (Guitars & Basses)",
+    "icon": "🎸",
+    "badge": "彈撥聲部",
+    "items": [
+      {
+        "id": "ample_guitar",
+        "name": "Ample Sound 寫實吉他系列全套 (木吉他、電吉他、古典吉他)",
+        "desc": "華語音樂常用吉他音源，包含泰勒 814ce、馬丁 D-41、芬達、吉普森等全套模型 (S 碟 111GB 完整裝載)",
+        "size": 111,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "國內外專業音樂人公認擬真度最高的吉他系列。內建強大的真實掃弦引擎 (Strummer)、打板、泛音、推弦與拍弦系統。",
+          "suitable": "華語流行木吉他伴奏、民謠、搖滾電吉他、古典吉他演奏、現場演出。",
+          "list": [
+            "木吉他：AGT (Taylor 814ce), AGM (Martin D-41), AGSJ (Gibson SJ-200), AG12 (12弦木吉他)",
+            "電吉他：AGLP (Gibson Les Paul), AGSC (Fender Stratocaster), AGTC (Fender Telecaster), AGSH (Gibson ES-335)",
+            "古典吉他：AGL (Luthier 尼龍弦古典吉他)",
+            "內建真實吉他效果器排組與多款經典箱體模擬"
+          ]
+        }
+      },
+      {
+        "id": "session_guitarist",
+        "name": "Native Instruments Session Guitarist 系列 (民謠、電吉他律動庫)",
+        "desc": "真實吉他手錄音室演奏循環與和弦指彈系統，包含 Picked Acoustic、Electric Sunburst 等",
+        "size": 35,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由一流錄音室樂手實錄的和弦與節奏律動庫。只需按鍵盤和弦，即可自動演奏出自然流暢的吉他伴奏聲部。",
+          "suitable": "流行流行歌曲節奏吉他、民謠指彈伴奏、商業快節奏編曲。",
+          "list": [
+            "Picked Acoustic (馬丁 000-28 指彈與精緻分解和弦)",
+            "Strummed Acoustic 1 & 2 (經典民謠木吉他開放與封閉和弦掃弦)",
+            "Electric Sunburst Deluxe (吉普森電吉他經典律動與主奏雙模式)",
+            "Electric Vintage & Electric Mint (芬達 Telecaster 與 Stratocaster 電吉他)"
+          ]
+        }
+      },
+      {
+        "id": "spectrasonics_trilian",
+        "name": "Spectrasonics Trilian (全能低音貝斯音源)",
+        "desc": "原聲低音提琴、電貝斯與經典合成 Bass，音色與動態覆蓋完整",
+        "size": 40,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "Spectrasonics 出品的低音貝斯音源，涵蓋真實原聲、電貝斯與各類類比合成 Bass。低頻結實穩定，是現代流行與配樂的基石。",
+          "suitable": "流行音樂、搖滾、爵士、放克 Funk、R&B、電子音樂。",
+          "list": [
+            "Acoustic Upright Bass (原聲立式低音提琴，溫暖木質低頻)",
+            "Electric Basses (Fender Jazz Bass, Precision Bass, Music Man 5弦電貝斯，指彈與撥片)",
+            "Synth Bass (Minimoog, Roland TB-303, ARP 等經典類比合成低音)",
+            "無品貝斯 (Fretless Bass) 與各類滑音演奏法"
+          ]
+        }
+      },
+      {
+        "id": "scarbee_ample_basses",
+        "name": "經典電貝斯系列 (Scarbee Bass / Session Bassist / Ample Bass)",
+        "desc": "包含 Rickenbacker 4003、Pre-Bass、Jay-Bass、MM-Bass 等經典電貝斯取樣",
+        "size": 30,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "收錄各類標誌性硬體電貝斯的取樣庫，具備真實拾音器動態與放大器箱體模擬。",
+          "suitable": "復古搖滾、摩城音樂、硬搖滾、金屬音樂、Fusion 爵士。",
+          "list": [
+            "Scarbee Rickenbacker Bass (官方認證經典搖滾電貝斯)",
+            "Scarbee Pre-Bass & Jay-Bass (經典芬達 P-Bass 與 J-Bass)",
+            "Session Bassist Icon Bass & Prime Bass (現代指彈與撥片電貝斯)",
+            "Ample Bass 系列 (P-Bass, J-Bass, Fretless)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "D. 爵士鼓與打擊樂 (Drums & Acoustic Percussion)",
+    "icon": "🥁",
+    "badge": "打擊節奏",
+    "items": [
+      {
+        "id": "superior_drummer_3",
+        "name": "Toontrack Superior Drummer 3 (SD3 核心生鼓庫)",
+        "desc": "比利時 Galaxy Studios 實錄未壓縮生鼓核心庫，具備 11.1 聲道多麥克風原始信號 (已裝載 123 GB)",
+        "size": 123,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "全球專業混音師與製作人公認的聲學鼓標準。由傳奇工程師 George Massenburg 錄製，具備純生鼓音色與完整的室內環境麥克風通道。",
+          "suitable": "所有需要真實聲學鼓的流行音樂、搖滾、爵士、金屬與配樂製作。",
+          "list": [
+            "核心鼓組：Ayotte, Gretsch, Pearl, Premier, Ludwig, Yamaha 頂級鼓組",
+            "麥克風軌道：直接麥克風 (Direct)、軍鼓上下麥、底鼓內外麥、環境麥 (Overheads, Ambience Close, Mid, Far)",
+            "內建強大混音台、EQ、壓縮、殘響效果器與 MIDI 律動庫"
+          ]
+        }
+      },
+      {
+        "id": "sdx_hitmaker",
+        "name": "Toontrack SDX Hitmaker (經典流行金曲鼓組擴充)",
+        "desc": "傳奇工程師 Hugh Padgham 錄製，70/80 年代流行、搖滾與經典流行曲風鼓組",
+        "size": 78,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "在倫敦名棚錄製，涵蓋經典流行音樂中最常聽到的通鼓與軍鼓動態，音色緊湊自然。",
+          "suitable": "流行音樂、經典搖滾、流行抒情歌曲。",
+          "list": [
+            "經典錄音棚鼓組、閘門殘響軍鼓、多通道混音預設"
+          ]
+        }
+      },
+      {
+        "id": "sdx_fields_of_rock",
+        "name": "Toontrack SDX Fields of Rock (搖滾聖堂擴充)",
+        "desc": "英國傳奇 Rockfield 錄音棚錄製，英國經典搖滾與現代流行鼓組",
+        "size": 150,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "在 Queen、Oasis 錄製傳奇專輯的 Rockfield 錄音棚實錄，具有極具特色的房間共鳴與動態。",
+          "suitable": "流行搖滾、現代英式流行、原聲鼓組編曲。",
+          "list": [
+            "多套經典鼓組、大房間與乾音雙棚取樣"
+          ]
+        }
+      },
+      {
+        "id": "sdx_jazz_sessions",
+        "name": "Toontrack SDX The Jazz Sessions (爵士與輕音樂鼓組擴充)",
+        "desc": "頂級爵士鼓組全套，包含鼓刷 (Brushes)、木槌 (Mallets) 與鼓棒演奏法",
+        "size": 150,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "專為爵士樂、原聲不插電與流行慢歌設計。鼓刷掃動的動態極為細膩，銅鈸泛音悠長。",
+          "suitable": "爵士樂、Bossanova、原聲不插電流行、輕音樂伴奏。",
+          "list": [
+            "鼓刷 (Brushes) 演奏法、鼓棒 (Sticks) 演奏法、復古小直徑爵士鼓組"
+          ]
+        }
+      },
+      {
+        "id": "sdx_death",
+        "name": "Toontrack SDX Death (重型搖滾與打擊鼓組)",
+        "desc": "由 Mark Lewis 於佛羅里達實錄，衝擊力極強的現代重型鼓組",
+        "size": 106,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "極具穿透力與低頻衝擊力的現代鼓組，適合需要強烈打擊感的音樂。",
+          "suitable": "重搖滾、金屬、現代力量流行、遊戲戰鬥配樂。",
+          "list": [
+            "緊湊厚重的底鼓與軍鼓、高穿透力金屬銅鈸"
+          ]
+        }
+      },
+      {
+        "id": "sdx_darkness",
+        "name": "Toontrack SDX Darkness (暗黑氛圍與現代鼓組)",
+        "desc": "暗色調、深沉且富有氛圍感的新一代打擊樂與鼓組擴充",
+        "size": 64,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "音色沉穩、房間殘響獨特，適合非傳統流行的現代氛圍音樂。",
+          "suitable": "現代電子流行、暗黑配樂、氛圍搖滾。",
+          "list": [
+            "暗沉調音鼓組、特色空間麥克風通道"
+          ]
+        }
+      },
+      {
+        "id": "sdx_state_of_the_art",
+        "name": "Toontrack SDX State of the Art (當代錄音棚鼓組)",
+        "desc": "現代頂級流行錄音棚鼓組，清晰乾淨，通用性極高",
+        "size": 78,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "追求極致乾淨與現代感的錄音棚鼓組，適應各類現代流行與舞曲混音。",
+          "suitable": "現代流行、商業舞曲、廣播級流行音樂混音。",
+          "list": [
+            "現代精準調音鼓組、獨立可調動態通道"
+          ]
+        }
+      },
+      {
+        "id": "sdx_progressive_foundry",
+        "name": "Toontrack SDX The Progressive Foundry (前衛搖滾鼓組)",
+        "desc": "由 Forrest Whitehead 錄製之高動態前衛搖滾鼓組",
+        "size": 59,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "適合複雜切分節奏與高難度鼓點的精細取樣鼓組。",
+          "suitable": "前衛搖滾、複雜節奏流行、技巧型鼓點編曲。",
+          "list": [
+            "多層次通鼓採樣、高解析軍鼓邊擊"
+          ]
+        }
+      },
+      {
+        "id": "sdx_stockholm",
+        "name": "Toontrack SDX Stockholm (北歐獨立與流行鼓組)",
+        "desc": "在斯德哥爾摩錄音室實錄，北歐獨立音樂與現代流行聲線",
+        "size": 39,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "具有北歐流行樂標誌性的清澈感與適度房間反響。",
+          "suitable": "獨立流行、民謠搖滾、北歐風格流行曲。",
+          "list": [
+            "經典北歐流行鼓組、開放通透的銅鈸聲"
+          ]
+        }
+      },
+      {
+        "id": "sdx_metal_foundry",
+        "name": "Toontrack SDX The Metal Foundry (經典硬搖滾與金屬鼓)",
+        "desc": "Toontrack 經典之作，歷史最悠久且最穩定的重型鼓組庫",
+        "size": 34,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "經過無數商業唱片驗證的經典鼓組庫。",
+          "suitable": "硬搖滾、金屬、力量流行。",
+          "list": [
+            "多款經典金屬軍鼓與雙踩底鼓設置"
+          ]
+        }
+      },
+      {
+        "id": "sdx_other_packs",
+        "name": "Toontrack SDX 其餘 7 套經典錄音棚擴充合集 (Avatar / NY / Rock Warehouse 等)",
+        "desc": "包含 Avatar, Indiependent, Metal Machinery, Rock Warehouse, NY Vol.3, Music City USA 等",
+        "size": 120,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "收錄紐約傳奇 Avatar Studios、溫哥華 Rock Warehouse 以及納許維爾鄉村名棚的全套擴充。",
+          "suitable": "各類特色風格、美式鄉村、復古流行、大空間搖滾。",
+          "list": [
+            "Avatar (紐約傳奇 Avatar Studios 原聲經典)",
+            "Rock Warehouse (溫哥華名棚大空間大房間反響)",
+            "Music City USA (納許維爾鄉村與原聲搖滾)",
+            "The Indiependent (西雅圖獨立搖滾乾音特色)",
+            "New York Studios Vol.3 (紐約系列經典錄音棚)"
+          ]
+        }
+      },
+      {
+        "id": "ni_abbey_road_drums",
+        "name": "Native Instruments Abbey Road Drummer 全系列 & Studio Drummer",
+        "desc": "英國傳奇艾比路錄音室實錄 50s, 60s, 70s, 80s, Modern, Vintage 爵士鼓組全集",
+        "size": 35,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由 Native Instruments 與倫敦 Abbey Road Studios 深度合作。在傳奇的 2 號與 3 號棚使用該年代真實硬體設備錄製。",
+          "suitable": "各年代復古流行、披頭四風格、80 年代流行、現代流行編曲。",
+          "list": [
+            "Abbey Road 50s, 60s, 70s, 80s Drummer (各時代復古麥克風調音)",
+            "Abbey Road Modern Drummer & Vintage Drummer",
+            "Studio Drummer (現代流行錄音室標配原聲鼓組)"
+          ]
+        }
+      },
+      {
+        "id": "bfd3",
+        "name": "InMusic / FXpansion BFD3 聲學原聲爵士鼓旗艦版",
+        "desc": "經典原聲爵士鼓取樣引擎，多通道獨立調整",
+        "size": 40,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "聲學鼓取樣先鋒，具備純生鼓音色與極高的混音自由度。",
+          "suitable": "需要精細混音的聲學原聲鼓編曲。",
+          "list": [
+            "原聲鼓組深度取樣、獨立出血 (Bleed) 與阻抗微調"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "E. 銅管與木管 (Brass & Woodwinds)",
+    "icon": "🎺",
+    "badge": "管樂聲部",
+    "items": [
+      {
+        "id": "cinematic_studio_brass_winds",
+        "name": "Cinematic Studio Brass & Woodwinds (CSB & CSW 管樂合集)",
+        "desc": "澳洲 Trackdown Studios 實錄，與 CSS 弦樂完全對齊之交響銅管與木管",
+        "size": 41,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "Cinematic Studio Series 家族的管樂聲部。CSB 銅管具備溫暖的連奏與強奏時的自然爆發力；CSW 木管則音色清澈、空氣感十足。",
+          "suitable": "電影配樂、管弦大編制、流行歌曲長笛/薩克斯聲部、流行銅管鋪陳。",
+          "list": [
+            "Cinematic Studio Brass (小號、圓號 Horns、長號、大號合奏與獨奏)",
+            "Cinematic Studio Woodwinds (長笛 Flute、雙簧管 Oboe、單簧管 Clarinet、巴松管 Bassoon、短笛)"
+          ]
+        }
+      },
+      {
+        "id": "session_horns_pro",
+        "name": "Native Instruments Session Horns Pro (流行 Funk/R&B 銅管合奏組)",
+        "desc": "10 件套流行管樂團，包含小號、中音/次中音薩克斯、長號，支援 Voicing Assistant 和聲助手",
+        "size": 28,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "華語流行與歐美流行音樂中最常使用的銅管組音源。專為現代流行、放克與 R&B 編配設計，獨家 Voicing Assistant 可自動將單音琴鍵分解為真實銅管和聲配器。",
+          "suitable": "流行音樂、放克 Funk、靈魂樂 Soul、R&B、Big Band 大樂隊。",
+          "list": [
+            "4 支小號、3 支薩克斯 (Alto, Tenor, Baritone)、2 支長號、1 支大號",
+            "獨奏模式與 10 人合奏模式",
+            "Smart Voice Split 智慧聲部拆分技術"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_symphonic_brass_winds",
+        "name": "Spitfire Symphonic Brass & Woodwinds (交響大編制管樂合集)",
+        "desc": "倫敦 AIR Studios 實錄交響大編制銅管與木管樂隊，具備傳奇大廳自然殘響",
+        "size": 65,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Spitfire 交響旗艦管樂。AIR Studios Lyndhurst Hall 的開闊聲場賦予銅管極佳的莊嚴感與電影厚度。",
+          "suitable": "史詩電影配樂、交響管弦大編制、好萊塢大片伴奏。",
+          "list": [
+            "Symphonic Brass (小號獨奏/合奏、圓號群奏、長號、低音長號、大號)",
+            "Symphonic Woodwinds (交響木管全套聲部，含英國管、低音單簧管)"
+          ]
+        }
+      },
+      {
+        "id": "vintage_horns",
+        "name": "Vintage Horns 1 & 2 (復古摩城與爵士管樂套件)",
+        "desc": "60~70 年代摩城 (Motown) 與放克復古管樂音色，粗獷有力、個性鮮明",
+        "size": 5,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "專為復古老唱片音色設計的管樂庫。採樣音色帶有濃厚的類比粗粒感與老式磁帶染色。",
+          "suitable": "復古放克、70 年代摩城流行、復古 R&B、獨立復古風格編曲。",
+          "list": [
+            "復古小號、長號、薩克斯管與長笛短句採樣"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "F. 國樂與亞洲傳統樂器 (Chinese & Asian Instruments)",
+    "icon": "🪕",
+    "badge": "國樂民樂",
+    "items": [
+      {
+        "id": "threebody_chinese",
+        "name": "三體聲音科技國樂全套 (Three-Body Technology 旗艦六件套)",
+        "desc": "國產物理建模與高解析真實取樣，包含揉弦、滑音與地道中式演奏法 (S 碟已裝載)",
+        "size": 30,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "被譽為目前演奏法最地道的國樂採樣音源。利用物理建模與先進演奏法捕捉，還原中國傳統樂器細微的滑音、揉弦、打音、擻音等特色。",
+          "suitable": "古風流行、國風電音、仙俠影視配樂、民族管弦、現場演奏。",
+          "list": [
+            "鳳凰笛 (Dizi - 竹笛：曲笛與梆笛，具備真實氣聲與滑音)",
+            "尋音簫 (Xiao - 洞簫：幽深空靈，氣聲與弱奏自然)",
+            "傾城二胡 (Erhu - 二胡：具備快弓、慢弓、揉弦與墊指滑音)",
+            "臥龍古箏 (Guzheng - 古箏：真實搖指、刮奏與滑音技巧)",
+            "國色琵琶 (Pipa - 琵琶：輪指、煞音與絞弦特色演奏法)",
+            "裂空嗩吶 (Suona - 嗩吶：嘹亮穿透，氣鳴滑音逼真)"
+          ]
+        }
+      },
+      {
+        "id": "kong_audio",
+        "name": "空音 Kong Audio 完整合集 (23 款中國民族樂器全套)",
+        "desc": "華語音樂經典民族音源，涵蓋吹管、彈撥、拉弦、打擊四大聲部所有樂器",
+        "size": 120,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "華語流行與配樂製作最齊全的中國民族樂器庫。音色純粹樸實，在華語流行編曲中極易調配混音。",
+          "suitable": "國風流行音樂、大型民族管弦樂編曲、武俠戲劇配樂、民族打擊樂鋪陳。",
+          "list": [
+            "吹管：曲笛、梆笛、簫、嗩吶、管子、笙、葫蘆絲、巴烏",
+            "彈撥：古箏、琵琶、中阮、大阮、柳琴、揚琴、三弦",
+            "拉弦：二胡、中胡、高胡、板胡、京胡",
+            "打擊：堂鼓、排鼓、大鑼、小鑼、碰鈴、木魚等全套中式打擊"
+          ]
+        }
+      },
+      {
+        "id": "jade_ethnic_orchestra",
+        "name": "Strezov Sampling JADE Ethnic Orchestra & Evolutions (亞洲管弦旗艦)",
+        "desc": "華人演奏家實錄之亞洲管弦樂合集，多種傳統樂器與亞洲民族合唱",
+        "size": 135,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "由保加利亞 Strezov 與華人音樂家合作錄製的大型亞洲管弦樂庫。聲場宏大立體，包含罕見的亞洲弓弦樂隊合奏。",
+          "suitable": "史詩級東方管弦配樂、大型紀錄片、大製作仙俠遊戲、影視配樂。",
+          "list": [
+            "蒙古馬頭琴獨奏與合奏、呼麥喉音 (Khoomei)",
+            "日本尺八 (Shakuhachi)、日本箏 (Koto)",
+            "完整中國民族弓弦樂隊合奏 (Chinese String Ensemble)",
+            "特色亞洲合唱團人聲 (Asian Choirs)"
+          ]
+        }
+      },
+      {
+        "id": "evolution_world_colors",
+        "name": "Evolution Series World Colors 國樂系列合集",
+        "desc": "澳洲 Evolution 系列出品之乾音細膩取樣：二胡、琵琶、笛子、簫、塤、古琴、揚琴、古箏、巴烏",
+        "size": 25,
+        "default": false,
+        "badge": "選配擴充",
+        "details": {
+          "overview": "Evolution Series 出品的亞洲傳統樂器精細乾音庫。麥克風擺位極近，細節清晰，極好添加自訂空間殘響效果。",
+          "suitable": "現代流行國風編曲、清爽好混音的國樂點綴。",
+          "list": [
+            "World Colors Erhu, Pipa, Dizi, Xiao, Xun, Guqin, Yangqin, Guzheng, Bawu 全套 9 款"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "G. 世界音樂與特色民族樂器 (World & Ethnic Instruments)",
+    "icon": "🌍",
+    "badge": "世界民樂",
+    "items": [
+      {
+        "id": "ethno_world_6",
+        "name": "Best Service - Ethno World 6 Complete (全球樂器庫 + 人聲庫)",
+        "desc": "涵蓋全球五大洲 320 多款民族樂器與原生態特色人聲，世界音樂最權威庫",
+        "size": 33,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由 Marcel Barsotti 歷時數十年錄製的世界音樂巨作。涵蓋中東、非洲、歐洲、美洲與大洋洲的所有重要民間樂器與原住民人聲短句。",
+          "suitable": "世界音樂、旅遊紀錄片、異域風情流行歌曲、大片背景音樂。",
+          "list": [
+            "弦樂器：西塔琴 (Sitar)、烏德琴 (Oud)、薩茲琴 (Saz)、曼陀鈴、布祖基琴 (Bouzouki)",
+            "管樂器：杜讀管 (Duduk)、印加排笛 (Pan Flute)、愛爾蘭低音哨笛、印第安笛",
+            "打擊樂：達布卡鼓 (Darbuka)、非洲金貝鼓 (Djembe)、鋼鼓 (Steel Pan)、框鼓 (Frame Drum)",
+            "人聲庫：全球原生態人聲採樣、宗教吟唱、呼麥、民族短句"
+          ]
+        }
+      },
+      {
+        "id": "accordions_2",
+        "name": "Best Service - Accordions 2 (Eduardo Tarilonte 手風琴全套)",
+        "desc": "收錄全球 13 款特色手風琴與簧片風鳴樂器，從皮亞佐拉探戈班多鈕到法式香頌手風琴",
+        "size": 8,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "採樣名家 Eduardo Tarilonte 傾力打造的手風琴音源。完美還原風箱的動態控制與簧片震動。",
+          "suitable": "阿根廷探戈、法式香頌、義大利民謠、流行歌曲特色配器。",
+          "list": [
+            "Bandoneon (阿根廷班多鈕琴 - 皮亞佐拉探戈靈魂)",
+            "French Musette (法式香頌手風琴)",
+            "Concertina (愛爾蘭六角手風琴)",
+            "Accordion (標準鍵盤手風琴與巴揚手風琴)"
+          ]
+        }
+      },
+      {
+        "id": "uilleann_pipes",
+        "name": "Ilya Efimov Uilleann Pipes (愛爾蘭風笛)",
+        "desc": "極致真實的愛爾蘭風笛，具備細膩演奏裝飾音與無縫連奏 (已完成底層二進制修補)",
+        "size": 1.5,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "愛爾蘭風笛權威取樣音源。完美捕捉風笛特有的連奏滑音、顫音與裝飾跳音，具備極佳的民族旋律感。",
+          "suitable": "愛爾蘭風格音樂、居爾特民謠、電影英雄主題曲、大河之舞風情。",
+          "list": [
+            "無縫真實 Legato 連奏、裝飾音演奏鍵位切換、風箱氣鳴伴奏管聲"
+          ]
+        }
+      },
+      {
+        "id": "harp_collection",
+        "name": "電影級雙豎琴合集 (Cinesamples CineHarp & Skaila Kanga Harp)",
+        "desc": "索尼配樂棚實錄好萊塢電影豎琴，以及傳奇豎琴大師 Skaila Kanga 重製版",
+        "size": 17,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "涵蓋好萊塢大片中常用的華麗豎琴刮奏 (Glissando) 與古典單音指彈。",
+          "suitable": "電影配樂、流行浪漫抒情歌曲、童話氛圍音樂、管弦伴奏。",
+          "list": [
+            "CineHarp (Sony 哥倫比亞影業傳奇配樂舞台實錄，多麥克風通道)",
+            "Skaila Kanga Harp Redux (英國傳奇大師 Skaila Kanga 演奏取樣)"
+          ]
+        }
+      },
+      {
+        "id": "world_percussion_taiko",
+        "name": "Evolution Series World Percussion Taiko (和太鼓全套)",
+        "desc": "日本傳統和太鼓獨奏與合奏，強大衝擊力與動態範圍 (已完成二進制規範化)",
+        "size": 3,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "由世界頂級打擊樂大師在專業配樂棚錄製。收錄巨大太鼓的震撼低音震動與中高太鼓的急促排擊。",
+          "suitable": "大片戰鬥節奏、東方史詩音樂、動作片高潮打擊鋪陳。",
+          "list": [
+            "大太鼓 (O-Daiko)、長胴太鼓、締太鼓合奏與單擊技巧"
+          ]
+        }
+      },
+      {
+        "id": "harmonica_suite",
+        "name": "藍調口琴與半音階口琴合集 (Chris Hein / Ilya Efimov / Bolder Sounds)",
+        "desc": "收錄十孔藍調口琴 (Blues Harp) 與爵士半音階口琴，吸吐氣切換與壓音技巧逼真",
+        "size": 5,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "收錄各類常用口琴音源。真實還原口琴吸氣 (Draw)、吐氣 (Blow) 與壓音 (Bending) 技巧。",
+          "suitable": "美式藍調、鄉村民謠、爵士樂口琴獨奏、流行民謠插曲。",
+          "list": [
+            "Chris Hein Chromatic Harmonica (爵士與流行半音階口琴)",
+            "Ilya Efimov Retro Harmonica (十孔藍調口琴，真實壓音滑音)",
+            "Bolder Sounds Harmonica"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "H. 影視氛圍、大型管弦合集與聲音設計 (Cinematic & Sound Design)",
+    "icon": "🌌",
+    "badge": "影視氛圍",
+    "items": [
+      {
+        "id": "spectrasonics_omnisphere",
+        "name": "Spectrasonics Omnisphere 2 (旗艦合成器與聲響設計引擎)",
+        "desc": "全球專業音樂製作與配樂界標竿合成器，收錄 60GB 原廠核心取樣與音色預設",
+        "size": 60,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "幾乎出現在所有好萊塢電影配樂與當代流行專輯中的旗艦合成器。結合深度取樣與多種合成架構，內建數千種音色預設。",
+          "suitable": "所有流行音樂、電影配樂、遊戲聲音設計、氛圍鋪墊 (Pad)、現代電子流行。",
+          "list": [
+            "硬體合成器模型整合 (支援數十款經典實體合成器面板對應)",
+            "電影氛圍聲景 (Cinematic Soundscapes & Textures)",
+            "Bells, Plucks, Arp 節奏脈衝與弦樂混合織體"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_albion_series",
+        "name": "Spitfire Albion 系列 6 大管弦配樂合集 (ONE / NEO / Tundra / UIST / Iceni / Loegria)",
+        "desc": "大編制交響、極簡冰冷聲景、低音重裝管弦與小型民間合奏一站式配樂合集",
+        "size": 280,
+        "default": false,
+        "badge": "影視選配",
+        "details": {
+          "overview": "Spitfire 最著名的一站式管弦配樂合集。全系列 6 大部合集，各自擁有鮮明獨特的音色性格。",
+          "suitable": "電影預告片、現代遊戲配樂、史詩戰鬥、暗黑氛圍、北歐極簡管弦。",
+          "list": [
+            "Albion ONE (經典配樂旗艦：大編制管弦、史詩打擊、合成器紋理)",
+            "Albion NEO (新古典融合弦樂、精緻小編制、現代混種聲景)",
+            "Albion V Tundra (苔原：北歐極弱音安靜管弦樂，空靈冰冷之美)",
+            "Albion IV UIST (極地實驗聲景與隨機不規則前衛演奏法)",
+            "Albion III Iceni (低音重裝管弦：大提琴、低音提琴、低音銅管與低頻重擊)",
+            "Albion Loegria REDUX (精緻小巧民間管弦樂與唯美懷舊弦樂)"
+          ]
+        }
+      },
+      {
+        "id": "spitfire_hz_percussion",
+        "name": "Spitfire 漢斯季默打擊全套 (HZ01 倫敦 / HZ02 洛杉磯 / HZ03 獨奏家)",
+        "desc": "AIR Studios Lyndhurst Hall 實錄之巨型電影打擊樂團與特色打擊",
+        "size": 60,
+        "default": false,
+        "badge": "影視選配",
+        "details": {
+          "overview": "Spitfire 與漢斯季默聯名開發之電影打擊樂庫。收錄倫敦頂尖打擊樂團在傳奇大廳的合奏重擊。",
+          "suitable": "好萊塢動作大片配樂、史詩戰鬥、遊戲打擊樂鋪陳。",
+          "list": [
+            "HZ01 Hans Zimmer Percussion London Ensembles (倫敦大型打擊樂團版)",
+            "HZ02 Hans Zimmer Percussion Los Angeles (洛杉磯版特色打擊)",
+            "HZ03 Hans Zimmer Percussion London Soloists (倫敦頂尖打擊獨奏家版)"
+          ]
+        }
+      },
+      {
+        "id": "olafur_arnalds_suite",
+        "name": "Ólafur Arnalds 系列 (Stratus / Chamber Evolutions / Composer Toolkit)",
+        "desc": "冰島極簡大師聯名：演算法矩陣鋼琴、室內樂演變紋理與極簡聲景",
+        "size": 30,
+        "default": false,
+        "badge": "影視選配",
+        "details": {
+          "overview": "收錄冰島新古典作曲家 Ólafur Arnalds 的標誌性極簡聲景與自製演算法鋼琴。",
+          "suitable": "獨立文藝電影、北歐新古典音樂、抒情安靜聲景。",
+          "list": [
+            "Stratus (矩陣演算法雙鋼琴系統)",
+            "Chamber Evolutions (室內樂緩慢演變紋理)",
+            "Composer Toolkit (極簡鋼琴與氈音弱奏)"
+          ]
+        }
+      },
+      {
+        "id": "heavyocity_damage",
+        "name": "Heavyocity Damage 1 & 2 (混種工業打擊樂經典)",
+        "desc": "好萊塢預告片與動作電影常備之工業打擊、金屬碰撞與重低音衝擊",
+        "size": 30,
+        "default": false,
+        "badge": "影視選配",
+        "details": {
+          "overview": "動作電影預告片中最常聽到的金屬撞擊、重裝爆炸與電子工業循環節奏。",
+          "suitable": "動作片、預告片、懸疑緊張氛圍、混種電子搖滾。",
+          "list": [
+            "工業廢棄物撞擊打擊、巨型史詩大鼓合奏、節奏切片循環"
+          ]
+        }
+      },
+      {
+        "id": "spectrasonics_stylus_rmx",
+        "name": "Spectrasonics Stylus RMX Xpanded (節奏律動循環切片)",
+        "desc": "流行、嘻哈、放克與電子節奏即時切片與速度同步引擎",
+        "size": 15,
+        "default": true,
+        "badge": "常用推薦",
+        "details": {
+          "overview": "經典 Groove 節奏循環引擎。數千種真實打擊樂短句自動與宿主 DAW 速度精準對齊，支援一鍵拖拽 MIDI 軌。",
+          "suitable": "流行音樂底層節奏鋪墊、R&B、嘻哈、放克、世界節奏。",
+          "list": [
+            "包含 Core Library 加上 BackBeat, Retro Funk, Metamorphosis, Burning Grooves 等全套擴充"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "category": "I. 常用合成器與效果器外掛 (💻 電腦內建 1TB SSD，不佔外接空間)",
+    "icon": "💻",
+    "badge": "本機外掛",
+    "items": [
+      {
+        "id": "arturia_v_collection",
+        "name": "Arturia V Collection (33 款傳奇類比與數位鍵盤名機)",
+        "desc": "Minimoog, Prophet-5, CS-80, Jupiter-8, Juno-6, Mellotron 等經典硬體合成器物理建模",
+        "size": 40,
+        "default": true,
+        "isInternal": true,
+        "badge": "本機常用",
+        "details": {
+          "overview": "法國 Arturia 開發的經典鍵盤旗艦套件。採用專利 TAE 物理建模技術，完美重現上世紀所有最著名的硬體合成器與電子琴聲響。",
+          "suitable": "流行音樂、合成波 Synthwave、電影配樂、放克 Funk、現代流行電子。",
+          "list": [
+            "類比合成器：Mini V (Minimoog), Prophet-5 V, CS-80 V, Jup-8 V, Jun-6 V, ARP 2600 V",
+            "數位與取樣名機：Fairlight CMI V, Synclavier V, DX7 V, Mellotron V, SQ80 V",
+            "電子琴與風琴：B-3 V, Vox Continental V, Farfisa V, Stage-73 V"
+          ]
+        }
+      },
+      {
+        "id": "roland_cloud_suite",
+        "name": "Roland Cloud 經典名機合集 + SRX 全系列擴充卡",
+        "desc": "D-50, JD-800, JV-1080, XV-5080, TR-808/909 及 SRX 10張擴充卡全套",
+        "size": 25,
+        "default": true,
+        "isInternal": true,
+        "badge": "本機常用",
+        "details": {
+          "overview": "Roland 官方雲端音色庫，涵蓋華語流行音樂 80~00 年代所有經典硬體音色，包括著名的 SRX World 國樂世界卡與 SRX Brass/Strings。",
+          "suitable": "華語流行情歌、90 年代流行金曲、演唱會經典鍵盤音色。",
+          "list": [
+            "經典機型：D-50, JD-800, JV-1080, XV-5080 音源模組",
+            "節奏機：TR-808, TR-909 鼓機",
+            "SRX 擴充卡全套：SRX World (含著名國樂打擊與吹管)、SRX Keyboards, SRX Brass, SRX Strings"
+          ]
+        }
+      },
+      {
+        "id": "korg_collection_gadget",
+        "name": "KORG Collection (Triton / M1 / Wavestation) + Gadget 2 Bundle",
+        "desc": "華語流行經典 TRITON 工作站、M1 音色模組與 40 款 Gadget 城市音色模組",
+        "size": 20,
+        "default": true,
+        "isInternal": true,
+        "badge": "本機常用",
+        "details": {
+          "overview": "KORG 經典名琴合集。包含華語流行音樂演唱會最常用的 TRITON 工作站名琴與 M1 鋼琴/風琴音色。",
+          "suitable": "流行音樂編曲、現場演出、舞曲製作。",
+          "list": [
+            "KORG TRITON & TRITON Extreme (華語流行編曲核心工作站)",
+            "KORG M1 (90 年代流行舞曲 House 鋼琴與風琴標竿)",
+            "KORG Wavestation (波形向量合成器)",
+            "KORG Gadget 2 (40 款各具特色之輕量合成器與打擊模組)"
+          ]
+        }
+      },
+      {
+        "id": "modern_synths_duo",
+        "name": "現代電子流行合成器精選 (Serum 2 / Spire 1.5 / Massive X)",
+        "desc": "當代波表合成器與 EDM / 流行編曲必備合成器音色",
+        "size": 10,
+        "default": true,
+        "isInternal": true,
+        "badge": "本機常用",
+        "details": {
+          "overview": "現代流行歌曲、EDM 與電音編曲中最常使用的軟體合成器，音色明亮銳利、低頻扎實。",
+          "suitable": "現代流行、EDM、Hip-Hop、Trap、電子舞曲。",
+          "list": [
+            "Xfer Serum (當代波表合成器標準)",
+            "Reveal Sound Spire (流行 Lead 與 Pluck 音色利器)",
+            "NI Massive X (新一代旗艦合成器)"
+          ]
+        }
+      },
+      {
+        "id": "fx_master_suite",
+        "name": "專業錄音室混音與母帶級效果器全套 (FabFilter / Soundtoys / iZotope / Waves)",
+        "desc": "涵蓋 EQ、動態壓縮、磁帶飽和、空間殘響與母帶後期處理插件全套",
+        "size": 35,
+        "default": true,
+        "isInternal": true,
+        "badge": "本機常用",
+        "details": {
+          "overview": "專業混音與母帶工程必備之高階效果器套裝，安裝於本機系統槽。",
+          "suitable": "錄音、人聲後製、分軌混音、母帶後期處理。",
+          "list": [
+            "FabFilter Total Bundle (Pro-Q 3, Pro-C 2, Pro-L 2, Saturn 2 等全套)",
+            "Soundtoys 5 (Decapitator 磁帶飽和, Echoboy 延遲神器, Little AlterBoy 人聲變調)",
+            "iZotope Ozone 11 Advanced & Neutron 4 (母帶後期與智慧混音套裝)",
+            "Valhalla DSP (VintageVerb, Delay, Shimmer 經典空間系效果器)"
+          ]
+        }
+      }
+    ]
+  }
+];
 
     // State management
     let selectionState = {};
