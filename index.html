@@ -6,6 +6,27 @@
   <title>阿三老師 - 4TB 外接硬碟音源配置與空間挑選系統</title>
   <style>
     :root {
+      --bg-main: #f8f9fa;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f3f5;
+      --bg-card-selected: #ffffff;
+      --bg-inset: #f8f9fa;
+      --border-color: #e5e7eb;
+      --border-hover: #9ca3af;
+      --border-focus: #000000;
+      --border-selected: #000000;
+      --text-main: #000000;
+      --text-secondary: #374151;
+      --text-muted: #6b7280;
+      --text-dim: #9ca3af;
+      --primary: #000000;
+      --primary-hover: #222222;
+      --accent-gray: #4b5563;
+      --accent-light: #111111;
+      --accent-dark: #f3f4f6;
+    }
+
+    body.dark-theme {
       --bg-main: #000000;
       --bg-card: #0d0d0d;
       --bg-card-hover: #141414;
@@ -39,6 +60,7 @@
       line-height: 1.5;
       padding: 24px;
       min-height: 100vh;
+      transition: background-color 0.2s, color 0.2s;
     }
 
     .container {
@@ -61,7 +83,7 @@
     .title-group h1 {
       font-size: 25px;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 12px;
@@ -69,9 +91,9 @@
     }
 
     .title-group h1 span {
-      color: #ffffff;
+      color: var(--text-muted);
       font-weight: 500;
-      border-left: 1px solid #333333;
+      border-left: 1px solid var(--border-color);
       padding-left: 12px;
       margin-left: 2px;
     }
@@ -86,6 +108,7 @@
     .badges-row {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
     }
 
@@ -93,26 +116,58 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #111111;
-      color: #ffffff;
+      background: var(--bg-card);
+      color: var(--text-main);
       padding: 5px 12px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid #2e2e2e;
-    }
-
-    .badge-internal {
-      background: #161616;
-      color: #d4d4d4;
-      border-color: #383838;
+      border: 1px solid var(--border-color);
     }
 
     .badge-verified {
+      background: var(--primary);
+      color: var(--bg-main);
+      font-weight: 700;
+      border-color: var(--primary);
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+    }
+
+    /* Edit Mode Banner */
+    .edit-mode-banner {
+      background: #000000;
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      line-height: 1.5;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    body.dark-theme .edit-mode-banner {
       background: #ffffff;
       color: #000000;
-      font-weight: 700;
-      border-color: #ffffff;
     }
 
     /* Dashboard Layout */
@@ -140,7 +195,7 @@
       align-items: center;
       position: sticky;
       top: 20px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     .chart-wrapper {
@@ -158,13 +213,13 @@
 
     .chart-bg {
       fill: none;
-      stroke: #1a1a1a;
+      stroke: var(--border-color);
       stroke-width: 18;
     }
 
     .chart-fill {
       fill: none;
-      stroke: #ffffff;
+      stroke: var(--primary);
       stroke-width: 18;
       stroke-linecap: round;
       stroke-dasharray: 565.48;
@@ -183,7 +238,7 @@
     .chart-percent {
       font-size: 34px;
       font-weight: 800;
-      color: #ffffff;
+      color: var(--text-main);
       letter-spacing: -0.5px;
     }
 
@@ -196,11 +251,11 @@
 
     .storage-details {
       width: 100%;
-      background: #080808;
+      background: var(--bg-inset);
       border-radius: 12px;
       padding: 14px;
       margin-bottom: 14px;
-      border: 1px solid #1a1a1a;
+      border: 1px solid var(--border-color);
     }
 
     .storage-row {
@@ -220,18 +275,18 @@
 
     .storage-val {
       font-weight: 600;
-      color: #ffffff;
+      color: var(--text-main);
     }
 
     .internal-box {
       width: 100%;
-      background: #0a0a0a;
-      border: 1px dashed #333333;
+      background: var(--bg-inset);
+      border: 1px dashed var(--border-color);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 14px;
       font-size: 12.5px;
-      color: #cccccc;
+      color: var(--text-secondary);
     }
 
     .internal-box-title {
@@ -240,7 +295,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      color: #ffffff;
+      color: var(--text-main);
     }
 
     .status-alert {
@@ -251,9 +306,9 @@
       margin-bottom: 14px;
       text-align: center;
       font-weight: 600;
-      background: #111111;
-      border: 1px solid #2a2a2a;
-      color: #ffffff;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
       transition: all 0.3s;
     }
 
@@ -280,42 +335,43 @@
     }
 
     .btn-primary {
-      background: #ffffff;
-      color: #000000;
-      border: 1px solid #ffffff;
-      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+      background: var(--primary);
+      color: var(--bg-main);
+      border: 1px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .btn-primary:hover {
-      background: #e5e5e5;
-      transform: translateY(-1px);
-    }
-
-    .btn-success {
-      background: #f0f0f0;
-      color: #000000;
-      border: 1px solid #f0f0f0;
-    }
-    .btn-success:hover {
-      background: #ffffff;
+      background: var(--primary-hover);
       transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: #141414;
-      color: #ffffff;
-      border: 1px solid #2e2e2e;
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
     }
     .btn-secondary:hover {
-      background: #222222;
-      border-color: #444444;
+      background: var(--bg-inset);
+      border-color: var(--border-hover);
     }
 
     .btn-preset {
-      background: #111111;
-      color: #ffffff;
-      border: 1px solid #333333;
+      background: var(--bg-inset);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
     }
     .btn-preset:hover {
+      background: var(--primary);
+      color: var(--bg-main);
+      border-color: var(--primary);
+    }
+
+    .btn-edit-mode {
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #000000;
+    }
+    body.dark-theme .btn-edit-mode {
       background: #ffffff;
       color: #000000;
       border-color: #ffffff;
@@ -343,17 +399,17 @@
 
     .search-input {
       width: 100%;
-      background: #080808;
-      border: 1px solid #242424;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-color);
       border-radius: 10px;
       padding: 9px 14px 9px 38px;
-      color: #ffffff;
+      color: var(--text-main);
       font-size: 13.5px;
       outline: none;
       transition: border-color 0.2s;
     }
     .search-input:focus {
-      border-color: #ffffff;
+      border-color: var(--primary);
     }
 
     .search-icon {
@@ -373,8 +429,8 @@
     }
 
     .pill-btn {
-      background: #121212;
-      border: 1px solid #262626;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       color: var(--text-muted);
       padding: 7px 12px;
       border-radius: 8px;
@@ -384,14 +440,14 @@
       transition: all 0.2s;
     }
     .pill-btn:hover {
-      background: #222222;
-      color: #ffffff;
-      border-color: #444444;
+      background: var(--bg-inset);
+      color: var(--text-main);
+      border-color: var(--border-hover);
     }
     .pill-btn.active {
-      background: #ffffff;
-      border-color: #ffffff;
-      color: #000000;
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--bg-main);
       font-weight: 700;
     }
 
@@ -410,13 +466,13 @@
       align-items: center;
       padding-bottom: 12px;
       margin-bottom: 14px;
-      border-bottom: 1px solid #1a1a1a;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .category-title {
       font-size: 16.5px;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -437,8 +493,8 @@
     }
 
     .product-card {
-      background: #080808;
-      border: 1px solid #1e1e1e;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 13px 16px;
       display: flex;
@@ -450,13 +506,13 @@
     }
 
     .product-card:hover {
-      border-color: #383838;
-      background: #111111;
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
     }
 
     .product-card.selected {
-      border-color: #ffffff;
-      background: #161616;
+      border: 2px solid var(--primary);
+      background: var(--bg-card);
     }
 
     .product-card.disabled {
@@ -469,7 +525,7 @@
       margin-top: 3px;
       width: 18px;
       height: 18px;
-      accent-color: #ffffff;
+      accent-color: var(--primary);
       cursor: pointer;
     }
 
@@ -490,7 +546,7 @@
     .product-name {
       font-size: 14.5px;
       font-weight: 600;
-      color: #ffffff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -499,9 +555,9 @@
     .product-size {
       font-size: 12.5px;
       font-weight: 700;
-      color: #ffffff;
-      background: #181818;
-      border: 1px solid #2e2e2e;
+      color: var(--text-main);
+      background: var(--bg-inset);
+      border: 1px solid var(--border-color);
       padding: 2px 8px;
       border-radius: 6px;
       white-space: nowrap;
@@ -509,7 +565,7 @@
 
     .product-desc {
       font-size: 12.5px;
-      color: #888888;
+      color: var(--text-secondary);
       line-height: 1.45;
       margin-bottom: 6px;
     }
@@ -526,28 +582,22 @@
       padding: 2px 8px;
       border-radius: 5px;
       font-weight: 600;
-      background: #161616;
-      border: 1px solid #2e2e2e;
-      color: #d4d4d4;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
     }
 
     .badge-core {
-      background: #ffffff;
-      color: #000000;
+      background: var(--primary);
+      color: var(--bg-main);
       font-weight: 700;
-      border-color: #ffffff;
-    }
-
-    .badge-optional {
-      background: #161616;
-      color: #999999;
-      border-color: #2e2e2e;
+      border-color: var(--primary);
     }
 
     .details-toggle {
       background: none;
       border: none;
-      color: #888888;
+      color: var(--text-muted);
       font-size: 11.5px;
       cursor: pointer;
       padding: 2px 6px;
@@ -558,12 +608,77 @@
       transition: all 0.2s;
     }
     .details-toggle:hover {
+      color: var(--text-main);
+      background: var(--bg-inset);
+    }
+
+    /* Card Edit Actions */
+    .card-edit-actions {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      margin-left: 8px;
+    }
+
+    body.edit-mode-active .card-edit-actions {
+      display: inline-flex;
+    }
+
+    .btn-tiny {
+      padding: 3px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      background: var(--bg-inset);
+      color: var(--text-main);
+      transition: all 0.15s;
+    }
+    .btn-tiny-edit:hover {
+      background: var(--primary);
+      color: var(--bg-main);
+      border-color: var(--primary);
+    }
+    .btn-tiny-delete {
+      color: #ef4444;
+      border-color: #fca5a5;
+    }
+    .btn-tiny-delete:hover {
+      background: #ef4444;
       color: #ffffff;
-      background: #222222;
+      border-color: #ef4444;
+    }
+
+    .category-footer-actions {
+      display: none;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-color);
+    }
+    body.edit-mode-active .category-footer-actions {
+      display: block;
+    }
+
+    .btn-add-item-card {
+      width: 100%;
+      padding: 9px 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px dashed var(--border-hover);
+      background: var(--bg-inset);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-add-item-card:hover {
+      background: var(--bg-card);
+      border-color: var(--primary);
     }
 
     .details-box {
-      background: #050505;
+      background: var(--bg-inset);
       border: 1px solid var(--border-color);
       border-top: none;
       border-radius: 0 0 12px 12px;
@@ -582,13 +697,13 @@
 
     .detail-section-title {
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       margin-top: 8px;
       margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 6px;
-      border-left: 2px solid #ffffff;
+      border-left: 2px solid var(--primary);
       padding-left: 6px;
     }
     .detail-section-title:first-child {
@@ -596,7 +711,7 @@
     }
 
     .detail-text {
-      color: #a0a0a0;
+      color: var(--text-secondary);
       line-height: 1.5;
       margin-bottom: 6px;
     }
@@ -606,35 +721,35 @@
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 5px 12px;
       margin-top: 6px;
-      background: #000000;
+      background: var(--bg-card);
       padding: 10px 14px;
       border-radius: 8px;
-      border: 1px solid #1a1a1a;
+      border: 1px solid var(--border-color);
     }
 
     .sub-item {
       font-size: 12px;
-      color: #cccccc;
+      color: var(--text-secondary);
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
     .sub-item-dot {
-      color: #666666;
+      color: var(--text-muted);
       font-size: 14px;
       line-height: 1;
     }
 
-    /* Export Modal */
+    /* Modals */
     .modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
       display: none;
       justify-content: center;
       align-items: center;
@@ -643,15 +758,15 @@
     }
 
     .modal-card {
-      background: #0d0d0d;
-      border: 1px solid #2e2e2e;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: 18px;
       max-width: 720px;
       width: 100%;
       max-height: 90vh;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
       overflow: hidden;
     }
 
@@ -666,7 +781,7 @@
     .modal-title {
       font-size: 17px;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -680,7 +795,7 @@
       cursor: pointer;
     }
     .modal-close:hover {
-      color: #ffffff;
+      color: var(--text-main);
     }
 
     .modal-body {
@@ -689,22 +804,61 @@
       flex: 1;
     }
 
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 5px;
+    }
+
+    .form-control {
+      width: 100%;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-control:focus {
+      border-color: var(--primary);
+    }
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
     .export-textarea {
       width: 100%;
       height: 360px;
-      background: #000000;
+      background: var(--bg-inset);
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 14px;
-      color: #ffffff;
+      color: var(--text-main);
       font-family: ui-monospace, SFMono-Regular, monospace;
       font-size: 12px;
       line-height: 1.5;
       resize: vertical;
       outline: none;
-    }
-    .export-textarea:focus {
-      border-color: #ffffff;
     }
 
     .modal-footer {
@@ -715,22 +869,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      background: #080808;
-    }
-
-    /* Import Modal */
-    .import-input {
-      width: 100%;
-      height: 120px;
-      background: #000000;
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 12px;
-      color: #ffffff;
-      font-family: monospace;
-      font-size: 12px;
-      margin-bottom: 12px;
-      outline: none;
+      background: var(--bg-inset);
     }
 
     /* Toast Notification */
@@ -738,16 +877,16 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #ffffff;
-      color: #000000;
+      background: var(--primary);
+      color: var(--bg-main);
       padding: 12px 20px;
       border-radius: 10px;
       font-weight: 700;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
       display: none;
       z-index: 2000;
       animation: toastIn 0.3s ease;
-      border: 1px solid #ffffff;
+      border: 1px solid var(--primary);
     }
 
     @keyframes toastIn {
@@ -757,12 +896,12 @@
   
     /* Hard Drive Status & Worklog Card Styles */
     .disk-status-card {
-      background: #0d0d0d;
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 20px 22px;
       margin-bottom: 20px;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
       position: relative;
       overflow: hidden;
     }
@@ -772,9 +911,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 3px;
+      width: 4px;
       height: 100%;
-      background: #ffffff;
+      background: var(--primary);
     }
 
     .disk-status-header {
@@ -789,7 +928,7 @@
     .disk-status-title {
       font-size: 17.5px;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 10px;
@@ -803,8 +942,8 @@
     }
 
     .disk-stat-box {
-      background: #080808;
-      border: 1px solid #1c1c1c;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 12px 14px;
     }
@@ -818,15 +957,15 @@
     .disk-stat-val {
       font-size: 20px;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
     }
 
     /* Directory Breakdown Bars */
     .folder-bars-container {
-      background: #080808;
+      background: var(--bg-inset);
       border-radius: 12px;
       padding: 14px 16px;
-      border: 1px solid #1a1a1a;
+      border: 1px solid var(--border-color);
       margin-bottom: 14px;
     }
 
@@ -840,12 +979,12 @@
       justify-content: space-between;
       font-size: 12.5px;
       margin-bottom: 4px;
-      color: #cccccc;
+      color: var(--text-secondary);
     }
 
     .folder-progress-bg {
       height: 8px;
-      background: #181818;
+      background: var(--border-color);
       border-radius: 999px;
       overflow: hidden;
     }
@@ -854,12 +993,12 @@
       height: 100%;
       border-radius: 999px;
       transition: width 0.4s ease;
-      background: #ffffff;
+      background: var(--primary);
     }
 
     /* Worklog Section */
     .worklog-card {
-      background: #0d0d0d;
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 14px;
       margin-bottom: 20px;
@@ -872,17 +1011,17 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      background: rgba(255, 255, 255, 0.02);
+      background: var(--bg-inset);
       transition: background 0.2s;
     }
     .worklog-header-toggle:hover {
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--bg-card-hover);
     }
 
     .worklog-title {
       font-size: 15px;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -897,16 +1036,16 @@
 
     .worklog-item {
       padding: 10px 14px;
-      background: #080808;
+      background: var(--bg-inset);
       border-radius: 10px;
       margin-bottom: 10px;
-      border: 1px solid #1c1c1c;
-      border-left: 3px solid #ffffff;
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--primary);
     }
 
     .worklog-item-title {
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-main);
       margin-bottom: 4px;
       display: flex;
       justify-content: space-between;
@@ -918,9 +1057,9 @@
       padding: 2px 7px;
       border-radius: 4px;
       font-weight: 600;
-      background: #1c1c1c;
-      color: #ffffff;
-      border: 1px solid #333333;
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
     }
   </style>
 </head>
@@ -933,6 +1072,8 @@
         <div class="subtitle">MacBook Pro (M5 Pro 1TB 內建 SSD) + Crucial X9 4TB APFS 外接音色專用硬碟 — 空間挑選與實體配置方案</div>
       </div>
       <div class="badges-row">
+        <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeToggleBtn">🌓 切換深色</button>
+        <button class="btn btn-edit-mode" id="btnToggleEditMode" onclick="toggleEditMode()" style="padding: 5px 12px; font-size: 12px; border-radius: 999px;">⚙️ 開啟微調編輯模式</button>
         <div class="badge-info">💾 Crucial X9 4TB APFS</div>
         <div class="badge-info badge-internal">💻 MacBook Pro 1TB SSD</div>
         <div class="badge-info badge-verified">✅ /Volumes/S 實體驗證</div>
@@ -1237,6 +1378,22 @@
             <button class="pill-btn" onclick="toggleAllDetails(false)">收合所有詳情</button>
             <button class="pill-btn" onclick="selectAll(true)">全部勾選</button>
             <button class="pill-btn" onclick="selectAll(false)">全部取消</button>
+            <button class="pill-btn" onclick="downloadCurrentHtml()" title="將您微調後的音色庫完整打包下載為 HTML 檔案">💾 下載最新 HTML</button>
+            <button class="pill-btn" onclick="openJsonModal()" title="查看或匯出/匯入完整 JSON 資料庫">📋 備份/匯入 JSON</button>
+            <button class="pill-btn" onclick="resetToFactoryData()" title="放棄自訂修改，還原回官方原始音色清單">🔄 還原原廠設定</button>
+          </div>
+        </div>
+
+        <!-- Categories Container -->
+        <!-- Edit Mode Alert Banner -->
+        <div class="edit-mode-banner" id="editModeBanner">
+          <div>
+            <strong>🛠️ 目前處於自訂微調編輯模式：</strong>
+            您可直接在每張卡片上點擊【✏️ 編輯】修改名稱、容量與描述，點擊【🗑️ 刪除】移除音色，或點擊各分類底部的【➕ 新增音色】。微調會自動保存於瀏覽器中！
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-secondary" style="padding:4px 10px; font-size:11.5px;" onclick="downloadCurrentHtml()">💾 儲存並下載 HTML</button>
+            <button class="btn btn-secondary" style="padding:4px 10px; font-size:11.5px;" onclick="toggleEditMode()">完成退出</button>
           </div>
         </div>
 
@@ -1247,6 +1404,91 @@
   </div>
 
   <!-- Export Modal -->
+  <!-- Edit / Add Item Modal -->
+  <div class="modal-overlay" id="editItemModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title" id="editModalTitle">✏️ 編輯音色庫項目</div>
+        <button class="modal-close" onclick="closeEditModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="editItemId">
+        <div class="form-group">
+          <label class="form-label">所屬配器分類</label>
+          <select class="form-control" id="editItemCategory"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">音色名稱</label>
+          <input type="text" class="form-control" id="editItemName" placeholder="例如：Ample Bass Acoustic (ABA) - 原聲木貝斯">
+        </div>
+        <div class="form-row">
+          <div class="form-group" style="flex:1;">
+            <label class="form-label">佔用容量 (GB)</label>
+            <input type="number" step="0.1" class="form-control" id="editItemSize" placeholder="例如：4.7">
+          </div>
+          <div class="form-group" style="flex:1;">
+            <label class="form-label">標籤文字</label>
+            <input type="text" class="form-control" id="editItemBadge" placeholder="例如：常用推薦 / 木貝斯">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">簡要規格與描述</label>
+          <input type="text" class="form-control" id="editItemDesc" placeholder="一兩句話陳述具體配器與取樣型號">
+        </div>
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="editItemDefault"> 預設為勾選狀態 (推薦基礎配置)
+          </label>
+          <label class="checkbox-label" style="margin-left: 20px;">
+            <input type="checkbox" id="editItemInternal"> 裝載於本機 SSD (不佔用外接 4TB 容量)
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="form-label">核心特色說明 (展開面板內容)</label>
+          <textarea class="form-control" id="editItemOverview" rows="2" placeholder="詳細聲學特性、採樣錄音室、硬體來源"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">推薦適用場景</label>
+          <input type="text" class="form-control" id="editItemSuitable" placeholder="例如：流行音樂、民謠吉他伴奏、爵士樂">
+        </div>
+        <div class="form-group">
+          <label class="form-label">具體型號 / 子音色清單 (每行一個子項目)</label>
+          <textarea class="form-control" id="editItemList" rows="4" placeholder="每行填寫一項子音色或具體琴款型號"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeEditModal()">取消</button>
+        <button class="btn btn-primary" onclick="saveItemChanges()">確認儲存修改</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSON Backup / Import Modal -->
+  <div class="modal-overlay" id="jsonModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">📋 備份與匯入音色庫 JSON 設定</div>
+        <button class="modal-close" onclick="closeJsonModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size:12.5px; color:var(--text-secondary); margin-bottom:10px;">
+          您可以複製下方完整音色資料庫 JSON 保存為文字檔備份；或貼上您已修改好的 JSON 點擊下方【匯入並套用】。
+        </div>
+        <textarea class="export-textarea" id="jsonTextarea"></textarea>
+      </div>
+      <div class="modal-footer">
+        <div>
+          <button class="btn btn-secondary" onclick="copyJsonToClipboard()">📋 複製 JSON</button>
+          <button class="btn btn-secondary" onclick="downloadJsonFile()">💾 下載 .json 檔</button>
+        </div>
+        <div>
+          <button class="btn btn-secondary" onclick="closeJsonModal()">關閉</button>
+          <button class="btn btn-primary" onclick="importJsonChanges()">📥 匯入並套用</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="exportModal">
     <div class="modal-card">
       <div class="modal-header">
@@ -1296,7 +1538,7 @@
     const TOTAL_CAPACITY_GB = 4000;
 
     // Full verified database with real disk measurements from /Volumes/S
-    const PRODUCTS_DATA = [
+    const DEFAULT_PRODUCTS_DATA = [
   {
     "category": "A. 原聲鋼琴與鍵盤樂器 (Pianos & Keyboards)",
     "icon": "🎹",
@@ -2865,13 +3107,368 @@
     ]
   }
 ];
+    let PRODUCTS_DATA = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS_DATA));
 
     // State management
     let selectionState = {};
     let expandedState = {};
 
+    
+    // Customization & Edit Mode State
+    let isEditMode = false;
+
+    // Load custom products data from localStorage if exists
+    function loadSavedProductsData() {
+      try {
+        const saved = localStorage.getItem("asan_custom_products_data_v1");
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            PRODUCTS_DATA = parsed;
+            console.log("Loaded custom PRODUCTS_DATA from localStorage");
+          }
+        }
+      } catch (e) {
+        console.warn("Load custom products error:", e);
+      }
+    }
+
+    function saveProductsDataToStorage() {
+      try {
+        localStorage.setItem("asan_custom_products_data_v1", JSON.stringify(PRODUCTS_DATA));
+      } catch (e) {
+        console.warn("Save products error:", e);
+      }
+    }
+
+    // Toggle Theme (Light / Dark)
+    function toggleTheme() {
+      const isDark = document.body.classList.toggle("dark-theme");
+      const btn = document.getElementById("themeToggleBtn");
+      if (btn) {
+        btn.innerText = isDark ? "☀️ 切換淺色" : "🌓 切換深色";
+      }
+      try {
+        localStorage.setItem("asan_theme_preference", isDark ? "dark" : "light");
+      } catch (e) {}
+    }
+
+    // Restore Theme
+    function initTheme() {
+      try {
+        const pref = localStorage.getItem("asan_theme_preference");
+        const btn = document.getElementById("themeToggleBtn");
+        if (pref === "dark") {
+          document.body.classList.add("dark-theme");
+          if (btn) btn.innerText = "☀️ 切換淺色";
+        } else {
+          document.body.classList.remove("dark-theme");
+          if (btn) btn.innerText = "🌓 切換深色";
+        }
+      } catch (e) {}
+    }
+
+    // Toggle Edit Mode
+    function toggleEditMode() {
+      isEditMode = !isEditMode;
+      document.body.classList.toggle("edit-mode-active", isEditMode);
+      const banner = document.getElementById("editModeBanner");
+      if (banner) banner.style.display = isEditMode ? "flex" : "none";
+      const btn = document.getElementById("btnToggleEditMode");
+      if (btn) {
+        btn.innerText = isEditMode ? "✓ 關閉微調模式" : "⚙️ 開啟微調編輯模式";
+        btn.style.background = isEditMode ? "#10b981" : "";
+        btn.style.color = isEditMode ? "#ffffff" : "";
+      }
+      renderList();
+      showToast(isEditMode ? "🛠️ 微調編輯模式已開啟！您可自由編輯、刪除或新增音色" : "✓ 已關閉微調編輯模式");
+    }
+
+    // Delete item
+    function deleteItem(itemId, event) {
+      if (event) event.stopPropagation();
+      const item = findItemById(itemId);
+      if (!item) return;
+      if (!confirm(`確定要從清單中刪除「${item.name}」嗎？\n(此操作會即時更新容量與統計，您可隨時在清單底部重新新增)`)) {
+        return;
+      }
+
+      PRODUCTS_DATA.forEach(cat => {
+        cat.items = cat.items.filter(it => it.id !== itemId);
+      });
+      delete selectionState[itemId];
+      delete expandedState[itemId];
+      saveProductsDataToStorage();
+      saveState();
+      renderList();
+      updateDashboard();
+      showToast(`🗑️ 已刪除音色：${item.name}`);
+    }
+
+    // Open Edit Modal
+    function openEditModal(itemId, event) {
+      if (event) event.stopPropagation();
+      const item = findItemById(itemId);
+      if (!item) return;
+
+      document.getElementById("editModalTitle").innerText = "✏️ 編輯音色庫項目";
+      document.getElementById("editItemId").value = item.id;
+      document.getElementById("editItemName").value = item.name || "";
+      document.getElementById("editItemSize").value = item.size !== undefined ? item.size : 0;
+      document.getElementById("editItemBadge").value = item.badge || "";
+      document.getElementById("editItemDesc").value = item.desc || "";
+      document.getElementById("editItemDefault").checked = !!item.default;
+      document.getElementById("editItemInternal").checked = !!item.isInternal;
+      document.getElementById("editItemOverview").value = (item.details && item.details.overview) ? item.details.overview : "";
+      document.getElementById("editItemSuitable").value = (item.details && item.details.suitable) ? item.details.suitable : "";
+      document.getElementById("editItemList").value = (item.details && item.details.list) ? item.details.list.join("\n") : "";
+
+      // Populate category dropdown
+      const catSelect = document.getElementById("editItemCategory");
+      catSelect.innerHTML = "";
+      PRODUCTS_DATA.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.category;
+        opt.innerText = c.category;
+        if (c.items.some(it => it.id === item.id)) {
+          opt.selected = true;
+        }
+        catSelect.appendChild(opt);
+      });
+
+      document.getElementById("editItemModal").style.display = "flex";
+    }
+
+    // Open Add Modal
+    function openAddModal(targetCategory) {
+      document.getElementById("editModalTitle").innerText = `➕ 新增音色至「${targetCategory}」`;
+      document.getElementById("editItemId").value = ""; // empty means new
+      document.getElementById("editItemName").value = "";
+      document.getElementById("editItemSize").value = "5";
+      document.getElementById("editItemBadge").value = "自訂新增";
+      document.getElementById("editItemDesc").value = "";
+      document.getElementById("editItemDefault").checked = false;
+      document.getElementById("editItemInternal").checked = false;
+      document.getElementById("editItemOverview").value = "";
+      document.getElementById("editItemSuitable").value = "";
+      document.getElementById("editItemList").value = "";
+
+      const catSelect = document.getElementById("editItemCategory");
+      catSelect.innerHTML = "";
+      PRODUCTS_DATA.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.category;
+        opt.innerText = c.category;
+        if (c.category === targetCategory) {
+          opt.selected = true;
+        }
+        catSelect.appendChild(opt);
+      });
+
+      document.getElementById("editItemModal").style.display = "flex";
+    }
+
+    function closeEditModal() {
+      document.getElementById("editItemModal").style.display = "none";
+    }
+
+    // Save changes from modal
+    function saveItemChanges() {
+      const itemId = document.getElementById("editItemId").value;
+      const targetCatName = document.getElementById("editItemCategory").value;
+      const name = document.getElementById("editItemName").value.trim();
+      const size = parseFloat(document.getElementById("editItemSize").value) || 0;
+      const badge = document.getElementById("editItemBadge").value.trim() || "音色項目";
+      const desc = document.getElementById("editItemDesc").value.trim();
+      const isDef = document.getElementById("editItemDefault").checked;
+      const isInternal = document.getElementById("editItemInternal").checked;
+      const overview = document.getElementById("editItemOverview").value.trim();
+      const suitable = document.getElementById("editItemSuitable").value.trim();
+      const sublistRaw = document.getElementById("editItemList").value.trim();
+      const sublist = sublistRaw ? sublistRaw.split("\n").map(s => s.trim()).filter(Boolean) : [];
+
+      if (!name) {
+        alert("請輸入音色名稱！");
+        return;
+      }
+
+      if (itemId) {
+        // Edit existing
+        let currentItem = null;
+        let currentCat = null;
+        PRODUCTS_DATA.forEach(c => {
+          c.items.forEach(it => {
+            if (it.id === itemId) {
+              currentItem = it;
+              currentCat = c;
+            }
+          });
+        });
+
+        if (currentItem) {
+          currentItem.name = name;
+          currentItem.size = size;
+          currentItem.badge = badge;
+          currentItem.desc = desc;
+          currentItem.default = isDef;
+          currentItem.isInternal = isInternal;
+          currentItem.details = {
+            overview: overview || desc,
+            suitable: suitable,
+            list: sublist
+          };
+
+          // If category changed, move item
+          if (currentCat && currentCat.category !== targetCatName) {
+            currentCat.items = currentCat.items.filter(it => it.id !== itemId);
+            const newCat = PRODUCTS_DATA.find(c => c.category === targetCatName);
+            if (newCat) newCat.items.push(currentItem);
+          }
+        }
+        showToast(`✓ 已儲存修改：${name}`);
+      } else {
+        // Add new
+        const newId = "custom_" + Date.now();
+        const newItem = {
+          id: newId,
+          name: name,
+          desc: desc || name,
+          size: size,
+          default: isDef,
+          isInternal: isInternal,
+          badge: badge,
+          details: {
+            overview: overview || desc,
+            suitable: suitable,
+            list: sublist
+          }
+        };
+        const targetCat = PRODUCTS_DATA.find(c => c.category === targetCatName);
+        if (targetCat) {
+          targetCat.items.push(newItem);
+        } else if (PRODUCTS_DATA.length > 0) {
+          PRODUCTS_DATA[0].items.push(newItem);
+        }
+        selectionState[newId] = isDef;
+        expandedState[newId] = false;
+        showToast(`➕ 已新增音色：${name}`);
+      }
+
+      saveProductsDataToStorage();
+      saveState();
+      closeEditModal();
+      renderList();
+      updateDashboard();
+    }
+
+    // Reset to Factory Default
+    function resetToFactoryData() {
+      if (!confirm("確定要將所有音色庫清單還原為原廠官方預設嗎？\n(這會清除您所有的自訂新增、更名與刪除)")) {
+        return;
+      }
+      PRODUCTS_DATA = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS_DATA));
+      try {
+        localStorage.removeItem("asan_custom_products_data_v1");
+      } catch (e) {}
+      PRODUCTS_DATA.forEach(cat => {
+        cat.items.forEach(it => {
+          selectionState[it.id] = it.default;
+        });
+      });
+      saveState();
+      renderList();
+      updateDashboard();
+      showToast("🔄 已成功還原原廠官方音色庫資料！");
+    }
+
+    // Download current HTML as full standalone file
+    function downloadCurrentHtml() {
+      // Clone document to prepare export
+      const docHtml = document.documentElement.outerHTML;
+      // Replace PRODUCTS_DATA in export with current active data
+      const jsonCurrent = JSON.stringify(PRODUCTS_DATA, null, 2);
+      const sPos = docHtml.find ? docHtml.indexOf("const DEFAULT_PRODUCTS_DATA = [") : docHtml.indexOf("const DEFAULT_PRODUCTS_DATA = [");
+      let finalHtml = docHtml;
+      
+      const sStart = docHtml.indexOf("const DEFAULT_PRODUCTS_DATA = [");
+      if (sStart !== -1) {
+        const sEnd = docHtml.indexOf("let PRODUCTS_DATA = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS_DATA));", sStart);
+        if (sEnd !== -1) {
+          const replacement = `const DEFAULT_PRODUCTS_DATA = ${jsonCurrent};\n    let PRODUCTS_DATA = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS_DATA));`;
+          finalHtml = docHtml.substring(0, sStart) + replacement + docHtml.substring(sEnd + "let PRODUCTS_DATA = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS_DATA));".length);
+        }
+      }
+
+      const blob = new Blob([finalHtml], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "阿三老師_4TB音源硬碟空間配置選擇器.html";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("💾 已成功下載最新 HTML 檔！您可以直接覆蓋桌面的網頁檔！");
+    }
+
+    // JSON Backup / Import Modal
+    function openJsonModal() {
+      document.getElementById("jsonTextarea").value = JSON.stringify(PRODUCTS_DATA, null, 2);
+      document.getElementById("jsonModal").style.display = "flex";
+    }
+
+    function closeJsonModal() {
+      document.getElementById("jsonModal").style.display = "none";
+    }
+
+    function copyJsonToClipboard() {
+      const txt = document.getElementById("jsonTextarea");
+      txt.select();
+      navigator.clipboard.writeText(txt.value).then(() => {
+        showToast("📋 已複製 JSON 到剪貼簿！");
+      }).catch(() => {
+        document.execCommand("copy");
+        showToast("📋 已複製 JSON！");
+      });
+    }
+
+    function downloadJsonFile() {
+      const jsonStr = document.getElementById("jsonTextarea").value;
+      const blob = new Blob([jsonStr], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "音色庫自訂清單.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("💾 已下載「音色庫自訂清單.json」！");
+    }
+
+    function importJsonChanges() {
+      try {
+        const raw = document.getElementById("jsonTextarea").value.trim();
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed) || parsed.length === 0) {
+          alert("JSON 格式不符：必須是包含各分類物件的陣列 Array！");
+          return;
+        }
+        PRODUCTS_DATA = parsed;
+        saveProductsDataToStorage();
+        closeJsonModal();
+        renderList();
+        updateDashboard();
+        showToast("📥 成功匯入並套用最新 JSON 資料！");
+      } catch (e) {
+        alert("JSON 解析失敗，請檢查格式是否正確！\n" + e.message);
+      }
+    }
+
     // Initialize data & restore localStorage
     function initData() {
+      initTheme();
+      loadSavedProductsData();
       // 1. Defaults
       PRODUCTS_DATA.forEach(cat => {
         cat.items.forEach(item => {
@@ -2970,6 +3567,13 @@
           chk.disabled = !!item.disabled;
           chk.onchange = () => toggleItem(item.id);
 
+          const editToolbar = document.createElement("div");
+          editToolbar.className = "card-edit-actions";
+          editToolbar.innerHTML = `
+            <button class="btn-tiny btn-tiny-edit" onclick="openEditModal('${item.id}', event)" title="編輯此音色">✏️ 編輯</button>
+            <button class="btn-tiny btn-tiny-delete" onclick="deleteItem('${item.id}', event)" title="從清單中刪除此音色">🗑️ 刪除</button>
+          `;
+
           // Tags
           let badgeTag = "";
           if (item.disabled) {
@@ -3038,6 +3642,16 @@
         });
 
         section.appendChild(grid);
+
+        // Category Add Button (Active in Edit Mode)
+        const catFooter = document.createElement("div");
+        catFooter.className = "category-footer-actions";
+        catFooter.innerHTML = `
+          <button class="btn-add-item-card" onclick="openAddModal('${cat.category.replace(/'/g, "\\'")}')">
+            ➕ 新增音色項目至「${cat.category}」
+          </button>
+        `;
+        section.appendChild(catFooter);
         container.appendChild(section);
       });
     }
