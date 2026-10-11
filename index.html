@@ -1061,6 +1061,27 @@
       color: var(--text-main);
       border: 1px solid var(--border-color);
     }
+  
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--bg-inset);
+      color: var(--text-main);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-success {
+      background: var(--primary);
+      color: var(--bg-main);
+      border: 1px solid var(--primary);
+    }
+    .btn-success:hover {
+      background: var(--primary-hover);
+      color: var(--bg-main);
+    }
+
   </style>
 </head>
 <body>
@@ -1084,7 +1105,7 @@
     <div class="dashboard">
       <!-- Left Sidebar: Chart & Quick Actions -->
       <div class="chart-card">
-        <h3 style="font-size: 15px; font-weight: 700; color: #fff;">Crucial X9 4TB 空間儀表板</h3>
+        <h3 style="font-size: 15px; font-weight: 700; color: var(--text-main);">Crucial X9 4TB 空間儀表板</h3>
         <div class="subtitle" style="font-size: 12px; margin-bottom: 6px;">純大型取樣音色庫專用槽</div>
 
         <div class="chart-wrapper">
@@ -1109,7 +1130,7 @@
           </div>
           <div class="storage-row">
             <span style="color: var(--text-muted);">外接剩餘可用空間</span>
-            <span class="storage-val" id="freeSpaceText" style="color: var(--);">4,000 GB</span>
+            <span class="storage-val" id="freeSpaceText" >4,000 GB</span>
           </div>
           <div class="storage-row">
             <span style="color: var(--text-muted);">已勾選項目數</span>
@@ -1119,8 +1140,8 @@
 
         <div class="internal-box">
           <div class="internal-box-title">💻 電腦內建 1TB SSD（合成器與效果器）</div>
-          <div>本機外掛預估佔用：<strong id="internalUsedText" style="color:#fff;">約 125 GB</strong></div>
-          <div style="font-size: 11.5px; color: #c084fc; margin-top: 3px;">• 檔案安裝於系統槽，完全不佔用外接 4TB！本機剩餘約 875 GB</div>
+          <div>本機外掛預估佔用：<strong id="internalUsedText" style="color: var(--text-main); font-weight: 700;">約 125 GB</strong></div>
+          <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 3px;">• 檔案安裝於系統槽，完全不佔用外接 4TB！本機剩餘約 875 GB</div>
         </div>
 
         <div class="status-alert" id="statusAlert">
@@ -1155,13 +1176,11 @@
                 <span class="badge-tag badge-core" style="font-size: 12px;">✅ 2026/10/10 實測通過</span>
               </div>
               <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">
-                實體掛載於 <code style="color:#ffffff; background:#181818; padding:2px 6px; border-radius:4px; border:1px solid #333333;">/Volumes/S</code> ｜ APFS 高速檔案系統 ｜ 全硬碟 154 套音色庫 100% 入庫相容驗證通過
+                實體掛載於 <code>/Volumes/S</code> ｜ APFS 高速檔案系統 ｜ 全硬碟 154 套音色庫 100% 入庫相容驗證通過
               </div>
             </div>
             <div style="display:flex; gap:8px;">
-              <span class="badge-tag" style="background:#181818; color:#ffffff; border:1px solid #333333;">
-                現況裝載率 95%
-              </span>
+              <span class="badge-tag badge-verified">現況裝載率 95%</span>
             </div>
           </div>
 
@@ -1169,83 +1188,83 @@
           <div class="disk-stats-grid">
             <div class="disk-stat-box">
               <div class="disk-stat-label">硬碟格式化總容量</div>
-              <div class="disk-stat-val">3,600 GB <span style="font-size:13px; font-weight:normal; color:#888;">(3.6 TiB)</span></div>
+              <div class="disk-stat-val">3,600 GB <span style="font-size:13px; font-weight:normal; color: var(--text-muted);">(3.6 TiB)</span></div>
             </div>
             <div class="disk-stat-box">
               <div class="disk-stat-label">目前實體已拷貝裝載</div>
-              <div class="disk-stat-val ">3,500 GB <span style="font-size:13px; font-weight:normal; color:#888;">(3.5 TiB)</span></div>
+              <div class="disk-stat-val ">3,500 GB <span style="font-size:13px; font-weight:normal; color: var(--text-muted);">(3.5 TiB)</span></div>
             </div>
             <div class="disk-stat-box">
               <div class="disk-stat-label">目前剩餘安全可用空間</div>
-              <div class="disk-stat-val ">190 GB <span style="font-size:13px; font-weight:normal; color:#888;">(充裕安全緩衝)</span></div>
+              <div class="disk-stat-val ">190 GB <span style="font-size:13px; font-weight:normal; color: var(--text-muted);">(充裕安全緩衝)</span></div>
             </div>
             <div class="disk-stat-box">
               <div class="disk-stat-label">NI 音色庫相容健康度</div>
-              <div class="disk-stat-val ">154 套 / 0 異常 <span style="font-size:13px; font-weight:normal; color:#888;">(100% 通過)</span></div>
+              <div class="disk-stat-val ">154 套 / 0 異常 <span style="font-size:13px; font-weight:normal; color: var(--text-muted);">(100% 通過)</span></div>
             </div>
           </div>
 
           <!-- 六大目錄實體容量分佈條 -->
           <div class="folder-bars-container">
-            <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 10px; display:flex; justify-content:space-between;">
+            <div style="font-size: 13px; font-weight: 700; color: var(--text-main); margin-bottom: 10px; display:flex; justify-content:space-between;">
               <span>📁 /Volumes/S 實體目錄容量佔比分佈 (總計 3.5 TB)</span>
-              <span style="font-size: 11.5px; color: #94a3b8;">以 du -sh 實體測量</span>
+              <span style="font-size: 11.5px; color: var(--text-muted);">以 du -sh 實體測量</span>
             </div>
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#ffffff;">NI</strong> (Native Instruments / Kontakt 全系列 154 套音色庫)</span>
-                <span style="color:#fff; font-weight:600;">2,200 GB (2.2 TB)</span>
+                <span><strong style="color: var(--text-main); font-weight: 800;">NI</strong> (Native Instruments / Kontakt 全系列 154 套音色庫)</span>
+                <span style="color: var(--text-main); font-weight: 700;">2,200 GB (2.2 TB)</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 61%; background: #ffffff;"></div>
+                <div class="folder-progress-fill" style="width: 61%; background: var(--primary);"></div>
               </div>
             </div>
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#f59e0b;">SD DRUM EXP</strong> (Toontrack Superior Drummer 3 旗艦本體 + 16 套 SDX 擴充包)</span>
-                <span style="color:#fff; font-weight:600;">886 GB</span>
+                <span><strong style="color: #b45309; font-weight: 800;">SD DRUM EXP</strong> (Toontrack Superior Drummer 3 旗艦本體 + 16 套 SDX 擴充包)</span>
+                <span style="color: var(--text-main); font-weight: 700;">886 GB</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 25%; background: #cccccc;"></div>
+                <div class="folder-progress-fill" style="width: 25%; background: #d97706;"></div>
               </div>
             </div>
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#a855f7;">STEAM</strong> (Spectrasonics 傳奇四巨頭：Omnisphere 2, Keyscape, Trilian, Stylus RMX)</span>
-                <span style="color:#fff; font-weight:600;">210 GB</span>
+                <span><strong style="color: #6b21a8; font-weight: 800;">STEAM</strong> (Spectrasonics 傳奇四巨頭：Omnisphere 2, Keyscape, Trilian, Stylus RMX)</span>
+                <span style="color: var(--text-main); font-weight: 700;">210 GB</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 6%; background: #aaaaaa;"></div>
+                <div class="folder-progress-fill" style="width: 6%; background: #7c3aed;"></div>
               </div>
             </div>
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#10b981;">Ample Sound</strong> (民謠木吉他、電吉他、古典吉他全套)</span>
-                <span style="color:#fff; font-weight:600;">111 GB</span>
+                <span><strong style="color: #047857; font-weight: 800;">Ample Sound</strong> (民謠木吉他、電吉他、古典吉他全套)</span>
+                <span style="color: var(--text-main); font-weight: 700;">111 GB</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 3.2%; background: linear-gradient(90deg, #059669, #10b981);"></div>
+                <div class="folder-progress-fill" style="width: 3.2%; background: #059669;"></div>
               </div>
             </div>
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#ec4899;">TECH & Three-Body Tech</strong> (前衛現代合成模組 21 GB + 三體聲音科技國樂 3.1 GB)</span>
-                <span style="color:#fff; font-weight:600;">24.1 GB</span>
+                <span><strong style="color: #be185d; font-weight: 800;">TECH & Three-Body Tech</strong> (前衛現代合成模組 21 GB + 三體聲音科技國樂 3.1 GB)</span>
+                <span style="color: var(--text-main); font-weight: 700;">24.1 GB</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 1%; background: linear-gradient(90deg, #db2777, #ec4899);"></div>
+                <div class="folder-progress-fill" style="width: 1%; background: #db2777;"></div>
               </div>
             </div>
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#cbd5e1;">Kontakt_入庫工具</strong> (阿三老師電腦一插即用 Add Library.command 腳本)</span>
-                <span style="color:#10b981; font-weight:600;">就緒 (4 KB)</span>
+                <span><strong style="color: var(--text-main); font-weight: 800;">Kontakt_入庫工具</strong> (阿三老師電腦一插即用 Add Library.command 腳本)</span>
+                <span style="color: #059669; font-weight: 700;">就緒 (4 KB)</span>
               </div>
             </div>
           </div>
@@ -1259,7 +1278,7 @@
             </div>
             <div style="display:flex; align-items:center; gap:8px;">
               <span class="badge-tag badge-core">154 套 0 異常</span>
-              <span id="worklogToggleIcon" style="color:#888888; font-size:14px; transition:transform 0.2s;">▼ 展開日誌</span>
+              <span id="worklogToggleIcon" style="color: var(--text-muted); font-size:14px; transition:transform 0.2s;">▼ 展開日誌</span>
             </div>
           </div>
 
@@ -1270,8 +1289,8 @@
                 <span>1. 全硬碟 154 套音色庫自動化體檢與入庫相容性全面排除</span>
                 <span class="worklog-tag worklog-tag-green">100% 通過</span>
               </div>
-              <div style="color: #cbd5e1; font-size: 12.5px;">
-                針對二進制標頭偏移 (512000)、SNPID 命名格式 (避免被判定為 000 散裝)、XML spec 1.0.16、授權金鑰完整性及阿三老師專用 <code>Add Library.command</code> 進行語法級全面審查。嚴重異常由原本 9 套完全清零（0 FAIL），入庫工具模擬成功率達 100%。完整體檢紀錄同步存檔於 <code style="color:#ffffff;">/Volumes/S/NI音色庫完整體檢排查報告.txt</code>。
+              <div style="color: var(--text-secondary); font-size: 12.5px;">
+                針對二進制標頭偏移 (512000)、SNPID 命名格式 (避免被判定為 000 散裝)、XML spec 1.0.16、授權金鑰完整性及阿三老師專用 <code>Add Library.command</code> 進行語法級全面審查。嚴重異常由原本 9 套完全清零（0 FAIL），入庫工具模擬成功率達 100%。完整體檢紀錄同步存檔於 <code>/Volumes/S/NI音色庫完整體檢排查報告.txt</code>。
               </div>
             </div>
 
@@ -1281,7 +1300,7 @@
                 <span>2. 修補異常 .nicnt 容器、代碼與目錄層級（共 4 套音色）</span>
                 <span class="worklog-tag worklog-tag-blue">底層修復</span>
               </div>
-              <ul style="color: #cbd5e1; font-size: 12.5px; padding-left: 18px; margin-top: 4px;">
+              <ul style="color: var(--text-secondary); font-size: 12.5px; padding-left: 18px; margin-top: 4px;">
                 <li><strong>Ilya Efimov Uilleann Pipes (愛爾蘭風笛)</strong>：SNPID 由非標準代碼 <code>I2U</code> 規範為合規 <code>A38</code>；重構標準 514,544 bytes 容器；清洗 XML 特殊括號並補齊結尾換行，Kontakt 原生註冊成功。</li>
                 <li><strong>Soniccouture Giant Bass Tongue Drum</strong>：解開原本 Windows 遺留之 <code>Fixed Library</code> 巢狀目錄移至外接硬碟根目錄；SNPID 由非法 5 碼 <code>A5810</code> 規範為標準 <code>A58</code>；以 Kontakt 樂器鏡像建立標準 <code>Instruments/</code> 目錄與封面圖。</li>
                 <li><strong>Soniccouture Broken Wurli</strong>：自 <code>Broken Wurli Library</code> 子層級扁平化解開至根目錄；SNPID 由 <code>A4810</code> 規範為標準 <code>A48</code>；重構標準 514,544 bytes 容器並補齊 <code>wallpaper.png</code>。</li>
@@ -1295,10 +1314,10 @@
                 <span>3. 全新補齊缺失之 .nicnt 容器與專屬 905x99 封面（共 7 套音色）</span>
                 <span class="worklog-tag worklog-tag-blue">容器生成</span>
               </div>
-              <div style="color: #cbd5e1; font-size: 12.5px; margin-bottom: 4px;">
+              <div style="color: var(--text-secondary); font-size: 12.5px; margin-bottom: 4px;">
                 針對原本完全沒有 .nicnt 導致無法入庫的 7 套音色，已全數注入標準 spec 1.0.16 + RAS3 規格並生成專屬精緻封面：
               </div>
-              <ul style="color: #cbd5e1; font-size: 12.5px; padding-left: 18px;">
+              <ul style="color: var(--text-secondary); font-size: 12.5px; padding-left: 18px;">
                 <li><strong>Soniccouture Novachord</strong>：官方 SNPID <code>924</code>，注入專屬 HU/JDX 金鑰與全真空管合成器復古封面。</li>
                 <li><strong>Soniccouture The Conservatoire Collection</strong>：官方 SNPID <code>929</code>，注入專屬金鑰與巴洛克古樂器封面。</li>
                 <li><strong>Spitfire Loegria REDUX v3.22</strong>：官方 SNPID <code>992</code>，自 <code>Info/</code> 目錄提取原生高清桌布。</li>
@@ -1315,7 +1334,7 @@
                 <span>4. Spitfire Audio - Hans Zimmer Piano 完整度實測專案報告</span>
                 <span class="worklog-tag worklog-tag-amber">現狀通報</span>
               </div>
-              <div style="color: #cbd5e1; font-size: 12.5px;">
+              <div style="color: var(--text-secondary); font-size: 12.5px;">
                 • <strong>容量差距</strong>：官方完整規格為 <strong>211.2 GB</strong> (收錄 AIR Hall 16 組多角度麥克風信號)；目前硬碟實體大小僅 <strong>73.89 GB</strong> (約 35%)。<br>
                 • <strong>百度網盤中斷痕跡</strong>：在目錄中發現中斷後綴檔案 <code>TC Outrigger.nki.baiduyun.p.downloading</code> 及 <code>SA_HZP_Samples_74.nkc.baiduyun.p.downloading</code>，證實先前下載時中斷。<br>
                 • <strong>取樣切片缺漏</strong>：取樣序號延伸至 77 號，但目前僅有 37 個 .nkx，缺失了 33 個取樣區塊 (1~7 號及中後段多數麥克風切片)。<br>
@@ -1329,7 +1348,7 @@
                 <span>7. 介面視覺全面重構為「純黑白專業工業級配色」並移除未完整音源</span>
                 <span class="worklog-tag">專業配色</span>
               </div>
-              <ul style="color: #cccccc; font-size: 13px; line-height: 1.6; margin: 6px 0 0 18px; padding: 0;">
+              <ul style="color: var(--text-secondary); font-size: 13px; line-height: 1.6; margin: 6px 0 0 18px; padding: 0;">
                 <li><strong>純黑白專業極簡風格</strong>：全面剔除彩度干擾，採用 OLED 純黑背景 (#000000)、石墨色卡片 (#0D0D0D) 與精確白線高反差階調，還原母帶級硬體設備之純粹專注感。</li>
                 <li><strong>移除未完整音源</strong>：依指示正式自勾選清單中完全移除 Spitfire Audio - Hans Zimmer Piano (74 GB 殘缺版)，確保清單中每一款音色均為 100% 完整可用之成熟音源。</li>
                 <li><strong>高反差互動指引</strong>：選中項目採用純白邊框立體反差標示，進度圓環與容量條改為高精度純白/灰階刻度計，搜尋輸入與按鈕全面黑白切換。</li>
@@ -1342,10 +1361,10 @@
                 <span>6. 配器與分類架構全面升級（獨立「獨奏樂器」、長長詳細列出 Ample Bass 每一款）</span>
                 <span class="worklog-tag worklog-tag-green">架構重構</span>
               </div>
-              <div style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-top: 6px;">
+              <div style="color: var(--text-secondary); font-size: 13px; line-height: 1.6; margin-top: 6px;">
                 落實阿三老師專業配器分類標準，全庫劃分為 11 大專業聲部分類：
               </div>
-              <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin: 6px 0 0 18px; padding: 0;">
+              <ul style="color: var(--text-secondary); font-size: 13px; line-height: 1.6; margin: 6px 0 0 18px; padding: 0;">
                 <li><strong>獨立「獨奏樂器」專區</strong>：小提琴獨奏 (Stradivari, Guarneri, Spitfire Solo, LASS First Chair)、大提琴獨奏 (Stradivari Cello, Spitfire Solo Cello)、室內樂四重奏、愛爾蘭風笛 (已修復 .nicnt)、峇里島竹笛、獨奏雙豎琴、手風琴等。</li>
                 <li><strong>Ample Bass 長長詳細逐套列出</strong>：嚴格獨立列出每一套實體琴款模型、具體容量與演奏法（ABA 木貝斯 4.7G、ABJ 爵士貝斯 3.7G、ABP P-Bass 3.6G、ABJF 無品貝斯 2.1G、ABY 5弦主動式 5.1G、ABU 原聲立式 4.2G、AEBJ Elrick 3.9G、AEU 輕量立式 2.1G），加上 Trilian、Scarbee 與 Session Bassist。</li>
                 <li><strong>原聲鋼琴與鍵盤樂器全面補齊</strong>：完整收錄 19 套鋼琴與鍵盤庫（涵蓋 Yamaha CFX/C3/C7, Steinway D, Kawai, Bösendorfer 290, Bechstein, Klavins 370 等 30+ 款實體鋼琴），並標註 Hans Zimmer Piano 現況。</li>
@@ -1357,10 +1376,10 @@
             <div class="worklog-item purple">
               <div class="worklog-item-title">
                 <span>5. 阿三老師專用「一鍵入庫工具」已置於外接硬碟根目錄</span>
-                <span class="worklog-tag" style="background:#1c1c1c; color:#ffffff; border:1px solid #333333;">即插即用</span>
+                <span class="worklog-tag worklog-tag-blue">即插即用</span>
               </div>
-              <div style="color: #cbd5e1; font-size: 12.5px;">
-                已將經過測試的入庫腳本部署至 <code style="color:#ffffff;">/Volumes/S/Kontakt_入庫工具/Add Library.command</code>。硬碟插至阿三老師電腦後，只需點開該工具並選擇音色庫目錄，即可在 macOS 系統秒入庫，無需繁瑣設定。
+              <div style="color: var(--text-secondary); font-size: 12.5px;">
+                已將經過測試的入庫腳本部署至 <code>/Volumes/S/Kontakt_入庫工具/Add Library.command</code>。硬碟插至阿三老師電腦後，只需點開該工具並選擇音色庫目錄，即可在 macOS 系統秒入庫，無需繁瑣設定。
               </div>
             </div>
           </div>
@@ -1496,7 +1515,7 @@
         <button class="modal-close" onclick="closeExportModal()">✕</button>
       </div>
       <div class="modal-body">
-        <p style="font-size: 13px; color: #94a3b8; margin-bottom: 10px;">
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px;">
           請點擊下方「一鍵複製 LINE 清單」，並直接貼在 LINE 傳送給林以鎮（小林）。內含完整已選、剔除項目與專屬還原代碼！
         </p>
         <textarea class="export-textarea" id="exportText" readonly></textarea>
@@ -1519,7 +1538,7 @@
         <button class="modal-close" onclick="closeImportModal()">✕</button>
       </div>
       <div class="modal-body">
-        <p style="font-size: 13px; color: #94a3b8; margin-bottom: 10px;">
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px;">
           請將老師回傳單最下方的「專屬配置還原代碼」貼入下方框內：
         </p>
         <textarea class="import-input" id="importInput" placeholder="貼入 Base64 還原代碼（如：eyJzZWxlY3RlZCI6...）"></textarea>
@@ -3630,7 +3649,7 @@
 
             ${item.details && item.details.suitable ? `
               <div class="detail-section-title" style="margin-top:8px;">🎵 推薦適用音樂場景：</div>
-              <div class="detail-text" style="color: #d4d4d4;">${item.details.suitable}</div>
+              <div class="detail-text" style="color: var(--text-secondary);">${item.details.suitable}</div>
             ` : ""}
 
             ${subItemsHtml}
