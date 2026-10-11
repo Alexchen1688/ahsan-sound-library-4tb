@@ -6,20 +6,24 @@
   <title>阿三老師 - 4TB 外接硬碟音源配置與空間挑選系統</title>
   <style>
     :root {
-      --bg-main: #0b0d13;
-      --bg-card: #151822;
-      --bg-card-hover: #1c2130;
-      --border-color: #262c3f;
-      --border-focus: #38bdf8;
-      --text-main: #e6edf3;
-      --text-muted: #8b949e;
-      --primary: #38bdf8;
-      --primary-hover: #0284c7;
-      --accent-green: #10b981;
-      --accent-orange: #f59e0b;
-      --accent-red: #ef4444;
-      --accent-purple: #a855f7;
-      --accent-pink: #ec4899;
+      --bg-main: #000000;
+      --bg-card: #0d0d0d;
+      --bg-card-hover: #141414;
+      --bg-card-selected: #181818;
+      --bg-inset: #080808;
+      --border-color: #222222;
+      --border-hover: #383838;
+      --border-focus: #ffffff;
+      --border-selected: #ffffff;
+      --text-main: #ffffff;
+      --text-secondary: #d4d4d4;
+      --text-muted: #888888;
+      --text-dim: #555555;
+      --primary: #ffffff;
+      --primary-hover: #e5e5e5;
+      --accent-gray: #aaaaaa;
+      --accent-light: #f5f5f5;
+      --accent-dark: #1a1a1a;
     }
 
     * {
@@ -33,7 +37,7 @@
       background-color: var(--bg-main);
       color: var(--text-main);
       line-height: 1.5;
-      padding: 20px;
+      padding: 24px;
       min-height: 100vh;
     }
 
@@ -45,7 +49,7 @@
     /* Header */
     header {
       margin-bottom: 24px;
-      padding-bottom: 18px;
+      padding-bottom: 20px;
       border-bottom: 1px solid var(--border-color);
       display: flex;
       flex-wrap: wrap;
@@ -55,24 +59,28 @@
     }
 
     .title-group h1 {
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      letter-spacing: -0.3px;
     }
 
     .title-group h1 span {
-      background: linear-gradient(135deg, #38bdf8, #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #ffffff;
+      font-weight: 500;
+      border-left: 1px solid #333333;
+      padding-left: 12px;
+      margin-left: 2px;
     }
 
     .subtitle {
       color: var(--text-muted);
-      font-size: 13.5px;
-      margin-top: 4px;
+      font-size: 13px;
+      margin-top: 5px;
+      letter-spacing: 0.2px;
     }
 
     .badges-row {
@@ -85,24 +93,26 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--primary);
+      background: #111111;
+      color: #ffffff;
       padding: 5px 12px;
       border-radius: 999px;
-      font-size: 12.5px;
-      border: 1px solid rgba(56, 189, 248, 0.25);
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid #2e2e2e;
     }
 
     .badge-internal {
-      background: rgba(168, 85, 247, 0.12);
-      color: var(--accent-purple);
-      border-color: rgba(168, 85, 247, 0.3);
+      background: #161616;
+      color: #d4d4d4;
+      border-color: #383838;
     }
 
     .badge-verified {
-      background: rgba(16, 185, 129, 0.12);
-      color: var(--accent-green);
-      border-color: rgba(16, 185, 129, 0.3);
+      background: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      border-color: #ffffff;
     }
 
     /* Dashboard Layout */
@@ -130,7 +140,7 @@
       align-items: center;
       position: sticky;
       top: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
     }
 
     .chart-wrapper {
@@ -148,16 +158,16 @@
 
     .chart-bg {
       fill: none;
-      stroke: #222736;
-      stroke-width: 20;
+      stroke: #1a1a1a;
+      stroke-width: 18;
     }
 
     .chart-fill {
       fill: none;
-      stroke: var(--primary);
-      stroke-width: 20;
+      stroke: #ffffff;
+      stroke-width: 18;
       stroke-linecap: round;
-      stroke-dasharray: 565.48; /* 2 * PI * 90 */
+      stroke-dasharray: 565.48;
       stroke-dashoffset: 282.74;
       transition: stroke-dashoffset 0.4s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s ease;
     }
@@ -173,23 +183,24 @@
     .chart-percent {
       font-size: 34px;
       font-weight: 800;
-      color: #fff;
+      color: #ffffff;
+      letter-spacing: -0.5px;
     }
 
     .chart-label {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
 
     .storage-details {
       width: 100%;
-      background: rgba(0, 0, 0, 0.25);
+      background: #080808;
       border-radius: 12px;
       padding: 14px;
       margin-bottom: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid #1a1a1a;
     }
 
     .storage-row {
@@ -203,20 +214,24 @@
       margin-bottom: 0;
     }
 
+    .storage-label {
+      color: var(--text-muted);
+    }
+
     .storage-val {
       font-weight: 600;
-      color: #fff;
+      color: #ffffff;
     }
 
     .internal-box {
       width: 100%;
-      background: rgba(168, 85, 247, 0.08);
-      border: 1px dashed rgba(168, 85, 247, 0.35);
+      background: #0a0a0a;
+      border: 1px dashed #333333;
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 14px;
       font-size: 12.5px;
-      color: #d8b4fe;
+      color: #cccccc;
     }
 
     .internal-box-title {
@@ -225,7 +240,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      color: #f3e8ff;
+      color: #ffffff;
     }
 
     .status-alert {
@@ -235,7 +250,10 @@
       font-size: 12.5px;
       margin-bottom: 14px;
       text-align: center;
-      font-weight: 500;
+      font-weight: 600;
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      color: #ffffff;
       transition: all 0.3s;
     }
 
@@ -262,41 +280,45 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #0284c7, #2563eb);
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, #0369a1, #1d4ed8);
+      background: #e5e5e5;
       transform: translateY(-1px);
     }
 
     .btn-success {
-      background: linear-gradient(135deg, #059669, #10b981);
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      background: #f0f0f0;
+      color: #000000;
+      border: 1px solid #f0f0f0;
     }
     .btn-success:hover {
-      background: linear-gradient(135deg, #047857, #059669);
+      background: #ffffff;
       transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: #252a38;
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
+      background: #141414;
+      color: #ffffff;
+      border: 1px solid #2e2e2e;
     }
     .btn-secondary:hover {
-      background: #2f3647;
+      background: #222222;
+      border-color: #444444;
     }
 
     .btn-preset {
-      background: rgba(56, 189, 248, 0.1);
-      color: var(--primary);
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      background: #111111;
+      color: #ffffff;
+      border: 1px solid #333333;
     }
     .btn-preset:hover {
-      background: rgba(56, 189, 248, 0.2);
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
     }
 
     /* Controls Bar */
@@ -321,17 +343,17 @@
 
     .search-input {
       width: 100%;
-      background: #0d1017;
-      border: 1px solid var(--border-color);
+      background: #080808;
+      border: 1px solid #242424;
       border-radius: 10px;
       padding: 9px 14px 9px 38px;
-      color: #fff;
+      color: #ffffff;
       font-size: 13.5px;
       outline: none;
       transition: border-color 0.2s;
     }
     .search-input:focus {
-      border-color: var(--border-focus);
+      border-color: #ffffff;
     }
 
     .search-icon {
@@ -351,8 +373,8 @@
     }
 
     .pill-btn {
-      background: #222634;
-      border: 1px solid var(--border-color);
+      background: #121212;
+      border: 1px solid #262626;
       color: var(--text-muted);
       padding: 7px 12px;
       border-radius: 8px;
@@ -362,13 +384,15 @@
       transition: all 0.2s;
     }
     .pill-btn:hover {
-      background: #2b3142;
-      color: #fff;
+      background: #222222;
+      color: #ffffff;
+      border-color: #444444;
     }
     .pill-btn.active {
-      background: rgba(56, 189, 248, 0.15);
-      border-color: var(--primary);
-      color: var(--primary);
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #000000;
+      font-weight: 700;
     }
 
     /* Category Section */
@@ -386,21 +410,23 @@
       align-items: center;
       padding-bottom: 12px;
       margin-bottom: 14px;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid #1a1a1a;
     }
 
     .category-title {
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 8px;
+      letter-spacing: -0.2px;
     }
 
     .category-stats {
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--text-muted);
+      font-weight: 500;
     }
 
     /* Product Item */
@@ -411,8 +437,8 @@
     }
 
     .product-card {
-      background: #11141c;
-      border: 1px solid #232838;
+      background: #080808;
+      border: 1px solid #1e1e1e;
       border-radius: 12px;
       padding: 13px 16px;
       display: flex;
@@ -424,17 +450,17 @@
     }
 
     .product-card:hover {
-      border-color: #3b435a;
-      background: #161a24;
+      border-color: #383838;
+      background: #111111;
     }
 
     .product-card.selected {
-      border-color: rgba(56, 189, 248, 0.45);
-      background: rgba(56, 189, 248, 0.04);
+      border-color: #ffffff;
+      background: #161616;
     }
 
     .product-card.disabled {
-      opacity: 0.5;
+      opacity: 0.45;
       cursor: not-allowed;
       border-style: dashed;
     }
@@ -443,7 +469,7 @@
       margin-top: 3px;
       width: 18px;
       height: 18px;
-      accent-color: var(--primary);
+      accent-color: #ffffff;
       cursor: pointer;
     }
 
@@ -452,7 +478,7 @@
       min-width: 0;
     }
 
-    .product-head-row {
+    .product-header-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -462,98 +488,90 @@
     }
 
     .product-name {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 600;
-      color: #fff;
+      color: #ffffff;
       display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .product-size {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #ffffff;
+      background: #181818;
+      border: 1px solid #2e2e2e;
+      padding: 2px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .product-desc {
+      font-size: 12.5px;
+      color: #888888;
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 6px;
     }
 
     .badge-tag {
       font-size: 11px;
-      padding: 2px 7px;
-      border-radius: 4px;
+      padding: 2px 8px;
+      border-radius: 5px;
       font-weight: 600;
+      background: #161616;
+      border: 1px solid #2e2e2e;
+      color: #d4d4d4;
     }
 
     .badge-core {
-      background: rgba(16, 185, 129, 0.2);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.4);
-    }
-
-    .badge-opt {
-      background: rgba(148, 163, 184, 0.15);
-      color: #cbd5e1;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    .badge-internal-tag {
-      background: rgba(168, 85, 247, 0.2);
-      color: #c084fc;
-      border: 1px solid rgba(168, 85, 247, 0.4);
-    }
-
-    .badge-disabled {
-      background: rgba(239, 68, 68, 0.2);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.4);
-    }
-
-    .badge-folder {
-      background: rgba(56, 189, 248, 0.1);
-      color: #38bdf8;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      font-family: ui-monospace, SFMono-Regular, monospace;
-      font-size: 10.5px;
-    }
-
-    .product-size {
-      font-size: 13.5px;
+      background: #ffffff;
+      color: #000000;
       font-weight: 700;
-      color: var(--primary);
-      white-space: nowrap;
+      border-color: #ffffff;
     }
 
-    .product-desc {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-      line-height: 1.4;
+    .badge-optional {
+      background: #161616;
+      color: #999999;
+      border-color: #2e2e2e;
     }
 
-    .btn-detail-toggle {
-      background: transparent;
+    .details-toggle {
+      background: none;
       border: none;
-      color: #60a5fa;
+      color: #888888;
       font-size: 11.5px;
       cursor: pointer;
-      padding: 2px 0;
+      padding: 2px 6px;
+      border-radius: 4px;
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      transition: all 0.2s;
     }
-    .btn-detail-toggle:hover {
-      text-decoration: underline;
+    .details-toggle:hover {
+      color: #ffffff;
+      background: #222222;
     }
 
-    /* Product Detail Expansion Box */
-    .product-detail-box {
-      display: none;
-      background: #0d1017;
-      border: 1px solid #232838;
+    .details-box {
+      background: #050505;
+      border: 1px solid var(--border-color);
       border-top: none;
-      border-radius: 0 0 10px 10px;
-      padding: 12px 16px;
+      border-radius: 0 0 12px 12px;
+      padding: 14px 18px;
       margin-top: -6px;
-      margin-bottom: 6px;
-      font-size: 12.5px;
-      color: #cbd5e1;
-    }
-
-    .product-detail-box.show {
-      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      display: none;
       animation: fadeIn 0.2s ease;
     }
 
@@ -564,20 +582,22 @@
 
     .detail-section-title {
       font-weight: 700;
-      color: #93c5fd;
-      margin-top: 6px;
+      color: #ffffff;
+      margin-top: 8px;
       margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 6px;
+      border-left: 2px solid #ffffff;
+      padding-left: 6px;
     }
     .detail-section-title:first-child {
       margin-top: 0;
     }
 
     .detail-text {
-      color: #94a3b8;
-      line-height: 1.45;
+      color: #a0a0a0;
+      line-height: 1.5;
       margin-bottom: 6px;
     }
 
@@ -586,22 +606,22 @@
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 5px 12px;
       margin-top: 6px;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 8px 12px;
+      background: #000000;
+      padding: 10px 14px;
       border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      border: 1px solid #1a1a1a;
     }
 
     .sub-item {
       font-size: 12px;
-      color: #cbd5e1;
+      color: #cccccc;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
     }
 
     .sub-item-dot {
-      color: var(--primary);
+      color: #666666;
       font-size: 14px;
       line-height: 1;
     }
@@ -613,8 +633,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
       display: none;
       justify-content: center;
       align-items: center;
@@ -623,15 +643,15 @@
     }
 
     .modal-card {
-      background: #151822;
-      border: 1px solid var(--border-color);
+      background: #0d0d0d;
+      border: 1px solid #2e2e2e;
       border-radius: 18px;
       max-width: 720px;
       width: 100%;
       max-height: 90vh;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
       overflow: hidden;
     }
 
@@ -644,9 +664,9 @@
     }
 
     .modal-title {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -660,7 +680,7 @@
       cursor: pointer;
     }
     .modal-close:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
     .modal-body {
@@ -672,16 +692,19 @@
     .export-textarea {
       width: 100%;
       height: 360px;
-      background: #0d1017;
+      background: #000000;
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 14px;
-      color: #e6edf3;
+      color: #ffffff;
       font-family: ui-monospace, SFMono-Regular, monospace;
       font-size: 12px;
       line-height: 1.5;
       resize: vertical;
       outline: none;
+    }
+    .export-textarea:focus {
+      border-color: #ffffff;
     }
 
     .modal-footer {
@@ -692,18 +715,18 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      background: #11141c;
+      background: #080808;
     }
 
     /* Import Modal */
     .import-input {
       width: 100%;
       height: 120px;
-      background: #0d1017;
+      background: #000000;
       border: 1px solid var(--border-color);
       border-radius: 10px;
       padding: 12px;
-      color: #fff;
+      color: #ffffff;
       font-family: monospace;
       font-size: 12px;
       margin-bottom: 12px;
@@ -715,15 +738,16 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #10b981;
-      color: #fff;
+      background: #ffffff;
+      color: #000000;
       padding: 12px 20px;
       border-radius: 10px;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
       display: none;
       z-index: 2000;
       animation: toastIn 0.3s ease;
+      border: 1px solid #ffffff;
     }
 
     @keyframes toastIn {
@@ -733,12 +757,12 @@
   
     /* Hard Drive Status & Worklog Card Styles */
     .disk-status-card {
-      background: linear-gradient(135deg, #151b28 0%, #111520 100%);
-      border: 1px solid #2d3748;
+      background: #0d0d0d;
+      border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 20px 22px;
       margin-bottom: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.7);
       position: relative;
       overflow: hidden;
     }
@@ -748,9 +772,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 4px;
+      width: 3px;
       height: 100%;
-      background: linear-gradient(180deg, #38bdf8, #10b981);
+      background: #ffffff;
     }
 
     .disk-status-header {
@@ -763,9 +787,9 @@
     }
 
     .disk-status-title {
-      font-size: 18px;
+      font-size: 17.5px;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -779,8 +803,8 @@
     }
 
     .disk-stat-box {
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #080808;
+      border: 1px solid #1c1c1c;
       border-radius: 12px;
       padding: 12px 14px;
     }
@@ -794,19 +818,15 @@
     .disk-stat-val {
       font-size: 20px;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
     }
-
-    .disk-stat-val.accent-green { color: #10b981; }
-    .disk-stat-val.accent-blue { color: #38bdf8; }
-    .disk-stat-val.accent-purple { color: #c084fc; }
 
     /* Directory Breakdown Bars */
     .folder-bars-container {
-      background: rgba(0, 0, 0, 0.25);
+      background: #080808;
       border-radius: 12px;
       padding: 14px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid #1a1a1a;
       margin-bottom: 14px;
     }
 
@@ -820,11 +840,12 @@
       justify-content: space-between;
       font-size: 12.5px;
       margin-bottom: 4px;
+      color: #cccccc;
     }
 
     .folder-progress-bg {
       height: 8px;
-      background: #1e2433;
+      background: #181818;
       border-radius: 999px;
       overflow: hidden;
     }
@@ -833,12 +854,13 @@
       height: 100%;
       border-radius: 999px;
       transition: width 0.4s ease;
+      background: #ffffff;
     }
 
     /* Worklog Section */
     .worklog-card {
-      background: #131722;
-      border: 1px solid #232a3b;
+      background: #0d0d0d;
+      border: 1px solid var(--border-color);
       border-radius: 14px;
       margin-bottom: 20px;
       overflow: hidden;
@@ -860,7 +882,7 @@
     .worklog-title {
       font-size: 15px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -868,25 +890,23 @@
 
     .worklog-content {
       padding: 16px 18px;
-      border-top: 1px solid #232a3b;
+      border-top: 1px solid var(--border-color);
       font-size: 13px;
       line-height: 1.6;
     }
 
     .worklog-item {
       padding: 10px 14px;
-      background: rgba(0, 0, 0, 0.25);
+      background: #080808;
       border-radius: 10px;
       margin-bottom: 10px;
-      border-left: 3px solid #38bdf8;
+      border: 1px solid #1c1c1c;
+      border-left: 3px solid #ffffff;
     }
-    .worklog-item.success { border-left-color: #10b981; }
-    .worklog-item.warning { border-left-color: #f59e0b; }
-    .worklog-item.purple { border-left-color: #a855f7; }
 
     .worklog-item-title {
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       margin-bottom: 4px;
       display: flex;
       justify-content: space-between;
@@ -898,12 +918,11 @@
       padding: 2px 7px;
       border-radius: 4px;
       font-weight: 600;
+      background: #1c1c1c;
+      color: #ffffff;
+      border: 1px solid #333333;
     }
-    .worklog-tag-green { background: rgba(16, 185, 129, 0.2); color: #34d399; }
-    .worklog-tag-blue { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
-    .worklog-tag-amber { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
-
-</style>
+  </style>
 </head>
 <body>
   <div class="container">
@@ -949,7 +968,7 @@
           </div>
           <div class="storage-row">
             <span style="color: var(--text-muted);">外接剩餘可用空間</span>
-            <span class="storage-val" id="freeSpaceText" style="color: var(--accent-green);">4,000 GB</span>
+            <span class="storage-val" id="freeSpaceText" style="color: var(--);">4,000 GB</span>
           </div>
           <div class="storage-row">
             <span style="color: var(--text-muted);">已勾選項目數</span>
@@ -995,11 +1014,11 @@
                 <span class="badge-tag badge-core" style="font-size: 12px;">✅ 2026/10/10 實測通過</span>
               </div>
               <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">
-                實體掛載於 <code style="color:#38bdf8; background:#0d1017; padding:2px 6px; border-radius:4px;">/Volumes/S</code> ｜ APFS 高速檔案系統 ｜ 全硬碟 154 套音色庫 100% 入庫相容驗證通過
+                實體掛載於 <code style="color:#ffffff; background:#181818; padding:2px 6px; border-radius:4px; border:1px solid #333333;">/Volumes/S</code> ｜ APFS 高速檔案系統 ｜ 全硬碟 154 套音色庫 100% 入庫相容驗證通過
               </div>
             </div>
             <div style="display:flex; gap:8px;">
-              <span class="badge-tag" style="background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.3);">
+              <span class="badge-tag" style="background:#181818; color:#ffffff; border:1px solid #333333;">
                 現況裝載率 95%
               </span>
             </div>
@@ -1013,15 +1032,15 @@
             </div>
             <div class="disk-stat-box">
               <div class="disk-stat-label">目前實體已拷貝裝載</div>
-              <div class="disk-stat-val accent-blue">3,500 GB <span style="font-size:13px; font-weight:normal; color:#888;">(3.5 TiB)</span></div>
+              <div class="disk-stat-val ">3,500 GB <span style="font-size:13px; font-weight:normal; color:#888;">(3.5 TiB)</span></div>
             </div>
             <div class="disk-stat-box">
               <div class="disk-stat-label">目前剩餘安全可用空間</div>
-              <div class="disk-stat-val accent-green">190 GB <span style="font-size:13px; font-weight:normal; color:#888;">(充裕安全緩衝)</span></div>
+              <div class="disk-stat-val ">190 GB <span style="font-size:13px; font-weight:normal; color:#888;">(充裕安全緩衝)</span></div>
             </div>
             <div class="disk-stat-box">
               <div class="disk-stat-label">NI 音色庫相容健康度</div>
-              <div class="disk-stat-val accent-green">154 套 / 0 異常 <span style="font-size:13px; font-weight:normal; color:#888;">(100% 通過)</span></div>
+              <div class="disk-stat-val ">154 套 / 0 異常 <span style="font-size:13px; font-weight:normal; color:#888;">(100% 通過)</span></div>
             </div>
           </div>
 
@@ -1034,11 +1053,11 @@
 
             <div class="folder-bar-item">
               <div class="folder-bar-meta">
-                <span><strong style="color:#38bdf8;">NI</strong> (Native Instruments / Kontakt 全系列 154 套音色庫)</span>
+                <span><strong style="color:#ffffff;">NI</strong> (Native Instruments / Kontakt 全系列 154 套音色庫)</span>
                 <span style="color:#fff; font-weight:600;">2,200 GB (2.2 TB)</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 61%; background: linear-gradient(90deg, #0284c7, #38bdf8);"></div>
+                <div class="folder-progress-fill" style="width: 61%; background: #ffffff;"></div>
               </div>
             </div>
 
@@ -1048,7 +1067,7 @@
                 <span style="color:#fff; font-weight:600;">886 GB</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 25%; background: linear-gradient(90deg, #d97706, #f59e0b);"></div>
+                <div class="folder-progress-fill" style="width: 25%; background: #cccccc;"></div>
               </div>
             </div>
 
@@ -1058,7 +1077,7 @@
                 <span style="color:#fff; font-weight:600;">210 GB</span>
               </div>
               <div class="folder-progress-bg">
-                <div class="folder-progress-fill" style="width: 6%; background: linear-gradient(90deg, #7c3aed, #a855f7);"></div>
+                <div class="folder-progress-fill" style="width: 6%; background: #aaaaaa;"></div>
               </div>
             </div>
 
@@ -1099,7 +1118,7 @@
             </div>
             <div style="display:flex; align-items:center; gap:8px;">
               <span class="badge-tag badge-core">154 套 0 異常</span>
-              <span id="worklogToggleIcon" style="color:#38bdf8; font-size:14px; transition:transform 0.2s;">▼ 展開日誌</span>
+              <span id="worklogToggleIcon" style="color:#888888; font-size:14px; transition:transform 0.2s;">▼ 展開日誌</span>
             </div>
           </div>
 
@@ -1111,7 +1130,7 @@
                 <span class="worklog-tag worklog-tag-green">100% 通過</span>
               </div>
               <div style="color: #cbd5e1; font-size: 12.5px;">
-                針對二進制標頭偏移 (512000)、SNPID 命名格式 (避免被判定為 000 散裝)、XML spec 1.0.16、授權金鑰完整性及阿三老師專用 <code>Add Library.command</code> 進行語法級全面審查。嚴重異常由原本 9 套完全清零（0 FAIL），入庫工具模擬成功率達 100%。完整體檢紀錄同步存檔於 <code style="color:#38bdf8;">/Volumes/S/NI音色庫完整體檢排查報告.txt</code>。
+                針對二進制標頭偏移 (512000)、SNPID 命名格式 (避免被判定為 000 散裝)、XML spec 1.0.16、授權金鑰完整性及阿三老師專用 <code>Add Library.command</code> 進行語法級全面審查。嚴重異常由原本 9 套完全清零（0 FAIL），入庫工具模擬成功率達 100%。完整體檢紀錄同步存檔於 <code style="color:#ffffff;">/Volumes/S/NI音色庫完整體檢排查報告.txt</code>。
               </div>
             </div>
 
@@ -1163,6 +1182,19 @@
               </div>
             </div>
 
+            <!-- 日誌 7 -->
+            <div class="worklog-item">
+              <div class="worklog-item-title">
+                <span>7. 介面視覺全面重構為「純黑白專業工業級配色」並移除未完整音源</span>
+                <span class="worklog-tag">專業配色</span>
+              </div>
+              <ul style="color: #cccccc; font-size: 13px; line-height: 1.6; margin: 6px 0 0 18px; padding: 0;">
+                <li><strong>純黑白專業極簡風格</strong>：全面剔除彩度干擾，採用 OLED 純黑背景 (#000000)、石墨色卡片 (#0D0D0D) 與精確白線高反差階調，還原母帶級硬體設備之純粹專注感。</li>
+                <li><strong>移除未完整音源</strong>：依指示正式自勾選清單中完全移除 Spitfire Audio - Hans Zimmer Piano (74 GB 殘缺版)，確保清單中每一款音色均為 100% 完整可用之成熟音源。</li>
+                <li><strong>高反差互動指引</strong>：選中項目採用純白邊框立體反差標示，進度圓環與容量條改為高精度純白/灰階刻度計，搜尋輸入與按鈕全面黑白切換。</li>
+              </ul>
+            </div>
+
             <!-- 日誌 6 -->
             <div class="worklog-item success">
               <div class="worklog-item-title">
@@ -1184,10 +1216,10 @@
             <div class="worklog-item purple">
               <div class="worklog-item-title">
                 <span>5. 阿三老師專用「一鍵入庫工具」已置於外接硬碟根目錄</span>
-                <span class="worklog-tag" style="background:rgba(168,85,247,0.2); color:#c084fc;">即插即用</span>
+                <span class="worklog-tag" style="background:#1c1c1c; color:#ffffff; border:1px solid #333333;">即插即用</span>
               </div>
               <div style="color: #cbd5e1; font-size: 12.5px;">
-                已將經過測試的入庫腳本部署至 <code style="color:#38bdf8;">/Volumes/S/Kontakt_入庫工具/Add Library.command</code>。硬碟插至阿三老師電腦後，只需點開該工具並選擇音色庫目錄，即可在 macOS 系統秒入庫，無需繁瑣設定。
+                已將經過測試的入庫腳本部署至 <code style="color:#ffffff;">/Volumes/S/Kontakt_入庫工具/Add Library.command</code>。硬碟插至阿三老師電腦後，只需點開該工具並選擇音色庫目錄，即可在 macOS 系統秒入庫，無需繁瑣設定。
               </div>
             </div>
           </div>
@@ -1509,24 +1541,6 @@
             "Scarbee Clavinet / Pianet (放克必備敲弦鍵盤)",
             "Scarbee Classic EP-88s (88 鍵手作電鋼琴，動態細緻)",
             "Soniccouture Broken Wurli & EP73 Deconstructed"
-          ]
-        }
-      },
-      {
-        "id": "spitfire_hz_piano_status",
-        "name": "Spitfire Audio - Hans Zimmer Piano (⚠️ 實測現況標註)",
-        "desc": "⚠️ 實測僅 74 GB (官方完整版為 211 GB)，缺少 33 個取樣切片，多麥克風預設會有取樣缺失，保留現況供評估",
-        "size": 74,
-        "default": false,
-        "badge": "殘缺標註",
-        "details": {
-          "overview": "Spitfire 與漢斯季默聯名開發之鋼琴音色。經底層二進制體檢，目前目錄僅有 37 個 .nkx 取樣切片，遺失 33 個區塊（1~7 號及中後段麥克風切片），存在下載中斷檔。",
-          "suitable": "僅供備查；正式製作建議優先使用 Noire、The Grandeur、CSP 或 Ivory II。",
-          "list": [
-            "官方規格：約 211.2 GB (AIR Hall 16 組多視角麥克風信號)",
-            "實測現況：73.89 GB (約 35% 取樣完整度)",
-            "部分單一麥克風預設可出聲，多麥克風組合預設載入會提示 Missing Samples",
-            "已注入標準 .nicnt 容器與專屬封面供辨識"
           ]
         }
       }
@@ -3012,7 +3026,7 @@
 
             ${item.details && item.details.suitable ? `
               <div class="detail-section-title" style="margin-top:8px;">🎵 推薦適用音樂場景：</div>
-              <div class="detail-text" style="color: #93c5fd;">${item.details.suitable}</div>
+              <div class="detail-text" style="color: #d4d4d4;">${item.details.suitable}</div>
             ` : ""}
 
             ${subItemsHtml}
@@ -3182,9 +3196,9 @@
         alertEl.style.borderColor = "rgba(56, 189, 248, 0.35)";
         alertEl.innerText = "👍 空間配置良好！滿足多數管弦、樂隊與流行編曲音源需求。";
       } else {
-        circleEl.style.stroke = "var(--accent-green)";
+        circleEl.style.stroke = "var(--)";
         alertEl.style.background = "rgba(16, 185, 129, 0.15)";
-        alertEl.style.color = "var(--accent-green)";
+        alertEl.style.color = "var(--)";
         alertEl.style.borderColor = "rgba(16, 185, 129, 0.35)";
         alertEl.innerText = `✨ 空間非常充裕！擁有約 ${(freeGB/1000).toFixed(1)} TB 餘裕空間供自選擴充或專案錄音！`;
       }
